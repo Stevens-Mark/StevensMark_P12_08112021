@@ -9,6 +9,7 @@ body {
   max-width: 1440px;
   margin: auto;
   box-sizing: border-box;
+  min-height: 100vh; 
 }
 
 code {
@@ -16,16 +17,16 @@ code {
     monospace;
 }
 
-main {
-  min-height: calc(100vh - 24rem);
-  /* height: 100%; */
-}
+ main {
+   min-height: calc(100vh - 24rem); 
+  /* height: 100%;  */
+} 
 
-@media screen and (max-width: 1240px) {
+/* @media screen and (max-width: 1240px) {
   main {
     margin: 20px;
   }
-}
+} */
 
 /* a {
   text-decoration: none;

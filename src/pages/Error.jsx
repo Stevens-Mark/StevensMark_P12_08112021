@@ -7,11 +7,12 @@ const ErrorWrapper = styled.div `
   align-items: center;
   justify-content: center;  
   color: #000;
+  margin-left: 117px;
 
 h1 {
   font-size: clamp(6rem, 20vw, 21.875rem);
   font-weight: 700;
-  margin-top: 6.75rem;
+  margin-top: 4.75rem;
   margin-bottom: 1rem;
 }
 
@@ -27,7 +28,6 @@ const ReturnLink = styled(Link) `
   color: #000;
   font-size: clamp(0.875rem, 1.5vw, 1.375rem);
   font-weight: 500;
-  margin-bottom: 9.375rem;
   text-decoration: underline;
 `;
 

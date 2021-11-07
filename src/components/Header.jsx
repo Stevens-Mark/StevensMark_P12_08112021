@@ -15,7 +15,6 @@ const UList = styled.ul`
   height: 91px;
   max-width: 1440px;
   margin: auto;
-  margin-bottom:  2.5rem;
   background: #000;
   list-style-type: none; 
   padding: 0px 25px;
@@ -41,10 +40,10 @@ export default function Header() {
         <nav>
             <UList>
                 <li><LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK></li>
-                <li><LINK className="navlink" exact to="/">Accueil</LINK></li>
-                <li><LINK className="navlink" to="/">Profil</LINK></li>
-                <li><LINK className="navlink" to="/">Réglage</LINK></li>
-                <li><LINK className="navlink" to="/">Communauté</LINK></li>
+                <li><LINK exact to="/">Accueil</LINK></li>
+                <li><LINK to="/">Profil</LINK></li>
+                <li><LINK to="/">Réglage</LINK></li>
+                <li><LINK to="/">Communauté</LINK></li>
             </UList>
         </nav>
     </header>
