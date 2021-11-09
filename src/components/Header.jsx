@@ -40,7 +40,7 @@ export default function Header() {
         <nav>
             <UList>
                 <li><LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK></li>
-                <li><LINK exact to="/">Accueil</LINK></li>
+                <li><LINK to="/">Accueil</LINK></li>
                 <li><LINK to="/">Profil</LINK></li>
                 <li><LINK to="/">Réglage</LINK></li>
                 <li><LINK to="/">Communauté</LINK></li>

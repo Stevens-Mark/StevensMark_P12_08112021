@@ -14,9 +14,7 @@ function App() {
       <Header />  
       <SideNav /> 
         <Switch>
-            <Route exact path="/">
-              <User />
-            </Route>
+            <Route exact path="/user/:id" component={User}/>
 
             <Route>
               <Error />

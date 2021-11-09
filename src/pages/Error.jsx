@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import colors from '../utils/style/colors'
 
 const ErrorWrapper = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;  
-  color: #000;
+  color: ${colors.primary};
   margin-left: 117px;
 
 h1 {
@@ -25,7 +26,7 @@ p {
 `;
 
 const ReturnLink = styled(Link) `
-  color: #000;
+  color: ${colors.primary};
   font-size: clamp(0.875rem, 1.5vw, 1.375rem);
   font-weight: 500;
   text-decoration: underline;

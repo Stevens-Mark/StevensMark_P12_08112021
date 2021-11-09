@@ -45,10 +45,10 @@ const SportLink = styled.div `
       <SportsGroup>
           <nav>
               <SportLink>
-                <li><Link to='/'><img className='coverImage' src={Yoga} alt='Yoga'/></Link> </li>
-                <li><Link to='/'><img className='coverImage' src={Swim} alt='Swim'/></Link> </li>
-                <li><Link to='/'><img className='coverImage' src={Bike} alt='Bike'/></Link> </li>
-                <li><Link to='/'><img className='coverImage' src={Gym} alt='Gym'/></Link> </li>
+                <li><Link to='/user'><img className='coverImage' src={Yoga} alt='Yoga'/></Link> </li>
+                <li><Link to='/user'><img className='coverImage' src={Swim} alt='Swim'/></Link> </li>
+                <li><Link to='/user'><img className='coverImage' src={Bike} alt='Bike'/></Link> </li>
+                <li><Link to='/user'><img className='coverImage' src={Gym} alt='Gym'/></Link> </li>
               </SportLink>
           </nav>
                 <p>Copyright, SportSee 2020</p>
