@@ -1,26 +1,23 @@
 
-import { useParams } from 'react-router';
+import { useParams } from 'react-router'
 import styled from 'styled-components'
-import { Loader } from '../utils/style/Atoms'
+import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks'
-import colors from '../utils/style/colors';
+import LoadingIcon from '../components/LoadingIcon'
+import Activity from '../components/Activity'
 
 
-const LoaderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 117px;
-  height: 90vh;
-`;
+/**
+ * CSS for component using styled.components
+ */
 
 const ErrorWrapper = styled.span`
-  color: #000;
+  color: ${colors.secondary};
   margin-left: 117px;
 `;
 
 const Welcome = styled.div`
-  color: #000;
+  color: ${colors.secondary};
   margin-left: 117px;
 
   h1 {
@@ -40,6 +37,12 @@ const Welcome = styled.div`
   }
 `;
 
+/**
+ * 
+ * @function User
+ * @returns {JSX}
+ */
+
 export default function User() {
  
   const  userId  = useParams().id
@@ -58,9 +61,7 @@ export default function User() {
 
   if (isLoading) {
       return (
-        <LoaderWrapper>
-        <Loader />
-      </LoaderWrapper>
+        <LoadingIcon />
       )
   }
   else {
@@ -72,6 +73,7 @@ export default function User() {
               <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </Welcome>
+          <Activity />
       </div>
     )
   }

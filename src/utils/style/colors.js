@@ -1,9 +1,14 @@
+// colors used on the website
+
 const colors = {
   primary: '#FF0000',
-  // secondary: '#8186A0',
-  // backgroundLight: '#F9F9FC',
-  // backgroundDark: '#4F4C6B',
-  // dark: '#2F2E41',
+  secondary: '#000',
+  tertiary: '#fff',
+  backgroundLight: '#FBFBFB',
+  barChartText: '#9B9EAC',
+  barChartGridStroke: '#DEDEDE',
+  barChartToolTip: '#C4C4C480',
+
 }
 
 export default colors

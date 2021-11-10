@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import colors from '../utils/style/colors';
+// logo imports
 import logo from '../assets/logo/sportsSee_logo.svg'
-import styled from 'styled-components';
 
+/**
+ * CSS for the component using styled.components
+ */
 
 const Image = styled.img`
   width: clamp(5rem, 12vw, 10rem);
@@ -24,14 +29,21 @@ const LINK = styled(Link)`
   text-decoration: none;
   cursor: pointer;  
   font-weight: 500;
-  color: #fff;
+  color:  ${colors.tertiary};
+
   padding: 5px;
   font-size: clamp(0.75rem, 1.667vw, 2rem);
 
-    &:hover {
+  &:hover {
       text-decoration: underline;
     }
 `;
+
+/**
+ * Component to render the Header
+ * @function Header
+ * @returns (JSX)
+ */
 
 export default function Header() {
     

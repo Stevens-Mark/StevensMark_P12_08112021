@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+// logo imports
 import Yoga from '../assets/icons/zen.svg'
 import Swim from '../assets/icons/swim.svg'
 import Bike from '../assets/icons/bike.svg'
 import Gym from '../assets/icons/dumbell.svg'
-import styled from 'styled-components';
 
+/**
+ * CSS for the component using styled.components
+ */
 const SportsGroup = styled.div `
     width: 117px;
     height: 90vh;
@@ -39,6 +43,11 @@ const SportLink = styled.div `
     height: 80vh;
 `;
 
+/**
+ * Component to render the LeftHand Side navigation Bar
+ * @function SideNav
+ * @returns {JSX}
+ */
   export default function SideNav() {
     
     return (

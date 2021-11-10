@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 
-
+/**
+ * Used to fetch data 
+ * @function useFetch (Hook)
+ * @param {string} url
+ * @returns {object} data
+ * @returns {boolean} isLoading
+ * @returns {boolean} error
+ */
 export function useFetch(url) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)

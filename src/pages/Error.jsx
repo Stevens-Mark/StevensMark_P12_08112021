@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 
+/**
+ * CSS for the component using styled.components
+ */
+
 const ErrorWrapper = styled.div `
   display: flex;
   flex-direction: column;
@@ -32,7 +36,11 @@ const ReturnLink = styled(Link) `
   text-decoration: underline;
 `;
 
-// Error message component
+/**
+ * Component to render Error 404 page
+ * @function Error
+ * @returns {JSX}
+ */
 export default function Error() {
   
   return (
