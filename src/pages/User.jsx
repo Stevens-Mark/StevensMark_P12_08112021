@@ -5,6 +5,7 @@ import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks'
 import LoadingIcon from '../components/LoadingIcon'
 import Activity from '../components/Activity'
+import KeyData from '../components/KeyData'
 
 
 /**
@@ -13,7 +14,7 @@ import Activity from '../components/Activity'
 
 const ErrorWrapper = styled.span`
   color: ${colors.secondary};
-  margin-left: 117px;
+  margin-left: 125px;
 `;
 
 const Welcome = styled.div`
@@ -37,6 +38,11 @@ const Welcome = styled.div`
   }
 `;
 
+const UserStats = styled.div`
+  display: flex;
+  margin-left: 125px;
+`;
+
 /**
  * 
  * @function User
@@ -49,7 +55,6 @@ export default function User() {
   
   const mockData = `../${userId}.json`
   // const apiData = `http://localhost:3000/user/${userId}/`
-  // const activity =`http://localhost:3000/user/${userId}/activity`
   // const sessions = `http://localhost:3000/user/${userId}/average-sessions`
   // const performance = `http://localhost:3000/user/${userId}/performance`
 
@@ -73,7 +78,10 @@ export default function User() {
               <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </Welcome>
-          <Activity />
+         <UserStats> 
+            <Activity />
+            <KeyData healthData={details.keyData} />
+          </UserStats> 
       </div>
     )
   }

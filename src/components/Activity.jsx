@@ -1,4 +1,5 @@
 import { useParams } from 'react-router'
+import PropTypes from 'prop-types'
 import { useFetch } from '../utils/hooks'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
@@ -20,10 +21,10 @@ import {
  */
  const ActivityChartWrapper = styled.div`
     background: ${colors.backgroundLight};
-    margin-left: 150px;
     height: 335px;
-    width: 45%;
+    width: 70%;
     padding: 5px;
+    box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
 const ActivityHeading = styled.div`
@@ -208,4 +209,11 @@ export default function Activity() {
       </ActivityChartWrapper>  
       )
     }
+  }
+
+  // Prototypes
+
+  CustomTooltip.propTypes = {
+    active: PropTypes.bool,
+    payload: PropTypes.array,
   }
