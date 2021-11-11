@@ -21,9 +21,8 @@ import {
  */
 const ActivityChartWrapper = styled.div`
   background: ${colors.backgroundLight};
-  height: 335px;
-  width: 97%;
-  padding: 5px;
+  height: 290px;
+  border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
@@ -145,7 +144,7 @@ export default function Activity() {
           </ActivityLegend>
         </ActivityHeading>
 
-        <ResponsiveContainer width='100%' height={300}>
+        <ResponsiveContainer width='100%' height={250}>
           <BarChart
             data={sessions}
             margin={{

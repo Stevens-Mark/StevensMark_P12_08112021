@@ -20,17 +20,17 @@ const ErrorWrapper = styled.span`
 
 const Welcome = styled.div`
   color: ${colors.secondary};
-  margin-left: 117px;
+  
 
   h1 {
-    font-size: 48px;
+    font-size: clamp(0.875rem, 3vw, 3rem);
     font-style: normal;
     font-weight: 500;
     margin: unset;
   }
 
   p {
-    font-size: 18px;
+    font-size: clamp(0.75rem, 1.250vw, 1.125rem);
     font-weight: 400;
   }
 
@@ -39,24 +39,44 @@ const Welcome = styled.div`
   }
 `;
 
+const DashBoardContainer = styled.div`
+  margin-left: clamp(3.5rem, 8vw, 7.5rem);
+  padding: clamp(0.625rem, 3vw, 3.125rem);
+`;
+
 const UserStats = styled.div`
-  display: flex;
-  margin-left: 125px;
+display: flex;
+`;
+
+const Stats = styled.div`
+width: 75%;
+`;
+
+const KeyDataWrapper = styled.div`
+width: 25%;
 `;
 
 const Analysis = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
+  gap: 15px;
+  @media screen and (min-width: 1025px) {
+    gap: 30px;
+    margin-top: 30px;
+    }  
 `;
 
 const CONTAINER = styled.div`
-  height: 263px;
-  width: 258px;
-  margin: 15px;
+  height: 225px;
+  width: 32%;
+  max-width: 258px;
   border-radius: 5px;
   background: blue;
   box-shadow: 0px 2px 4px 0px #00000005;
-
+  @media screen and (min-width: 1025px) {
+    height: 263px;
+    } 
 `;
 
 /**
@@ -88,25 +108,27 @@ export default function User() {
     const details = data.data
 
     return (
-      <div>
+      <DashBoardContainer>
+        <div>
           <Welcome>
               <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </Welcome>
          <UserStats> 
-           <div>
-              <Activity />
-             
-              <Analysis>
-                 <Average />
-                <CONTAINER />
-                <CONTAINER />
-              </Analysis>
-            </div>
-            <KeyData healthData={details.keyData} />
+            <Stats>
+              <Activity />         
+                <Analysis>
+                  <Average />
+                  <CONTAINER />
+                  <CONTAINER />
+                </Analysis>
+            </Stats>
+            <KeyDataWrapper>
+              <KeyData healthData={details.keyData} />
+            </KeyDataWrapper>
           </UserStats> 
-          
-      </div>
+        </div> 
+      </DashBoardContainer>
     )
   }
 }

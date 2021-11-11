@@ -20,17 +20,20 @@ import {
  * CSS for the component using styled.components
  */
 const AverageWrapper = styled.div`
-  height: 263px;
-  width: 258px;
-  margin: 15px;
+  height: 225px;
+  width: 32%;
+  max-width: 258px;
   border-radius: 5px;
   background: ${colors.primary};
+  @media screen and (min-width: 1025px) {
+    height: 263px;
+    }    
 `;
 
 const AverageHeading = styled.h2`
     color: ${colors.tertiary};
     opacity: 0.5;
-    font-size: 15px;
+    font-size: clamp(0.625rem, 1vw, 0.938rem);
     font-weight: 500;
     width: 150px;
     margin: 25px;

@@ -14,19 +14,23 @@ const HealthWrapper = styled.div`
   color: ${colors.HealthDataText};
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: 10%;
 `;
 
 const HealthCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 124px;
-  width: 258px;
+  height: 121px;
+  min-width: 185px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
-  margin-bottom: 40px;
+  margin-bottom: 15px;
+  @media screen and (min-width: 1025px) {
+    height: 124px;
+    margin-bottom: 28px;
+    }  
 `;
 
 const HealthValue = styled.div`

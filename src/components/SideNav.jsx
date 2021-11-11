@@ -10,27 +10,36 @@ import Gym from '../assets/icons/dumbell.svg'
  * CSS for the component using styled.components
  */
 const SportsGroup = styled.div `
-    width: 117px;
-    height: 90vh;
+    width: clamp(3.5rem, 8vw, 7.5rem);
+    height: 80vh;
     list-style-type: none; 
     text-align: center;
     background: black;
     position: absolute;
+    @media screen and (min-width: 1025px) {
+      height: 95vh;
+      } 
 
     p {
         font-size: 12px;
         transform: rotate(-90deg);
         width: 165px;
         font-weight: 500;
-        position: absolute;
-        left: -25px;
-        bottom: 80px;
+        margin: -15px;
       }
 
     img {
-        width: 64px;
-        margin: 10px;
+        width: clamp(2.5rem, 4.5vw, 4rem);
+        margin-bottom: 10px;
       }
+`;
+
+const SportsNav = styled.div `
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 `;
 
 const SportLink = styled.div `
@@ -52,15 +61,15 @@ const SportLink = styled.div `
     
     return (
       <SportsGroup>
-          <nav>
+          <SportsNav>
               <SportLink>
                 <li><Link to='/user'><img className='coverImage' src={Yoga} alt='Yoga'/></Link> </li>
                 <li><Link to='/user'><img className='coverImage' src={Swim} alt='Swim'/></Link> </li>
                 <li><Link to='/user'><img className='coverImage' src={Bike} alt='Bike'/></Link> </li>
                 <li><Link to='/user'><img className='coverImage' src={Gym} alt='Gym'/></Link> </li>
               </SportLink>
-          </nav>
-                <p>Copyright, SportSee 2020</p>
+              <p>Copyright, SportSee 2020</p>
+          </SportsNav>
       </SportsGroup>
       )
   }
