@@ -30,9 +30,8 @@ const LINK = styled(Link)`
   cursor: pointer;  
   font-weight: 500;
   color:  ${colors.tertiary};
-
   padding: 5px;
-  font-size: clamp(0.75rem, 1.667vw, 2rem);
+  font-size: clamp(1.125rem, 1.667vw, 1.5rem);
 
   &:hover {
       text-decoration: underline;
