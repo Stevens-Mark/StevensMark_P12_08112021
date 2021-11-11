@@ -19,6 +19,26 @@ import {
 /**
  * CSS for the component using styled.components
  */
+
+ const ErrorMsg = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: ${colors.secondary};
+ background: ${colors.backgroundLight};
+ height: 225px;
+ width: 32%;
+ max-width: 258px;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px 0px #00000005;
+ @media screen and (min-width: 1025px) {
+   height: 263px;
+   }  
+   p {
+     padding: 40px;
+   }
+`;
+
 const AverageWrapper = styled.div`
   height: 225px;
   width: 32%;
@@ -104,7 +124,7 @@ export default function Average() {
     const { data, isLoading, error } = useFetch(mockAverageData)
 
     if (error) {
-      return <span>Il y a un problème</span>
+      return <ErrorMsg><p>Il y a un problème... Aucune donnée trouvée</p></ErrorMsg>
     }
   
     if (isLoading) {

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks'
 import LoadingIcon from '../components/LoadingIcon'
+import Error from './Error'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
 import Average from '../components/Average'
@@ -13,15 +14,9 @@ import Average from '../components/Average'
  * CSS for component using styled.components
  */
 
-const ErrorWrapper = styled.span`
-  color: ${colors.secondary};
-  margin-left: 125px;
-`;
-
 const Welcome = styled.div`
   color: ${colors.secondary};
   
-
   h1 {
     font-size: clamp(0.875rem, 3vw, 3rem);
     font-style: normal;
@@ -96,7 +91,7 @@ export default function User() {
   const { data, isLoading, error } = useFetch(mockData)
 
   if (error) {
-    return <ErrorWrapper>Il y a un problème</ErrorWrapper>
+    return <Error />
   }
 
   if (isLoading) {

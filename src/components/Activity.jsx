@@ -19,6 +19,18 @@ import {
 /**
  * CSS for component using styled.components
  */
+
+ const ErrorMsg = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: ${colors.secondary};
+ background: ${colors.backgroundLight};
+ height: 290px;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px 0px #00000005;
+`;
+
 const ActivityChartWrapper = styled.div`
   background: ${colors.backgroundLight};
   height: 290px;
@@ -126,7 +138,7 @@ export default function Activity() {
   // @returns @param {object} data, {boolean} isLoading and {boolean} error
   const { data, isLoading, error } = useFetch(mockActivityData);
   if (error) {
-    return <span>Il y a un problème</span>;
+    return <ErrorMsg>Il y a un problème... Aucune donnée trouvée</ErrorMsg>;
   }
 
   if (isLoading) {
