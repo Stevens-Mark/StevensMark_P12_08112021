@@ -6,6 +6,7 @@ import { useFetch } from '../utils/hooks'
 import LoadingIcon from '../components/LoadingIcon'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
+import Average from '../components/Average'
 
 
 /**
@@ -43,6 +44,21 @@ const UserStats = styled.div`
   margin-left: 125px;
 `;
 
+const Analysis = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const CONTAINER = styled.div`
+  height: 263px;
+  width: 258px;
+  margin: 15px;
+  border-radius: 5px;
+  background: blue;
+  box-shadow: 0px 2px 4px 0px #00000005;
+
+`;
+
 /**
  * 
  * @function User
@@ -51,12 +67,11 @@ const UserStats = styled.div`
 
 export default function User() {
  
-  const  userId  = useParams().id
+  const { id } = useParams()
   
-  const mockData = `../${userId}.json`
-  // const apiData = `http://localhost:3000/user/${userId}/`
-  // const sessions = `http://localhost:3000/user/${userId}/average-sessions`
-  // const performance = `http://localhost:3000/user/${userId}/performance`
+  const mockData = `../${id}.json`
+  // const apiData = `http://localhost:3000/user/${id}/`
+  // const performance = `http://localhost:3000/user/${id}/performance`
 
   const { data, isLoading, error } = useFetch(mockData)
 
@@ -79,9 +94,18 @@ export default function User() {
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </Welcome>
          <UserStats> 
-            <Activity />
+           <div>
+              <Activity />
+             
+              <Analysis>
+                 <Average />
+                <CONTAINER />
+                <CONTAINER />
+              </Analysis>
+            </div>
             <KeyData healthData={details.keyData} />
           </UserStats> 
+          
       </div>
     )
   }
