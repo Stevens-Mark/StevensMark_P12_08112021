@@ -20,7 +20,7 @@ const HealthWrapper = styled.div`
 const HealthCard = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: clamp(0.75rem, 2vw, 2rem);
   height: 121px;
   min-width: 185px;
   border-radius: 5px;

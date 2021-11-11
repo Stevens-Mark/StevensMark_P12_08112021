@@ -11,21 +11,18 @@ import Gym from '../assets/icons/dumbell.svg'
  */
 const SportsGroup = styled.div `
     width: clamp(3.5rem, 8vw, 7.5rem);
-    height: 80vh;
+    height: 100vh;
     list-style-type: none; 
-    text-align: center;
     background: black;
     position: absolute;
-    @media screen and (min-width: 1025px) {
-      height: 95vh;
-      } 
 
     p {
         font-size: 12px;
         transform: rotate(-90deg);
-        width: 165px;
+        width: 140px;
         font-weight: 500;
-        margin: -15px;
+        position: absolute;
+        bottom: 75px;
       }
 
     img {
@@ -35,7 +32,6 @@ const SportsGroup = styled.div `
 `;
 
 const SportsNav = styled.div `
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +44,6 @@ const SportLink = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
     height: 80vh;
 `;
 
