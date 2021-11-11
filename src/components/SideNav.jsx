@@ -16,6 +16,7 @@ const SportsGroup = styled.div `
     background: black;
     position: absolute;
 
+
     p {
         font-size: 12px;
         transform: rotate(-90deg);
@@ -27,7 +28,7 @@ const SportsGroup = styled.div `
 
     img {
         width: clamp(2.5rem, 4.5vw, 4rem);
-        margin-bottom: 10px;
+        margin: 10px 0px;
       }
 `;
 

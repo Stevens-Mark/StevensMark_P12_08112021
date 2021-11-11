@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks'
-import LoadingIcon from '../components/LoadingIcon'
+import LoadingIcon from '../utils/Loaders/LoadingIcon'
 import Error from './Error'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
@@ -89,7 +89,7 @@ export default function User() {
   // const performance = `http://localhost:3000/user/${id}/performance`
 
   const { data, isLoading, error } = useFetch(mockData)
-
+  
   if (error) {
     return <Error />
   }
@@ -106,7 +106,7 @@ export default function User() {
       <DashBoardContainer>
         <div>
           <Welcome>
-              <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
+           <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
           </Welcome>
          <UserStats> 

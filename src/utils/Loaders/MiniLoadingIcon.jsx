@@ -1,4 +1,4 @@
-import colors from '../utils/style/colors'
+import colors from '../style/colors'
 import styled, { keyframes } from 'styled-components'
 
 /**
@@ -18,32 +18,21 @@ const rotate = keyframes`
  * CSS for the Loader component
  */
 const Loader = styled.div`
-  padding: 50px;
-  border: 20px solid ${colors.primary};
+  padding: 15px;
+  border: 8px solid ${colors.primary};
   animation: ${rotate} 1s infinite linear;
   border-bottom-color: transparent;
   border-radius: 106px;
-  height: 0;
-  width: 0;
-`;
-
-const LoaderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 117px;
-  height: 90vh;
 `;
 
 /**
- * Renders a loading icon (turning semi-circle)
- * @function LoadingIcon
+ * Renders a Mini (smaller) loading icon for each
+ * individual dashboard item (if needed)
+ * @function MiniLoadingIcon
  * @returns {JSX}
  */
-export default function LoadingIcon() {
+export default function MiniLoadingIcon() {
     return (
-        <LoaderWrapper>
           <Loader />
-        </LoaderWrapper>
     )
 }

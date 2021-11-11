@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useFetch } from '../utils/hooks';
 import styled from 'styled-components';
 import colors from '../utils/style/colors';
-import LoadingIcon from '../components/LoadingIcon';
+import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon';
 
 // import Rechart items
 import {
@@ -19,6 +19,16 @@ import {
 /**
  * CSS for component using styled.components
  */
+ const LoaderWrapper = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: ${colors.secondary};
+ background: ${colors.backgroundLight};
+ height: 290px;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px 0px #00000005;
+`;
 
  const ErrorMsg = styled.div`
  display: flex;
@@ -137,12 +147,16 @@ export default function Activity() {
   // Fetch the data using HOOK useFetch
   // @returns @param {object} data, {boolean} isLoading and {boolean} error
   const { data, isLoading, error } = useFetch(mockActivityData);
+
   if (error) {
     return <ErrorMsg>Il y a un problème... Aucune donnée trouvée</ErrorMsg>;
   }
-
   if (isLoading) {
-    return <LoadingIcon />;
+    return (
+      <LoaderWrapper>
+        <MiniLoadingIcon />
+      </LoaderWrapper>
+    )
   } else {
     const sessions = data.data.sessions;
     // Display Activity chart using RECHARTS
@@ -190,8 +204,7 @@ export default function Activity() {
               orientation='left'
               axisLine={false}
               tickLine={false}
-              domain={['dataMin -10', 'dataMax + 10']} 
-              />
+              domain={['dataMin -10', 'dataMax + 10']}  />
 
             <Tooltip
               content={<CustomTooltip />}
