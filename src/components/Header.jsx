@@ -7,11 +7,9 @@ import logo from '../assets/logo/sportsSee_logo.svg'
 /**
  * CSS for the component using styled.components
  */
-
 const Image = styled.img`
   width: clamp(5rem, 12vw, 10rem);
   margin-top: 10px;
-
 `;
 
 const UList = styled.ul`
@@ -20,14 +18,12 @@ const UList = styled.ul`
   align-items: center;
   height: 91px;
   max-width: 1440px;
-  margin: auto;
-  background: #000;
+  background: ${colors.secondary};
   padding: 0px 25px;
 `;
 
 const LINK = styled(Link)`
   text-decoration: none;
-  
   font-weight: 500;
   color:  ${colors.tertiary};
   padding: 5px;

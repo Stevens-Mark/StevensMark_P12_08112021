@@ -14,6 +14,7 @@ import Average from '../components/Average'
  */
 const DashBoardWrapper = styled.main`
   padding: clamp(0.625rem, 2vw, 4.5rem);
+
   @media screen and (min-width: 1440px) {
     padding: 77px;
     } 
@@ -29,7 +30,7 @@ const Welcome = styled.div`
     } 
 
   h1 {
-    font-size: clamp(0.875rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
     font-style: normal;
     font-weight: 500;
     margin: unset;
@@ -47,14 +48,26 @@ const Welcome = styled.div`
 
 const UserStats = styled.div`
   display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    }
 `;
 
 const Stats = styled.div`
-width: 75%;
+  @media screen and (min-width: 1024px) {
+    width: 75%;
+    }
 `;
 
 const KeyDataWrapper = styled.aside`
-width: 25%;
+margin-bottom: 20px;
+
+  @media screen and (min-width: 1024px) {
+    width: 25%;
+    margin-bottom: 0px;
+    }
 `;
 
 const Analysis = styled.div`
@@ -63,7 +76,7 @@ const Analysis = styled.div`
   margin-top: 30px;
   gap: 15px;
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1024px) {
     gap: 30px;
     }  
 `;

@@ -16,7 +16,7 @@ const colors = {
   //line chart
   LineChartToolTip: 'blue',
 
-
+    test: 'orange',
 }
 
 export default colors

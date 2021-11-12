@@ -23,7 +23,6 @@ p {
   text-align: center;
   font-weight: 500;
   margin-bottom: 8.313rem;
-  color: ${colors.secondary};
 }
 `;
 

@@ -14,29 +14,55 @@ const HealthWrapper = styled.div`
   color: ${colors.HealthDataText};
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  height: 100%;
-  justify-content: space-between;
-`;
+  align-items: center;
 
+  @media screen and (min-width: 455px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: column;
+    margin-left: 10%;
+    justify-content: space-between;
+    height: 100%;
+   }
+`;
+// changed here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const HealthCard = styled.article`
   display: flex;
   align-items: center;
-  padding-left: clamp(0.75rem, 2vw, 2rem);
-  height: 121px;
-  min-width: 185px;
+  height: 70px;
+  width: 100%;
   border-radius: 5px;
+  margin: 10px;
   box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
-
-  @media screen and (min-width: 1025px) {
-    height: 124px;
   
+  img {
+    margin-left: 5px;
+  }
+
+  @media screen and (min-width: 455px) {
+    flex: 1 1 200px;
+    max-width: 275px;
+    margin: unset;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 124px;
+    margin: unset;
+    flex: unset;
     }  
 `;
 
+//   padding-left: clamp(0.75rem, 2vw, 2rem);
+
 const HealthValue = styled.div`
   font-size: 20px;
+  font-size: clamp(1rem, 1.389vw, 1.25rem);
   font-style: normal;
   font-weight: 700;
   margin-left: 24px;

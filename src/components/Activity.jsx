@@ -41,6 +41,7 @@ import {
  box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
+// HER I CHHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
   height: 290px;
