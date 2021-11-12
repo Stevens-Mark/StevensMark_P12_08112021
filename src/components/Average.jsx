@@ -55,7 +55,7 @@ const ErrorMsg = styled.div`
   }
 `;
 
-const AverageWrapper = styled.div`
+const AverageWrapper = styled.article`
   height: 225px;
   width: 32%;
   max-width: 258px;

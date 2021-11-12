@@ -33,12 +33,12 @@ export default function App() {
       <Header />  
         <Wrapper>
             <SideNav /> 
-            <main>
+            
               <Switch>
                 <Route exact path="/user/:id" component={User}/>
                 <Route component={Error} />
               </Switch> 
-          </main>
+         
         </Wrapper>
     </Router>  
   )

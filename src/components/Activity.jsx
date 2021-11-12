@@ -41,7 +41,7 @@ import {
  box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
-const ActivityChartWrapper = styled.div`
+const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
   height: 290px;
   border-radius: 5px;

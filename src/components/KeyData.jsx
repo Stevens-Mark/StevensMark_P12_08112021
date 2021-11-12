@@ -19,7 +19,7 @@ const HealthWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const HealthCard = styled.div`
+const HealthCard = styled.article`
   display: flex;
   align-items: center;
   padding-left: clamp(0.75rem, 2vw, 2rem);

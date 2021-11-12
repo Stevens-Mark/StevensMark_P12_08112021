@@ -10,7 +10,7 @@ import Gym from '../assets/icons/dumbell.svg'
 /**
  * CSS for the component using styled.components
  */
-const SportsGroup = styled.aside `
+const SportsGroup = styled.nav`
   background: ${colors.secondary};
   margin-top: 20px;
 
@@ -39,8 +39,6 @@ const SportsGroup = styled.aside `
         margin: 10px 0px;
         }
     }
-
- 
 `;
 
 const SportsNav = styled.div `
@@ -51,11 +49,9 @@ const SportsNav = styled.div `
   justify-content: space-around;
 `;
 
-const SportLink = styled.div `
-
+const SportLink = styled.ul `
   display: flex;
   flex-direction: row;
-
   justify-content: space-around;
   width: 100%;
 
@@ -63,7 +59,6 @@ const SportLink = styled.div `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
     }  
 `;
 

@@ -46,14 +46,14 @@ const Welcome = styled.div`
 `;
 
 const UserStats = styled.div`
-display: flex;
+  display: flex;
 `;
 
 const Stats = styled.div`
 width: 75%;
 `;
 
-const KeyDataWrapper = styled.div`
+const KeyDataWrapper = styled.aside`
 width: 25%;
 `;
 
@@ -68,7 +68,7 @@ const Analysis = styled.div`
     }  
 `;
 
-const CONTAINER = styled.div`
+const CONTAINER = styled.article`
   height: 225px;
   width: 32%;
   max-width: 258px;
@@ -118,6 +118,7 @@ export default function User() {
             <Stats>
               <Activity />         
                 <Analysis>
+                
                   <Average />
                   <CONTAINER />
                   <CONTAINER />
