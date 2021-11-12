@@ -14,6 +14,10 @@ const SportsGroup = styled.aside `
   background: ${colors.secondary};
   margin-top: 20px;
 
+  @media screen and (min-width: 1024px) {
+    margin-top: unset; 
+    }
+
   p {
     font-size: 12px;
     font-weight: 500;
@@ -29,12 +33,14 @@ const SportsGroup = styled.aside `
 
   img {
       width: clamp(2.5rem, 4.5vw, 4rem);
-      margin: 10px 0px;
+      margin-top: 15px; 
+
+      @media screen and (min-width: 1024px) {
+        margin: 10px 0px;
+        }
     }
 
-  @media screen and (min-width: 1024px) {
-    margin-top: unset; 
-    } 
+ 
 `;
 
 const SportsNav = styled.div `

@@ -12,15 +12,22 @@ import Average from '../components/Average'
 /**
  * CSS for component using styled.components
  */
- const DashBoardWrapper = styled.main`
- padding: clamp(0.625rem, 2vw, 3.125rem);
+const DashBoardWrapper = styled.main`
+  padding: clamp(0.625rem, 2vw, 4.5rem);
+  @media screen and (min-width: 1440px) {
+    padding: 77px;
+    } 
 `;
 // margin-left: clamp(3.5rem, 8vw, 7.5rem);
 
 const Welcome = styled.div`
   color: ${colors.secondary};
-  margin-bottom: 40px;
-  
+  margin-bottom: 35px;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 77px;
+    } 
+
   h1 {
     font-size: clamp(0.875rem, 3vw, 3rem);
     font-style: normal;
