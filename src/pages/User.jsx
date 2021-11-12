@@ -63,7 +63,7 @@ const Analysis = styled.div`
   margin-top: 30px;
   gap: 15px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     gap: 30px;
     }  
 `;
