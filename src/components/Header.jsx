@@ -8,18 +8,32 @@ import logo from '../assets/logo/sportsSee_logo.svg'
  * CSS for the component using styled.components
  */
 const Image = styled.img`
-  width: clamp(5rem, 12vw, 10rem);
+  width: clamp(7rem, 12vw, 10rem);
   margin-top: 10px;
 `;
 
-const UList = styled.ul`
+const NavGroup = styled.nav`
+  background: ${colors.secondary};
+  height: 91px;
+  text-align: center;
+  
+  @media screen and (min-width: 455px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+  }
+`;
+
+const LinkGroup = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 91px;
-  max-width: 1440px;
-  background: ${colors.secondary};
-  padding: 0px 25px;
+
+    padding: 5px;
+
+  @media screen and (min-width: 455px) {
+    width: 80%;
+  }
 `;
 
 const LINK = styled(Link)`
@@ -27,7 +41,7 @@ const LINK = styled(Link)`
   font-weight: 500;
   color:  ${colors.tertiary};
   padding: 5px;
-  font-size: clamp(1.125rem, 1.667vw, 1.5rem);
+  font-size: clamp(1rem, 1.667vw, 1.5rem);
 
   &:hover {
       color: ${colors.primary};
@@ -44,15 +58,17 @@ export default function Header() {
     
   return (
     <header>
-        <nav>
-            <UList>
-                <li><LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK></li>
-                <li><LINK to="/">Accueil</LINK></li>
-                <li><LINK to="/">Profil</LINK></li>
-                <li><LINK to="/">Réglage</LINK></li>
-                <li><LINK to="/">Communauté</LINK></li>
-            </UList>
-        </nav>
+        
+            <NavGroup>
+                <LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK>
+                <LinkGroup>
+                  <LINK to="/">Accueil</LINK>
+                  <LINK to="/">Profil</LINK>
+                  <LINK to="/">Réglage</LINK>
+                  <LINK to="/">Communauté</LINK>
+                </LinkGroup>
+            </NavGroup>
+        
     </header>
     )
 }
