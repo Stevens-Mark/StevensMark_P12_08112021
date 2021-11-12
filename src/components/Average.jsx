@@ -19,38 +19,40 @@ import {
 /**
  * CSS for the component using styled.components
  */
- const LoaderWrapper = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- background: ${colors.backgroundLight};
- height: 225px;
- width: 32%;
- max-width: 258px;
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
- @media screen and (min-width: 1025px) {
-   height: 263px;
-   }  
+const LoaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${colors.backgroundLight};
+  height: 225px;
+  width: 32%;
+  max-width: 258px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px #00000005;
+
+  @media screen and (min-width: 1025px) {
+    height: 263px;
+    }  
 `;
 
- const ErrorMsg = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- color: ${colors.secondary};
- background: ${colors.backgroundLight};
- height: 225px;
- width: 32%;
- max-width: 258px;
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
- @media screen and (min-width: 1025px) {
-   height: 263px;
-   }  
-   p {
-     padding: 40px;
-   }
+const ErrorMsg = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.secondary};
+  background: ${colors.backgroundLight};
+  height: 225px;
+  width: 32%;
+  max-width: 258px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px #00000005;
+
+  @media screen and (min-width: 1025px) {
+    height: 263px;  
+    p {
+      padding: 40px;
+    }
+  }
 `;
 
 const AverageWrapper = styled.div`
@@ -59,19 +61,20 @@ const AverageWrapper = styled.div`
   max-width: 258px;
   border-radius: 5px;
   background: ${colors.primary};
+  
   @media screen and (min-width: 1025px) {
     height: 263px;
     }    
 `;
 
 const AverageHeading = styled.h2`
-    color: ${colors.tertiary};
-    opacity: 0.5;
-    font-size: clamp(0.625rem, 1vw, 0.938rem);
-    font-weight: 500;
-    width: 150px;
-    margin: 25px;
-    position: absolute;
+  color: ${colors.tertiary};
+  opacity: 0.5;
+  font-size: clamp(0.625rem, 1vw, 0.938rem);
+  font-weight: 500;
+  width: 150px;
+  margin: 25px;
+  position: absolute;
 `;
 
 const ToolTipLabel = styled.div`

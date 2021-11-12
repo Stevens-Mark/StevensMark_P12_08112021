@@ -9,13 +9,17 @@ import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
 import Average from '../components/Average'
 
-
 /**
  * CSS for component using styled.components
  */
+ const DashBoardWrapper = styled.main`
+ padding: clamp(0.625rem, 2vw, 3.125rem);
+`;
+// margin-left: clamp(3.5rem, 8vw, 7.5rem);
 
 const Welcome = styled.div`
   color: ${colors.secondary};
+  margin-bottom: 40px;
   
   h1 {
     font-size: clamp(0.875rem, 3vw, 3rem);
@@ -34,11 +38,6 @@ const Welcome = styled.div`
   }
 `;
 
-const DashBoardContainer = styled.div`
-  margin-left: clamp(3.5rem, 8vw, 7.5rem);
-  padding: clamp(0.625rem, 3vw, 3.125rem);
-`;
-
 const UserStats = styled.div`
 display: flex;
 `;
@@ -54,11 +53,11 @@ width: 25%;
 const Analysis = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 30px;
   gap: 15px;
-  @media screen and (min-width: 1025px) {
+
+  @media screen and (min-width: 1024px) {
     gap: 30px;
-    margin-top: 30px;
     }  
 `;
 
@@ -69,6 +68,7 @@ const CONTAINER = styled.div`
   border-radius: 5px;
   background: blue;
   box-shadow: 0px 2px 4px 0px #00000005;
+
   @media screen and (min-width: 1025px) {
     height: 263px;
     } 
@@ -79,7 +79,6 @@ const CONTAINER = styled.div`
  * @function User
  * @returns {JSX}
  */
-
 export default function User() {
  
   const { id } = useParams()
@@ -103,8 +102,7 @@ export default function User() {
     const details = data.data
 
     return (
-      <DashBoardContainer>
-        <div>
+      <DashBoardWrapper>
           <Welcome>
            <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
               <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
@@ -121,9 +119,8 @@ export default function User() {
             <KeyDataWrapper>
               <KeyData healthData={details.keyData} />
             </KeyDataWrapper>
-          </UserStats> 
-        </div> 
-      </DashBoardContainer>
+          </UserStats>  
+      </DashBoardWrapper>
     )
   }
 }

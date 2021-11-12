@@ -34,8 +34,8 @@ export function useFetch(url) {
   return { isLoading, data, error }
 }
 
-  // Prototypes
-  
-  useFetch.propTypes = {
-    url: PropTypes.string.isRequired,
-  }
+// Prototypes
+
+useFetch.propTypes = {
+  url: PropTypes.string.isRequired,
+}

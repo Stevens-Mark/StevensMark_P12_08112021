@@ -11,6 +11,7 @@ import logo from '../assets/logo/sportsSee_logo.svg'
 const Image = styled.img`
   width: clamp(5rem, 12vw, 10rem);
   margin-top: 10px;
+
 `;
 
 const UList = styled.ul`
@@ -21,20 +22,19 @@ const UList = styled.ul`
   max-width: 1440px;
   margin: auto;
   background: #000;
-  list-style-type: none; 
   padding: 0px 25px;
 `;
 
 const LINK = styled(Link)`
   text-decoration: none;
-  cursor: pointer;  
+  
   font-weight: 500;
   color:  ${colors.tertiary};
   padding: 5px;
   font-size: clamp(1.125rem, 1.667vw, 1.5rem);
 
   &:hover {
-      text-decoration: underline;
+      color: ${colors.primary};
     }
 `;
 

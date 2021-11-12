@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import colors from '../utils/style/colors'
 // logo imports
 import Yoga from '../assets/icons/zen.svg'
 import Swim from '../assets/icons/swim.svg'
@@ -9,43 +10,55 @@ import Gym from '../assets/icons/dumbell.svg'
 /**
  * CSS for the component using styled.components
  */
-const SportsGroup = styled.div `
-    width: clamp(3.5rem, 8vw, 7.5rem);
-    height: 100vh;
-    list-style-type: none; 
-    background: black;
-    position: absolute;
+const SportsGroup = styled.aside `
+  background: ${colors.secondary};
+  margin-top: 20px;
 
+  p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0px;
 
-    p {
-        font-size: 12px;
-        transform: rotate(-90deg);
-        width: 140px;
-        font-weight: 500;
-        position: absolute;
-        bottom: 75px;
-      }
+    @media screen and (min-width: 1024px) {
+      transform: rotate(-90deg);
+      width: 140px;
+      position: relative;
+      top: 30px;
+      }  
+    }
 
-    img {
-        width: clamp(2.5rem, 4.5vw, 4rem);
-        margin: 10px 0px;
-      }
+  img {
+      width: clamp(2.5rem, 4.5vw, 4rem);
+      margin: 10px 0px;
+    }
+
+  @media screen and (min-width: 1024px) {
+    margin-top: unset; 
+    } 
 `;
 
 const SportsNav = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  height: 100%;
+  justify-content: space-around;
 `;
 
 const SportLink = styled.div `
-    text-decoration: none;
-    cursor: pointer; 
-    display: flex;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  width: 100%;
+
+  @media screen and (min-width: 1024px) {
     flex-direction: column;
     justify-content: center;
-    height: 80vh;
+    align-items: center;
+  
+    }  
 `;
 
 /**

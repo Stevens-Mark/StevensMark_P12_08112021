@@ -15,6 +15,8 @@ const HealthWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 10%;
+  height: 100%;
+  justify-content: space-between;
 `;
 
 const HealthCard = styled.div`
@@ -26,10 +28,10 @@ const HealthCard = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
-  margin-bottom: 15px;
+
   @media screen and (min-width: 1025px) {
     height: 124px;
-    margin-bottom: 28px;
+  
     }  
 `;
 
