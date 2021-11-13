@@ -17,23 +17,22 @@ const NavGroup = styled.nav`
   height: 91px;
   text-align: center;
   
-  @media screen and (min-width: 455px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 25px;
-  }
+    @media screen and (min-width: 455px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 25px;
+    }
 `;
 
 const LinkGroup = styled.div`
   display: flex;
   justify-content: space-between;
+   padding: 5px;
 
-    padding: 5px;
-
-  @media screen and (min-width: 455px) {
-    width: 80%;
-  }
+    @media screen and (min-width: 455px) {
+      width: 80%;
+    }
 `;
 
 const LINK = styled(Link)`
@@ -42,10 +41,9 @@ const LINK = styled(Link)`
   color:  ${colors.tertiary};
   padding: 5px;
   font-size: clamp(1rem, 1.667vw, 1.5rem);
-
-  &:hover {
-      color: ${colors.primary};
-    }
+    &:hover {
+        color: ${colors.primary};
+      }
 `;
 
 /**
@@ -53,22 +51,19 @@ const LINK = styled(Link)`
  * @function Header
  * @returns (JSX)
  */
-
 export default function Header() {
     
   return (
     <header>
-        
-            <NavGroup>
-                <LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK>
-                <LinkGroup>
-                  <LINK to="/">Accueil</LINK>
-                  <LINK to="/">Profil</LINK>
-                  <LINK to="/">Réglage</LINK>
-                  <LINK to="/">Communauté</LINK>
-                </LinkGroup>
-            </NavGroup>
-        
+      <NavGroup>
+          <LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK>
+          <LinkGroup>
+            <LINK to="/">Accueil</LINK>
+            <LINK to="/">Profil</LINK>
+            <LINK to="/">Réglage</LINK>
+            <LINK to="/">Communauté</LINK>
+          </LinkGroup>
+      </NavGroup>
     </header>
     )
 }

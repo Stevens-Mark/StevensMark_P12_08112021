@@ -16,19 +16,18 @@ const HealthWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 455px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    flex-direction: column;
-    margin-left: 10%;
-    justify-content: space-between;
-    height: 100%;
-   }
+    @media screen and (min-width: 455px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    @media screen and (min-width: 1024px) {
+      flex-direction: column;
+      margin-left: 10%;
+      justify-content: space-between;
+      height: 100%;
+    }
 `;
 // changed here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const HealthCard = styled.article`
@@ -45,20 +44,18 @@ const HealthCard = styled.article`
     margin-left: 5px;
   }
 
-  @media screen and (min-width: 455px) {
-    flex: 1 1 200px;
-    max-width: 275px;
-    margin: unset;
-  }
-
-  @media screen and (min-width: 1024px) {
-    height: 124px;
-    margin: unset;
-    flex: unset;
-    }  
+    @media screen and (min-width: 455px) {
+      flex: 1 1 250px;
+      min-width: 325px;
+      margin: unset;
+    }
+    @media screen and (min-width: 1024px) {
+      height: 124px;
+      min-width: unset;
+      margin: unset;
+      flex: unset;
+      }  
 `;
-
-//   padding-left: clamp(0.75rem, 2vw, 2rem);
 
 const HealthValue = styled.div`
   font-size: 20px;
@@ -76,12 +73,11 @@ const HealthValue = styled.div`
 `;
 
 /**
- * Renders the data showing health (calories, carbs, fats & proteins)
+ * Renders the data showing health (calories, carbs, fats & protiens)
  * @function KeyData
  * @param {object} healthData: holds users health data
  * @returns {JSX}
  */
-
 export default function KeyData({ healthData }) {
   const categories = ['Calories', 'Protéines', 'Glucides', 'Lipides'];
   const icons = [calories, protiens, fats, carbs];

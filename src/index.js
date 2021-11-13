@@ -11,7 +11,6 @@ import reportWebVitals from './reportWebVitals';
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
-    min-height: 100vh; 
   }
 
   body {
@@ -19,17 +18,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', 'Montserrat', 'Segoe UI', 'Oxygen', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: ${colors.tertiary};
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
 
   }
-
-  /* main {
-    min-height: calc(100vh - 24rem); 
-   /* height: 100%;  
- } 
-  */
 
   ul {
     margin: 0;
@@ -68,3 +61,9 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+  /* main {
+    min-height: calc(100vh - 24rem); 
+   /* height: 100%;  
+ }  min-height: 100vh; 
+  */

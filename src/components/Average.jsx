@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 import PropTypes from 'prop-types'
-import { useFetch } from '../utils/hooks'
+import { useFetch } from '../utils/hooks/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
@@ -30,9 +30,13 @@ const LoaderWrapper = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    }  
+    @media screen and (min-width: 1025px) {
+      height: 263px;
+      }  
+    @media screen and (min-width: 1440px) {
+      height: 325px;
+      max-width: 325px;
+      } 
 `;
 
 const ErrorMsg = styled.div`
@@ -47,24 +51,36 @@ const ErrorMsg = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 
-  @media screen and (min-width: 1025px) {
-    height: 263px;  
-    p {
-      padding: 40px;
+    @media screen and (min-width: 1025px) {
+      height: 263px;  
+      p {
+        padding: 40px;
+      }
     }
-  }
+    @media screen and (min-width: 1440px) {
+      height: 325px;
+      max-width: 325px;
+      } 
 `;
 
 const AverageWrapper = styled.article`
   height: 225px;
-  width: 32%;
-  max-width: 258px;
+  width: 100%;
   border-radius: 5px;
   background: ${colors.primary};
-  
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    }    
+  box-shadow: 0px 2px 4px 0px #00000005;
+
+    @media screen and (min-width: 600px) {
+      width: 32%;
+      max-width: 258px;
+      } 
+    @media screen and (min-width: 1025px) {
+      height: 263px;
+      }    
+    @media screen and (min-width: 1440px) {
+      height: 325px;
+      max-width: 325px;
+      } 
 `;
 
 const AverageHeading = styled.h2`
@@ -89,7 +105,7 @@ const ToolTipLabel = styled.div`
 `;
 
 /**
- * Format day on X axis from number to letter
+ * Format day on Xaxis from number to letter
  * @function TranformDay
  * @param {number} tickItem
  * @returns {string} formattedDay
@@ -133,7 +149,6 @@ export default function Average() {
   const { id } = useParams()
     
     const mockAverageData = `../${id}/average-sessions.json`
-
     // const sessions = `http://localhost:3000/user/${id}/average-sessions`
   
     // Fetch the data using HOOK useFetch

@@ -14,52 +14,66 @@ const SportsGroup = styled.nav`
   background: ${colors.secondary};
   margin-top: 20px;
 
-  @media screen and (min-width: 1024px) {
-    margin-top: unset; 
-    }
+    @media screen and (min-width: 1024px) {
+      margin-top: unset; 
+      }
 
   p {
     font-size: 12px;
     font-weight: 500;
-    margin-top: 0px;
 
-    @media screen and (min-width: 1024px) {
-      transform: rotate(-90deg);
-      width: 140px;
-      position: relative;
-      top: 30px;
-      }  
+      @media screen and (min-width: 1024px) {
+        transform: rotate(-90deg);
+        width: 140px;
+        }
     }
-
+    
   img {
       width: clamp(2.5rem, 4.5vw, 4rem);
       margin-top: 15px; 
 
-      @media screen and (min-width: 1024px) {
-        margin: 10px 0px;
-        }
+        @media screen and (min-width: 1024px) {
+          margin: 10px 0px;
+          }
     }
 `;
+
+// p {
+//   font-size: 12px;
+//   font-weight: 500;
+
+//   @media screen and (min-width: 1024px) {
+//     transform: rotate(-90deg);
+//     width: 140px;
+//     // position: relative;
+//     // top: 30px;
+//     }  
+//   }
 
 const SportsNav = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   justify-content: space-around;
+
+    @media screen and (min-width: 1024px) {
+      height: 100vh;
+      } 
 `;
 
-const SportLink = styled.ul `
+const SportLink = styled.div `
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  margin-top: 10px;
 
-  @media screen and (min-width: 1024px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }  
+    @media screen and (min-width: 1024px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 115px;
+      }  
 `;
 
 /**
@@ -67,19 +81,19 @@ const SportLink = styled.ul `
  * @function SideNav
  * @returns {JSX}
  */
-  export default function SideNav() {
-    
-    return (
-      <SportsGroup>
-          <SportsNav>
-              <SportLink>
-                <li><Link to='/user'><img className='coverImage' src={Yoga} alt='Yoga'/></Link> </li>
-                <li><Link to='/user'><img className='coverImage' src={Swim} alt='Swim'/></Link> </li>
-                <li><Link to='/user'><img className='coverImage' src={Bike} alt='Bike'/></Link> </li>
-                <li><Link to='/user'><img className='coverImage' src={Gym} alt='Gym'/></Link> </li>
-              </SportLink>
-              <p>Copyright, SportSee 2020</p>
-          </SportsNav>
-      </SportsGroup>
-      )
-  }
+export default function SideNav() {
+  
+  return (
+    <SportsGroup>
+        <SportsNav>
+            <SportLink>
+              <Link to='/user'><img className='coverImage' src={Yoga} alt='Yoga'/></Link>
+              <Link to='/user'><img className='coverImage' src={Swim} alt='Swim'/></Link>
+              <Link to='/user'><img className='coverImage' src={Bike} alt='Bike'/></Link>
+              <Link to='/user'><img className='coverImage' src={Gym} alt='Gym'/></Link>
+            </SportLink>
+            <p>Copyright, SportSee 2020</p>
+        </SportsNav>
+    </SportsGroup>
+    )
+}

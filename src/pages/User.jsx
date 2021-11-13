@@ -2,7 +2,7 @@
 import { useParams } from 'react-router'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
-import { useFetch } from '../utils/hooks'
+import { useFetch } from '../utils/hooks/FetchData'
 import LoadingIcon from '../utils/Loaders/LoadingIcon'
 import Error from './Error'
 import Activity from '../components/Activity'
@@ -19,7 +19,6 @@ const DashBoardWrapper = styled.main`
     padding: 77px;
     } 
 `;
-// margin-left: clamp(3.5rem, 8vw, 7.5rem);
 
 const Welcome = styled.div`
   color: ${colors.secondary};
@@ -62,7 +61,7 @@ const Stats = styled.div`
 `;
 
 const KeyDataWrapper = styled.aside`
-margin-bottom: 20px;
+  margin-bottom: 20px;
 
   @media screen and (min-width: 1024px) {
     width: 25%;
@@ -72,25 +71,39 @@ margin-bottom: 20px;
 
 const Analysis = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   margin-top: 30px;
   gap: 15px;
 
-  @media screen and (min-width: 1024px) {
-    gap: 30px;
-    }  
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }  
+  @media screen and (min-width: 1440px) {
+    margin-top: 70px;
+  }  
 `;
 
+
+// THIS IS TEMPORARY FOR DUMMY CHARTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const CONTAINER = styled.article`
   height: 225px;
-  width: 32%;
-  max-width: 258px;
+  width: 100%;
   border-radius: 5px;
   background: blue;
   box-shadow: 0px 2px 4px 0px #00000005;
 
+  @media screen and (min-width: 600px) {
+    width: 32%;
+    max-width: 258px;
+    }  
   @media screen and (min-width: 1025px) {
     height: 263px;
+    } 
+  @media screen and (min-width: 1440px) {
+    height: 325px;
+    max-width: 325px;
     } 
 `;
 
@@ -112,7 +125,6 @@ export default function User() {
   if (error) {
     return <Error />
   }
-
   if (isLoading) {
       return (
         <LoadingIcon />
@@ -130,8 +142,7 @@ export default function User() {
          <UserStats> 
             <Stats>
               <Activity />         
-                <Analysis>
-                
+                <Analysis>          
                   <Average />
                   <CONTAINER />
                   <CONTAINER />

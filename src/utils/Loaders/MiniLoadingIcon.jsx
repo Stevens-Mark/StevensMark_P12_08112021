@@ -33,6 +33,6 @@ const Loader = styled.div`
  */
 export default function MiniLoadingIcon() {
     return (
-          <Loader />
+      <Loader />
     )
 }

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
-import { useFetch } from '../utils/hooks';
+import { useFetch } from '../utils/hooks/FetchData';
 import styled from 'styled-components';
 import colors from '../utils/style/colors';
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon';
@@ -19,29 +19,29 @@ import {
 /**
  * CSS for component using styled.components
  */
- const LoaderWrapper = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- color: ${colors.secondary};
- background: ${colors.backgroundLight};
- height: 290px;
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
+const LoaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.secondary};
+  background: ${colors.backgroundLight};
+  height: 290px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
- const ErrorMsg = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- color: ${colors.secondary};
- background: ${colors.backgroundLight};
- height: 290px;
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
+const ErrorMsg = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.secondary};
+  background: ${colors.backgroundLight};
+  height: 290px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
-// HER I CHHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+// HERE I CHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
   height: 290px;
@@ -52,22 +52,31 @@ const ActivityChartWrapper = styled.article`
 const ActivityHeading = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: ${colors.SecondaryText};
-  font-size: 14px;
+  font-size: clamp(0.625rem, 0.972vw, 1rem);
   font-weight: 500;
 
   h2 {
     color: ${colors.secondary};
-    font-size: 15px;
+    font-size: clamp(0.75rem, 1.042vw, 1.125rem);
     font-weight: 500;
-    margin-right: 20px;
+    margin-left: 5px;
+
+      @media screen and (min-width: 375px) {
+        margin-left: 35px;
+      }  
   }
 `;
 
 const ActivityLegend = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 5px;
+
+    @media screen and (min-width: 375px) {
+      margin-right: 35px;
+    }  
 `;
 
 const BulletOne = styled.span`
@@ -97,7 +106,7 @@ const ToolTipLabel = styled.div`
 `;
 
 /**
- * Format date on X axis from yyyy-mm-dd to dd/mm
+ * Format date on Xaxis from yyyy-mm-dd to dd/mm
  * @function TranformDate
  * @param {string} tickItem
  * @returns {string} formattedDate
@@ -142,7 +151,6 @@ export default function Activity() {
   const { id } = useParams()
 
   const mockActivityData = `../${id}/activity.json`;
-
   // const activity =`http://localhost:3000/user/${id}/activity`
 
   // Fetch the data using HOOK useFetch
