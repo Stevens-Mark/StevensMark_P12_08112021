@@ -25,6 +25,8 @@ const StyledMenu = styled.nav`
   height: 65px;
   opacity: ${({ open }) => open ? '1' : '0'};
   transition: opacity 0.6s ease-in-out;
+  position: relative;
+  z-index: 10;
 `;
 
 const LINK = styled(Link)`

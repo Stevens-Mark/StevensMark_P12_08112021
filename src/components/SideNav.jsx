@@ -38,18 +38,6 @@ const SportsGroup = styled.nav`
     }
 `;
 
-// p {
-//   font-size: 12px;
-//   font-weight: 500;
-
-//   @media screen and (min-width: 1024px) {
-//     transform: rotate(-90deg);
-//     width: 140px;
-//     // position: relative;
-//     // top: 30px;
-//     }  
-//   }
-
 const SportsNav = styled.div `
   display: flex;
   flex-direction: column;

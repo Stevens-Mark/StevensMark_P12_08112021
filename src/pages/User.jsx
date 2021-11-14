@@ -15,7 +15,7 @@ import Average from '../components/Average'
 const DashBoardWrapper = styled.main`
   padding: clamp(0.625rem, 2vw, 4.5rem);
 
-  @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1440px) {
     padding: 77px;
     } 
 `;
@@ -24,9 +24,9 @@ const Welcome = styled.div`
   color: ${colors.secondary};
   margin-bottom: 35px;
 
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 77px;
-    } 
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 77px;
+      } 
 
   h1 {
     font-size: clamp(1.5rem, 3vw, 3rem);
@@ -49,9 +49,9 @@ const UserStats = styled.div`
   display: flex;
   flex-direction: column-reverse;
 
-  @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    }
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      }
 `;
 
 const Stats = styled.div`
@@ -63,10 +63,10 @@ const Stats = styled.div`
 const KeyDataWrapper = styled.aside`
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1024px) {
-    width: 25%;
-    margin-bottom: 0px;
-    }
+    @media screen and (min-width: 1024px) {
+      width: 25%;
+      margin-bottom: 0px;
+      }
 `;
 
 const Analysis = styled.div`
@@ -76,15 +76,14 @@ const Analysis = styled.div`
   margin-top: 30px;
   gap: 15px;
 
-  @media screen and (min-width: 600px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }  
-  @media screen and (min-width: 1440px) {
-    margin-top: 70px;
-  }  
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }  
+    @media screen and (min-width: 1440px) {
+      margin-top: 70px;
+    }  
 `;
-
 
 // THIS IS TEMPORARY FOR DUMMY CHARTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const CONTAINER = styled.article`
@@ -94,17 +93,17 @@ const CONTAINER = styled.article`
   background: blue;
   box-shadow: 0px 2px 4px 0px #00000005;
 
-  @media screen and (min-width: 600px) {
-    width: 32%;
-    max-width: 258px;
-    }  
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    } 
-  @media screen and (min-width: 1440px) {
-    height: 325px;
-    max-width: 325px;
-    } 
+    @media screen and (min-width: 600px) {
+      width: 32%;
+      max-width: 258px;
+      }  
+    @media screen and (min-width: 1025px) {
+      height: 263px;
+      } 
+    @media screen and (min-width: 1440px) {
+      height: 325px;
+      max-width: 325px;
+      } 
 `;
 
 /**
