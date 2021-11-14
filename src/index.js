@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     // max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
-
+    height: 100vh;
   }
 
   ul {
