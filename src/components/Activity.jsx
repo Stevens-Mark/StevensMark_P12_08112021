@@ -137,8 +137,8 @@ const CustomTooltip = ({ active, payload }) => {
       </ToolTipLabel>
     )
   }
-  return null;
-};
+  return null
+}
 
 /**
  * Fetch() the user's data for their Activities

@@ -1,22 +1,30 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../utils/style/colors';
+import { useState } from 'react';
+
+/**
+ * CSS for the component using styled.components
+ */
+const HamburgerWrapper = styled.div`
+  display: none;
+  z-index: 6;
+
+    @media (max-width: 500px){
+      display:fixed;
+    }
+`;
 
 const StyledMenu = styled.nav`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 27px;
+  justify-items: center;
+  background: ${colors.secondary};
+  width: 100%;
+  height: 65px;
   opacity: ${({ open }) => open ? '1' : '0'};
-  // transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-375%)'};
-  height: 4vh;
-  text-align: center;
-  top: 0;
-  left: 0;
   transition: opacity 0.6s ease-in-out;
-
-    @media (max-width: 500px) {
-        width: 100%;
-      }
 `;
 
 const LINK = styled(Link)`
@@ -31,26 +39,15 @@ const LINK = styled(Link)`
       }
 `;
 
-export function Menu({ open }) {
-  return (
-    <StyledMenu open={open}>
-            <LINK to="/">Accueil</LINK>
-            <LINK to="/">Profil</LINK>
-            <LINK to="/">Réglage</LINK>
-            <LINK to="/">Communauté</LINK>
-    </StyledMenu>
-  )
-}
-
 const StyledBurger = styled.button`
   position: absolute;
-  top: 20px;
+  top: 36px;
   right: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -62,9 +59,9 @@ const StyledBurger = styled.button`
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
-    background: white;
+    width: 1.5rem;
+    height: 0.2rem;
+    background: ${colors.primary};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -83,13 +80,32 @@ const StyledBurger = styled.button`
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
-`
-export function Burger({ open, setOpen })  {
+`;
+
+/**
+ *  Component renders a 'Hamburger' icon for the navigation menu 
+ *  when the screen width is less than 500px
+ *  'StyledBurger' animates from a Hamburger icon (closed menu) to an 'X' icon (menu open)
+ * 
+ * @function BurgerNav
+ * @returns {JSX}
+ */
+export function BurgerNav() {
+  const [open, setOpen] = useState(false);
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+    <HamburgerWrapper>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+            <div />
+            <div />
+            <div />
+        </StyledBurger>
+
+        <StyledMenu open={open}>
+            <LINK to="/">Accueil</LINK>
+            <LINK to="/">Profil</LINK>
+            <LINK to="/">Réglage</LINK>
+            <LINK to="/">Communauté</LINK>
+        </StyledMenu>
+    </HamburgerWrapper>
   )
 }

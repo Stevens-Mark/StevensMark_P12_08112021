@@ -135,7 +135,7 @@ const ToolTipLabel = styled.div`
         </ToolTipLabel>
       )
     }
-    return null;
+    return null
   }
   
 /**

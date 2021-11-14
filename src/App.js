@@ -25,7 +25,6 @@ const Wrapper = styled.div`
  * @function App
  * @returns JSX
  */
-
 export default function App() {
   return (
     

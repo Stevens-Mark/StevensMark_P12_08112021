@@ -1,30 +1,29 @@
 
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
 import styled from 'styled-components'
 import colors from '../utils/style/colors';
 // logo imports
 import logo from '../assets/logo/sportsSee_logo.svg'
-import { Menu } from './Hamburger';
-import { Burger } from './Hamburger';
+// import Hamburger Navigation component
+import { BurgerNav } from './Hamburger';
 
 /**
  * CSS for the component using styled.components
  */
 const Image = styled.img`
   width: clamp(7rem, 12vw, 10rem);
-  margin-top: 16px;
+  margin-top: 28px;
   margin-left: 16px;
-  @media screen and (min-width: 500px) {
-    margin-top: 8px;
-    margin-left: 0px;
-  }
+
+    @media screen and (min-width: 500px) {
+      margin-top: 8px;
+      margin-left: 0px;
+    }
 `;
 
 const NavGroup = styled.nav`
   background: ${colors.secondary};
   height: 91px;
-  
   
     @media screen and (min-width: 500px) {
       display: flex;
@@ -35,11 +34,11 @@ const NavGroup = styled.nav`
 `;
 
 const LinkGroup = styled.div`
-  
-  justify-content: space-between;
-   padding: 5px;
-   display: none;
+  display: none;
+
     @media screen and (min-width: 500px) {
+      justify-content: space-between;
+      padding: 10px;
       display: flex;
       width: 80%;
     }
@@ -56,22 +55,14 @@ const LINK = styled(Link)`
       }
 `;
 
-const HamburgerWrapper = styled.div`
-  display: none;
-  z-index: 6;
-
-    @media (max-width: 500px){
-      display:fixed;
-    }
-`;
-
 /**
- * Component to render the Header
+ * Component to render the Header Navigation
+ * Changes to a Hamburger Nav icon if screen widrth less than 500px (see BurgerNav component)
  * @function Header
  * @returns (JSX)
  */
 export default function Header() {
-  const [open, setOpen] = useState(false);
+
   return (
     <header>
       <NavGroup>
@@ -82,10 +73,7 @@ export default function Header() {
             <LINK to="/">Réglage</LINK>
             <LINK to="/">Communauté</LINK>
           </LinkGroup>
-            <HamburgerWrapper>
-                <Burger open={open} setOpen={setOpen} />
-                <Menu open={open} setOpen={setOpen} />
-            </HamburgerWrapper>
+            <BurgerNav />
       </NavGroup>
     </header>
     )
