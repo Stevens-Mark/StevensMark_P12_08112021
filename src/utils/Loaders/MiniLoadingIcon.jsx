@@ -26,8 +26,7 @@ const Loader = styled.div`
 `;
 
 /**
- * Renders a Mini (smaller) loading icon for each
- * individual dashboard item (if needed)
+ * Renders a loading icon 
  * @function MiniLoadingIcon
  * @returns {JSX}
  */

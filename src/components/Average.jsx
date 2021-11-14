@@ -178,8 +178,6 @@ export default function Average() {
 
         <ResponsiveContainer width="100%" height="100%"> 
           <LineChart
-            // width={500}
-            // height={100}
             data={sessions}
             margin={{
               top: 0,

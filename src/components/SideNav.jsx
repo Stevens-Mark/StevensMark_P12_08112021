@@ -70,15 +70,14 @@ const SportLink = styled.div `
  * @returns {JSX}
  */
 export default function SideNav() {
-  
   return (
     <SportsGroup>
         <SportsNav>
             <SportLink>
-              <Link to='/user'><img className='coverImage' src={Yoga} alt='Yoga'/></Link>
-              <Link to='/user'><img className='coverImage' src={Swim} alt='Swim'/></Link>
-              <Link to='/user'><img className='coverImage' src={Bike} alt='Bike'/></Link>
-              <Link to='/user'><img className='coverImage' src={Gym} alt='Gym'/></Link>
+              <Link to='/yoga'><img className='coverImage' src={Yoga} alt='Yoga'/></Link>
+              <Link to='/swimming'><img className='coverImage' src={Swim} alt='Swim'/></Link>
+              <Link to='/cycling'><img className='coverImage' src={Bike} alt='Bike'/></Link>
+              <Link to='/gym'><img className='coverImage' src={Gym} alt='Gym'/></Link>
             </SportLink>
             <p>Copyright, SportSee 2020</p>
         </SportsNav>

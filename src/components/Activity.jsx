@@ -158,7 +158,7 @@ export default function Activity() {
   const { data, isLoading, error } = useFetch(mockActivityData);
 
   if (error) {
-    return <ErrorMsg>Il y a un problème... Aucune donnée trouvée</ErrorMsg>;
+    return <ErrorMsg>Il y a un problème... Aucune donnée trouvée</ErrorMsg>
   }
   if (isLoading) {
     return (

@@ -1,11 +1,11 @@
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../utils/style/colors';
 // logo imports
 import logo from '../assets/logo/sportsSee_logo.svg'
 // import Hamburger Navigation component
-import { BurgerNav } from './Hamburger';
+import { BurgerNav } from './BurgerNav';
 
 /**
  * CSS for the component using styled.components
@@ -44,15 +44,17 @@ const LinkGroup = styled.div`
     }
 `;
 
-const LINK = styled(Link)`
+const LINK = styled(NavLink)`
   text-decoration: none;
   font-weight: 500;
   color:  ${colors.tertiary};
   padding: 5px;
   font-size: clamp(1rem, 1.667vw, 1.5rem);
+    &.${(props) => props.activeClassName} {
+      color: ${colors.primary};
+        }
     &:hover {
-        color: ${colors.primary};
-      }
+      color: ${colors.primary};
 `;
 
 /**
@@ -68,10 +70,10 @@ export default function Header() {
       <NavGroup>
           <LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK>
           <LinkGroup>
-            <LINK to="/">Accueil</LINK>
-            <LINK to="/">Profil</LINK>
-            <LINK to="/">Réglage</LINK>
-            <LINK to="/">Communauté</LINK>
+            <LINK activeClassName="active" exact to="/">Accueil</LINK>
+            <LINK activeClassName="active" to="/profile">Profil</LINK>
+            <LINK activeClassName="active" to="/settings">Réglage</LINK>
+            <LINK activeClassName="active" to="/community">Communauté</LINK>
           </LinkGroup>
             <BurgerNav />
       </NavGroup>

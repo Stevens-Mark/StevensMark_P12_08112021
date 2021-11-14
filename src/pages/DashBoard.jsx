@@ -3,15 +3,22 @@ import { useParams } from 'react-router'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks/FetchData'
-import LoadingIcon from '../utils/Loaders/LoadingIcon'
 import Error from './Error'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
 import Average from '../components/Average'
+import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 
 /**
  * CSS for component using styled.components
  */
+ const LoaderWrapper = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 90vh;
+`;
+
 const DashBoardWrapper = styled.main`
   padding: clamp(0.625rem, 2vw, 4.5rem);
 
@@ -107,11 +114,11 @@ const CONTAINER = styled.article`
 `;
 
 /**
- * 
- * @function User
+ * Displays the Dashboard of a user with all their stats
+ * @function DashBoard
  * @returns {JSX}
  */
-export default function User() {
+export default function DashBoard() {
  
   const { id } = useParams()
   
@@ -126,7 +133,9 @@ export default function User() {
   }
   if (isLoading) {
       return (
-        <LoadingIcon />
+        <LoaderWrapper>
+          <MiniLoadingIcon />
+        </LoaderWrapper>
       )
   }
   else {

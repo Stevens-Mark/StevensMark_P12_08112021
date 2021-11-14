@@ -4,8 +4,10 @@ import styled from 'styled-components'
 // component imports
 import Header from './components/Header'
 import SideNav from './components/SideNav'
-import User from './pages/User'
+import WelcomePage from './pages/WelcomePage'
+import DashBoard from './pages/DashBoard'
 import Error from './pages/Error'
+
 
 /**
  * CSS for the component using styled.components
@@ -32,12 +34,11 @@ export default function App() {
       <Header />  
         <Wrapper>
             <SideNav /> 
-            
               <Switch>
-                <Route exact path="/user/:id" component={User}/>
+                <Route exact path="/" component={WelcomePage}/>
+                <Route  path="/user/:id" component={DashBoard}/>
                 <Route component={Error} />
               </Switch> 
-         
         </Wrapper>
     </Router>  
   )
