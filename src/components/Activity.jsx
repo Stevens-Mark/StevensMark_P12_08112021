@@ -142,7 +142,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 /**
  * Fetch() the user's data for their Activities
- * Display it in a BarChart with Weight & Calories burned
+ * Displays it in a BarChart with Weight & Calories burned
  * @function Activity
  * @returns {JSX} Activity Bar chart
  */

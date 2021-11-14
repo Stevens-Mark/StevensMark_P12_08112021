@@ -10,10 +10,6 @@ const HeadingWrapper = styled.div`
   color: ${colors.secondary};
   margin-bottom: 35px;
 
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 77px;
-    } 
-
 h1 {
   font-size: clamp(1.5rem, 3vw, 3rem);
   font-style: normal;
@@ -40,12 +36,10 @@ span {
  */
 export default function Title({intro, highlightedText, text}) {
   return (
-
     <HeadingWrapper>
       <h1>{intro} <span>{highlightedText}</span></h1>   
       <p>{text}</p>
     </HeadingWrapper>
-
   )
 }
 

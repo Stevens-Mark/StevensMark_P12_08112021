@@ -59,7 +59,7 @@ const LINK = styled(NavLink)`
 
 /**
  * Component to render the Header Navigation
- * Changes to a Hamburger Nav icon if screen widrth less than 500px (see BurgerNav component)
+ * Changes to a Hamburger Nav icon if screen width less than 500px (see BurgerNav component)
  * @function Header
  * @returns (JSX)
  */

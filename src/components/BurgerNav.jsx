@@ -103,7 +103,7 @@ export function BurgerNav() {
 
         <StyledMenu open={open}>
             <LINK to="/">Accueil</LINK>
-            <LINK to="/profil">Profil</LINK>
+            <LINK to="/profile">Profil</LINK>
             <LINK to="/settings">Réglage</LINK>
             <LINK to="/community">Communauté</LINK>
         </StyledMenu>

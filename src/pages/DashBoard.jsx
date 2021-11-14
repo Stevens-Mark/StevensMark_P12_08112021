@@ -89,7 +89,7 @@ const CONTAINER = styled.article`
 `;
 
 /**
- * Displays the Dashboard of a user with all their stats
+ * Renders the Dashboard of a user with all their stats
  * @function DashBoard
  * @returns {JSX}
  */
