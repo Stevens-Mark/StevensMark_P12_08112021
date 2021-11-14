@@ -1,9 +1,9 @@
 
 import { useParams } from 'react-router'
 import styled from 'styled-components'
-import colors from '../utils/style/colors'
 import { useFetch } from '../utils/hooks/FetchData'
 import Error from './Error'
+import Title from '../components/Title'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
 import Average from '../components/Average'
@@ -25,31 +25,6 @@ const DashBoardWrapper = styled.main`
     @media screen and (min-width: 1440px) {
     padding: 77px;
     } 
-`;
-
-const Welcome = styled.div`
-  color: ${colors.secondary};
-  margin-bottom: 35px;
-
-    @media screen and (min-width: 1440px) {
-      margin-bottom: 77px;
-      } 
-
-  h1 {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    font-style: normal;
-    font-weight: 500;
-    margin: unset;
-  }
-
-  p {
-    font-size: clamp(0.75rem, 1.250vw, 1.125rem);
-    font-weight: 400;
-  }
-
-  span {
-    color: ${colors.primary};
-  }
 `;
 
 const UserStats = styled.div`
@@ -143,10 +118,10 @@ export default function DashBoard() {
 
     return (
       <DashBoardWrapper>
-          <Welcome>
-           <h1>Bonjour <span>{details.userInfos.firstName}</span></h1>   
-              <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-          </Welcome>
+        <Title intro={'Bonjour'} 
+              highlightedText={details.userInfos.firstName} 
+              text={'Félicitation ! Vous avez explosé vos objectifs hier 👏'} />
+   
          <UserStats> 
             <Stats>
               <Activity />         

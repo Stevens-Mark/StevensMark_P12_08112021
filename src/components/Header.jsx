@@ -1,11 +1,11 @@
 
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../utils/style/colors';
+import colors from '../utils/style/colors'
 // logo imports
 import logo from '../assets/logo/sportsSee_logo.svg'
 // import Hamburger Navigation component
-import { BurgerNav } from './BurgerNav';
+import { BurgerNav } from './BurgerNav'
 
 /**
  * CSS for the component using styled.components

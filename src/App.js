@@ -8,7 +8,6 @@ import WelcomePage from './pages/WelcomePage'
 import DashBoard from './pages/DashBoard'
 import Error from './pages/Error'
 
-
 /**
  * CSS for the component using styled.components
  */

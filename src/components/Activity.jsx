@@ -1,9 +1,9 @@
-import { useParams } from 'react-router';
-import PropTypes from 'prop-types';
-import { useFetch } from '../utils/hooks/FetchData';
-import styled from 'styled-components';
-import colors from '../utils/style/colors';
-import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon';
+import { useParams } from 'react-router'
+import PropTypes from 'prop-types'
+import { useFetch } from '../utils/hooks/FetchData'
+import styled from 'styled-components'
+import colors from '../utils/style/colors'
+import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 
 // import Rechart items
 import {

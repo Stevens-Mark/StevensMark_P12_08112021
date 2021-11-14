@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from '../utils/style/colors';
-import { useState } from 'react';
+import colors from '../utils/style/colors'
+import { useState } from 'react'
 
 /**
  * CSS for the component using styled.components
@@ -88,7 +88,6 @@ const StyledBurger = styled.button`
  *  Component renders a 'Hamburger' icon for the navigation menu 
  *  when the screen width is less than 500px
  *  'StyledBurger' animates from a Hamburger icon (closed menu) to an 'X' icon (menu open)
- * 
  * @function BurgerNav
  * @returns {JSX}
  */
@@ -104,9 +103,9 @@ export function BurgerNav() {
 
         <StyledMenu open={open}>
             <LINK to="/">Accueil</LINK>
-            <LINK to="/">Profil</LINK>
-            <LINK to="/">Réglage</LINK>
-            <LINK to="/">Communauté</LINK>
+            <LINK to="/profil">Profil</LINK>
+            <LINK to="/settings">Réglage</LINK>
+            <LINK to="/community">Communauté</LINK>
         </StyledMenu>
     </HamburgerWrapper>
   )

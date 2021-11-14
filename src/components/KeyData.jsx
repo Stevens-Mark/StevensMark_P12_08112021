@@ -1,11 +1,11 @@
-import colors from '../utils/style/colors';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import colors from '../utils/style/colors'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 // import health icons
-import calories from '../assets/icons/calories.svg';
-import protiens from '../assets/icons/protiens.svg';
-import fats from '../assets/icons/fats.svg';
-import carbs from '../assets/icons/carbs.svg';
+import calories from '../assets/icons/calories.svg'
+import protiens from '../assets/icons/protiens.svg'
+import fats from '../assets/icons/fats.svg'
+import carbs from '../assets/icons/carbs.svg'
 
 /**
  * CSS for the component using styled.components
@@ -102,4 +102,4 @@ export default function KeyData({ healthData }) {
 
 KeyData.propTypes = {
   healthData: PropTypes.object.isRequired,
-};
+}

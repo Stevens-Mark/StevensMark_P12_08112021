@@ -140,7 +140,7 @@ const ToolTipLabel = styled.div`
   
 /**
  * Fetch() the user's data for their Average Sessions
- * Display it on a Line Chart
+ * Displays it on a Line Chart
  * @function Average
  * @returns {JSX} Average Sessions Line Chart
  */
