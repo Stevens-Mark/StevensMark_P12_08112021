@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   justify-content: center;
   color: ${colors.secondary};
   background: ${colors.backgroundLight};
-  // height: 290px;
+  height: 290px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 // HERE I CHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
-  // height: 290px;
+  height: 290px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
@@ -148,7 +148,7 @@ export default function Activity() {
   const { data, isLoading, error } = useFetch(mockActivityData);
 
   if (error) {
-    return <Wrapper>Il y a un problème... Aucune donnée trouvée</Wrapper>
+    return <Wrapper>Aucune donnée n'a été trouvée</Wrapper>
   }
   if (isLoading) {
     return (

@@ -24,12 +24,15 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: ${colors.backgroundLight};
+  color: ${colors.secondary};
   height: 225px;
   width: 32%;
   max-width: 258px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
-
+  p {
+    padding: 10px;
+  }
     @media screen and (min-width: 1025px) {
       height: 263px;
       }  
@@ -134,7 +137,7 @@ export default function Average() {
     if (error) {
       return (
         <Wrapper>
-          <p>Il y a un problème... Aucune donnée trouvée</p>
+          <p>Aucune donnée n'a été trouvée</p>
         </Wrapper>
         )
     }
