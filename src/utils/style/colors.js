@@ -6,7 +6,7 @@ const colors = {
   tertiary: '#fff',
   backgroundLight: '#FBFBFB',
   SecondaryText: '#74798c',
-  HealthDataText: ' #282D30',
+  quaternary: ' #282D30',
   
    //bar chart
   barChartText: '#9B9EAC',

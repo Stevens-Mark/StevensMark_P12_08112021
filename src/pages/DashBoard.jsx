@@ -3,11 +3,13 @@ import { useParams } from 'react-router'
 import styled from 'styled-components'
 import { useFetch } from '../utils/hooks/FetchData'
 import Error from './Error'
+import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 import Title from '../components/Title'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
 import Average from '../components/Average'
-import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+import Performance from '../components/Performance'
+
 
 /**
  * CSS for component using styled.components
@@ -96,7 +98,6 @@ export default function DashBoard() {
   
   const mockData = `../${id}.json`
   // const apiData = `http://localhost:3000/user/${id}/`
-  // const performance = `http://localhost:3000/user/${id}/performance`
 
   const { data, isLoading, error } = useFetch(mockData)
   
@@ -124,7 +125,7 @@ export default function DashBoard() {
               <Activity />         
                 <Analysis>          
                   <Average />
-                  <CONTAINER />
+                  <Performance />
                   <CONTAINER />
                 </Analysis>
             </Stats>

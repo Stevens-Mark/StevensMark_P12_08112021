@@ -11,7 +11,7 @@ import carbs from '../assets/icons/carbs.svg'
  * CSS for the component using styled.components
  */
 const HealthWrapper = styled.div`
-  color: ${colors.HealthDataText};
+  color: ${colors.quaternary};
   display: flex;
   flex-direction: column;
   align-items: center;
