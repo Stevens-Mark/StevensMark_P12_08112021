@@ -20,12 +20,8 @@ import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 `;
 
 const DashBoardWrapper = styled.main`
-  // height: calc(100vh - 135px);
-  padding: clamp(0.625rem, 2vw, 4.5rem);
-
-    // @media screen and (min-width: 1440px) {
-    // padding: 77px;
-    // } 
+  padding: clamp(0.625rem, 1.5vw, 4.5rem);
+  min-height: 100vh;
 `;
 
 const UserStats = styled.div`

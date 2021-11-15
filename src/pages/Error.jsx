@@ -5,7 +5,8 @@ import colors from '../utils/style/colors'
 /**
  * CSS for the component using styled.components
  */
-const ErrorWrapper = styled.div `
+const ErrorWrapper = styled.main`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

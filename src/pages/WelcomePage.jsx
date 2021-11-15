@@ -10,20 +10,11 @@ import logo from '../assets/logo/runningMan.png'
  * CSS for the component using styled.components
  */
  const MainWrapper = styled.main`
-  padding: clamp(0.625rem, 2vw, 4.5rem);
-  height: calc(100vh - 135px);
-  // min-height: 100vh; 
-
-  // @media screen and (min-width: 1440px) {
-  //   padding: 77px;
-  //   }
+  padding: clamp(0.625rem, 1.5vw, 4.5rem);
+  min-height: 100vh; 
 
    img {
     width: clamp(6rem, 17vw, 20rem);
-
-      // @media screen and (min-width: 1024px) {
-      //   margin: 10px 0px;
-      //   }
     }
 `;
 
@@ -38,26 +29,26 @@ const LINKS = styled(Link)`
 `;
 
 const CardWrapper = styled.div`
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 
-      @media screen and (min-width: 600px) {
-        flex-direction: row;
-        justify-content: space-around;
-        }
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-around;
+    }
 `;
 
 const Card = styled.article`
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    h2 {
-      margin: unset;
-    }
+  h2 {
+    margin: unset;
+  }
 `;
 
 /**
