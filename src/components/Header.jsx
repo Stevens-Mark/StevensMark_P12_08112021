@@ -15,7 +15,7 @@ const Image = styled.img`
   margin-top: 28px;
   margin-left: 16px;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
       margin-top: 8px;
       margin-left: 0px;
     }
@@ -25,7 +25,7 @@ const NavGroup = styled.nav`
   background: ${colors.secondary};
   height: 91px;
   
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,7 +36,7 @@ const NavGroup = styled.nav`
 const LinkGroup = styled.div`
   display: none;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
       justify-content: space-between;
       padding: 10px;
       display: flex;
@@ -59,7 +59,7 @@ const LINK = styled(NavLink)`
 
 /**
  * Component to render the Header Navigation
- * Changes to a Hamburger Nav icon if screen width less than 500px (see BurgerNav component)
+ * Changes to a Hamburger Nav icon if screen width less than 600px (see BurgerNav component)
  * @function Header
  * @returns (JSX)
  */

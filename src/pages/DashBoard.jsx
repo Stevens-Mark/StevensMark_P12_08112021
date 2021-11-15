@@ -59,9 +59,9 @@ const Analysis = styled.div`
       flex-direction: row;
       justify-content: space-between;
     }  
-    // @media screen and (min-width: 1440px) {
-    //   margin-top: 70px;
-    // }  
+    @media screen and (min-width: 1440px) {
+      margin-top: 70px;
+    }  
 `;
 
 // THIS IS TEMPORARY FOR DUMMY CHARTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! before 225px eight initial

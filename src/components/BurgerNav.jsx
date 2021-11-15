@@ -10,7 +10,7 @@ const HamburgerWrapper = styled.div`
   display: none;
   z-index: 6;
 
-    @media (max-width: 500px){
+    @media (max-width: 600px){
       display:fixed;
     }
 `;
@@ -86,7 +86,7 @@ const StyledBurger = styled.button`
 
 /**
  *  Component renders a 'Hamburger' icon for the navigation menu 
- *  when the screen width is less than 500px
+ *  when the screen width is less than 600px
  *  'StyledBurger' animates from a Hamburger icon (closed menu) to an 'X' icon (menu open)
  * @function BurgerNav
  * @returns {JSX}
