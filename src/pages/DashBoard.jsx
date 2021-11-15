@@ -13,18 +13,19 @@ import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
  * CSS for component using styled.components
  */
  const LoaderWrapper = styled.div`
- display: flex;
- justify-content: center;
- align-items: center;
- height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 `;
 
 const DashBoardWrapper = styled.main`
+  // height: calc(100vh - 135px);
   padding: clamp(0.625rem, 2vw, 4.5rem);
 
-    @media screen and (min-width: 1440px) {
-    padding: 77px;
-    } 
+    // @media screen and (min-width: 1440px) {
+    // padding: 77px;
+    // } 
 `;
 
 const UserStats = styled.div`
@@ -55,19 +56,19 @@ const Analysis = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   gap: 15px;
 
     @media screen and (min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;
     }  
-    @media screen and (min-width: 1440px) {
-      margin-top: 70px;
-    }  
+    // @media screen and (min-width: 1440px) {
+    //   margin-top: 70px;
+    // }  
 `;
 
-// THIS IS TEMPORARY FOR DUMMY CHARTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// THIS IS TEMPORARY FOR DUMMY CHARTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! before 225px eight initial
 const CONTAINER = styled.article`
   height: 225px;
   width: 100%;
@@ -79,9 +80,9 @@ const CONTAINER = styled.article`
       width: 32%;
       max-width: 258px;
       }  
-    @media screen and (min-width: 1025px) {
-      height: 263px;
-      } 
+    // @media screen and (min-width: 1025px) {
+    //   height: 263px;
+    //   } 
     @media screen and (min-width: 1440px) {
       height: 325px;
       max-width: 325px;

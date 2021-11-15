@@ -19,7 +19,7 @@ import {
 /**
  * CSS for the component using styled.components
  */
-const LoaderWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,30 +39,6 @@ const LoaderWrapper = styled.div`
       } 
 `;
 
-const ErrorMsg = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.secondary};
-  background: ${colors.backgroundLight};
-  height: 225px;
-  width: 32%;
-  max-width: 258px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
-
-    @media screen and (min-width: 1025px) {
-      height: 263px;  
-      p {
-        padding: 40px;
-      }
-    }
-    @media screen and (min-width: 1440px) {
-      height: 325px;
-      max-width: 325px;
-      } 
-`;
-
 const AverageWrapper = styled.article`
   height: 225px;
   width: 100%;
@@ -74,9 +50,9 @@ const AverageWrapper = styled.article`
       width: 32%;
       max-width: 258px;
       } 
-    @media screen and (min-width: 1025px) {
-      height: 263px;
-      }    
+    // @media screen and (min-width: 1025px) {
+    //   height: 263px;
+    //   }    
     @media screen and (min-width: 1440px) {
       height: 325px;
       max-width: 325px;
@@ -157,16 +133,16 @@ export default function Average() {
 
     if (error) {
       return (
-        <ErrorMsg>
+        <Wrapper>
           <p>Il y a un problème... Aucune donnée trouvée</p>
-        </ErrorMsg>
+        </Wrapper>
         )
     }
     if (isLoading) {
       return (
-        <LoaderWrapper>
+        <Wrapper>
           <MiniLoadingIcon />
-        </LoaderWrapper>
+        </Wrapper>
       )
     }
     else {

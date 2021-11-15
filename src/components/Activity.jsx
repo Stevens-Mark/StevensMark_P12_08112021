@@ -19,24 +19,13 @@ import {
 /**
  * CSS for component using styled.components
  */
-const LoaderWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${colors.secondary};
   background: ${colors.backgroundLight};
-  height: 290px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
-`;
-
-const ErrorMsg = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.secondary};
-  background: ${colors.backgroundLight};
-  height: 290px;
+  // height: 290px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
@@ -44,7 +33,7 @@ const ErrorMsg = styled.div`
 // HERE I CHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
-  height: 290px;
+  // height: 290px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
@@ -65,6 +54,7 @@ const ActivityHeading = styled.div`
 
       @media screen and (min-width: 375px) {
         margin-left: 35px;
+        margin-right: 35px;
       }  
   }
 `;
@@ -158,13 +148,13 @@ export default function Activity() {
   const { data, isLoading, error } = useFetch(mockActivityData);
 
   if (error) {
-    return <ErrorMsg>Il y a un problème... Aucune donnée trouvée</ErrorMsg>
+    return <Wrapper>Il y a un problème... Aucune donnée trouvée</Wrapper>
   }
   if (isLoading) {
     return (
-      <LoaderWrapper>
+      <Wrapper>
         <MiniLoadingIcon />
-      </LoaderWrapper>
+      </Wrapper>
     )
   } else {
     const sessions = data.data.sessions;

@@ -11,8 +11,8 @@ import logo from '../assets/logo/runningMan.png'
  */
  const MainWrapper = styled.main`
   padding: clamp(0.625rem, 2vw, 4.5rem);
-  // min-height: calc(100vh -20rem);
-  min-height: 100vh; 
+  height: calc(100vh - 135px);
+  // min-height: 100vh; 
 
   // @media screen and (min-width: 1440px) {
   //   padding: 77px;
@@ -38,7 +38,7 @@ const LINKS = styled(Link)`
 `;
 
 const CardWrapper = styled.div`
-      margin-top: 100px;
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
 
@@ -49,7 +49,7 @@ const CardWrapper = styled.div`
 `;
 
 const Card = styled.article`
-    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;

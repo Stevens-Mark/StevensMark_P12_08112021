@@ -12,56 +12,46 @@ import Gym from '../assets/icons/dumbell.svg'
  */
 const SportsGroup = styled.nav`
   background: ${colors.secondary};
-  margin-top: 20px;
 
     @media screen and (min-width: 1024px) {
       margin-top: unset; 
+      display: grid;
+      grid-template-rows: 6fr 2fr;
+      grid-template-columns: clamp(3.5rem,8vw,7.5rem);
       }
 
-  p {
-    font-size: 12px;
-    font-weight: 500;
-
-      @media screen and (min-width: 1024px) {
-        transform: rotate(-90deg);
-        width: 140px;
-        }
-    }
-    
   img {
       width: clamp(2.5rem, 4.5vw, 4rem);
       margin-top: 15px; 
-
-        @media screen and (min-width: 1024px) {
-          margin: 10px 0px;
-          }
-    }
-`;
-
-const SportsNav = styled.div `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-    @media screen and (min-width: 1024px) {
-      height: 100vh;
-      } 
+  }
 `;
 
 const SportLink = styled.div `
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
   margin-top: 10px;
 
     @media screen and (min-width: 1024px) {
+      height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 115px;
       }  
+`;
+
+const Copyright = styled.p `
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+
+    @media screen and (min-width: 1024px) {
+      align-items: center;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      margin-bottom: 20px;
+      }
 `;
 
 /**
@@ -71,16 +61,14 @@ const SportLink = styled.div `
  */
 export default function SideNav() {
   return (
-    <SportsGroup>
-        <SportsNav>
+    <SportsGroup>  
             <SportLink>
               <Link to='/yoga'><img src={Yoga} alt='Yoga'/></Link>
               <Link to='/swimming'><img src={Swim} alt='Swim'/></Link>
               <Link to='/cycling'><img src={Bike} alt='Bike'/></Link>
               <Link to='/gym'><img src={Gym} alt='Gym'/></Link>
-            </SportLink>
-            <p>Copyright, SportSee 2020</p>
-        </SportsNav>
+            </SportLink>       
+        <Copyright>Copyright, SportSee 2020</Copyright>
     </SportsGroup>
     )
 }

@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
     // max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
-    height: 100vh;
+    // min-height: 100vh;
+    height: 100%;
   }
 
   ul {
