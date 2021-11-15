@@ -128,7 +128,7 @@ export default function Average() {
   const { id } = useParams()
     
     const mockAverageData = `../${id}/average-sessions.json`
-    // const sessions = `http://localhost:3000/user/${id}/average-sessions`
+    // const average = `http://localhost:3000/user/${id}/average-sessions`
   
     // Fetch the data using HOOK useFetch
     // @returns @param {object} data, {boolean} isLoading and {boolean} error
