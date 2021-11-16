@@ -29,7 +29,7 @@ const HealthWrapper = styled.div`
       height: 100%;
     }
 `;
-// changed here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 const HealthCard = styled.article`
   display: flex;
   align-items: center;

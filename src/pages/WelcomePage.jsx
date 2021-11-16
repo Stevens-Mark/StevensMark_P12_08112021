@@ -53,7 +53,6 @@ const Card = styled.article`
 
 /**
  * Renders the 'Welcome Page' to make the demonstration of the project easier
-
  * @function WelcomePage
  * @returns {JSX}
  */

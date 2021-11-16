@@ -41,6 +41,9 @@ const Wrapper = styled.div`
 `;
 
 const ScoreWrapper = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 225px;
   width: 100%;
@@ -61,38 +64,34 @@ const ScoreWrapper = styled.article`
       } 
 `;
 
-const ScoreHeading = styled.div`
- 
-  
+const ScoreTitle = styled.h2`
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  color: ${colors.H2HeadingText};
+  margin: unset;
+  position: absolute;
+  top: 15px;
+  left: 15px; 
 `;
 
-const ScoreTitle = styled.h2`
-  font-size: clamp(0.75rem, 1.042vw, 1.125rem);
-  color: ${colors.H2HeadingText};
-  // margin: unset;
-  margin-top: 25px;
+const ScoreSummary = styled.div`
   position: absolute;
-  left: 10%; 
 `;
 
 const ScorePercentage = styled.p`
   color: ${colors.NumberText};
-  font-size: clamp(1rem,2vw,1.25rem);
+  font-size: clamp(1.125rem,2vw, 2rem);
   font-weight: 700;
-  position: absolute;
-  top: 25%;
-  left: 44%;
-  // margin: unset;
+  text-align: center;
+  margin: 10px 0px 5px 0px;
 `;
 
 const ScoreText = styled.p`
   color: ${colors.SecondaryText};
-  font-size: 16px;
+  font-size: clamp(0.75rem, 1vw, 1.125rem);
   font-weight: 500;
-  line-height: 18px;
-  position: absolute;
-  top: 41%;
-  left: 39%;
+  text-align: center;
+  line-height: 20px;
+  margin: 0px 0px 10px 0px;
 `;
 
 /**
@@ -129,24 +128,25 @@ export default function Score() {
     else {
       const score = data.data.todayScore
 
-      const scoreData = [ { value: 12 }, {value: 1 - score } ]
+      const scoreData = [ { value: score }, {value: 1 - score } ]
       const COLORS = ['#FF0000', 'transparent']
 
     // Display Radar chart using RECHARTS
     return (
       <ScoreWrapper>
-        <ScoreHeading>
+       
           <ScoreTitle>Score</ScoreTitle>
-          <ScorePercentage>{100 * score}%</ScorePercentage>
-          <ScoreText>de votre <br />objectif </ScoreText>
-        </ScoreHeading>
+          <ScoreSummary>
+            <ScorePercentage>{100 * score}%</ScorePercentage>
+            <ScoreText>de votre <br />objectif </ScoreText>
+          </ScoreSummary>
 
         <ResponsiveContainer width="100%" height="100%"> 
           <PieChart width={700} height={350}>
             <Pie
               data={scoreData}
-              innerRadius={55}
-              outerRadius={64}
+              innerRadius={70}
+              outerRadius={85}
               dataKey='value'
               stroke='transparent'
               startAngle={90} 

@@ -65,13 +65,13 @@ const AverageWrapper = styled.article`
 `;
 
 const AverageHeading = styled.h2`
+  position: absolute;
   color: ${colors.tertiary};
   opacity: 0.5;
-  font-size: clamp(0.625rem, 1vw, 0.938rem);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 500;
-  width: 150px;
-  margin: 25px;
-  position: absolute;
+  width: 170px;
+  margin: 15px;
 `;
 
 const ToolTipLabel = styled.div`

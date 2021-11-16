@@ -30,7 +30,6 @@ const Wrapper = styled.div`
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
-// HERE I CHANGED COLOR TEMP§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
   height: 290px;
@@ -47,7 +46,7 @@ const ActivityHeading = styled.div`
 
     h2 {
       color: ${colors.H2HeadingText};
-      font-size: clamp(0.75rem, 1.042vw, 1.125rem);
+      font-size: clamp(1rem, 1.2vw, 1.125rem);
       font-weight: 500;
       margin-left: 5px;
 
