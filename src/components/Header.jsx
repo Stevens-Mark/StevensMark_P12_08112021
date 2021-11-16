@@ -18,7 +18,7 @@ const Image = styled.img`
     @media screen and (min-width: 600px) {
       margin-top: 8px;
       margin-left: 0px;
-    }
+      }
 `;
 
 const NavGroup = styled.nav`
@@ -30,7 +30,7 @@ const NavGroup = styled.nav`
       justify-content: space-between;
       align-items: center;
       padding: 0px 25px;
-    }
+      }
 `;
 
 const LinkGroup = styled.div`
@@ -41,7 +41,7 @@ const LinkGroup = styled.div`
       padding: 10px;
       display: flex;
       width: 80%;
-    }
+      }
 `;
 
 const LINK = styled(NavLink)`

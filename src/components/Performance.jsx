@@ -28,16 +28,18 @@ const Wrapper = styled.div`
   max-width: 258px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
-  p {
-    padding: 10px;
-  }
-    @media screen and (min-width: 1025px) {
-      height: 263px;
-      }  
-    @media screen and (min-width: 1440px) {
-      height: 325px;
-      max-width: 325px;
-      } 
+
+    p {
+      padding: 10px;
+      }
+
+  @media screen and (min-width: 1025px) {
+    height: 263px;
+    }  
+  @media screen and (min-width: 1440px) {
+    height: 325px;
+    max-width: 325px;
+    } 
 `;
 
 const PerformanceWrapper = styled.article`

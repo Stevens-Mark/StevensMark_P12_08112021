@@ -33,10 +33,10 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 600px) {
-    flex-direction: row;
-    justify-content: space-around;
-    }
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-around;
+      }
 `;
 
 const Card = styled.article`
@@ -46,9 +46,9 @@ const Card = styled.article`
   justify-content: center;
   align-items: center;
 
-  h2 {
-    margin: unset;
-  }
+    h2 {
+      margin: unset;
+    }
 `;
 
 /**

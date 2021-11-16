@@ -10,21 +10,21 @@ const HeadingWrapper = styled.div`
   color: ${colors.secondary};
   margin-bottom: 35px;
 
-  h1 {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    font-style: normal;
-    font-weight: 500;
-    margin: unset;
-  }
+    h1 {
+      font-size: clamp(1.5rem, 3vw, 3rem);
+      font-style: normal;
+      font-weight: 500;
+      margin: unset;
+    }
 
-  p {
-    font-size: clamp(0.75rem, 1.250vw, 1.125rem);
-    font-weight: 400;
-  }
+    p {
+      font-size: clamp(0.75rem, 1.250vw, 1.125rem);
+      font-weight: 400;
+    }
 
-  span {
-    color: ${colors.primary};
-  }
+    span {
+      color: ${colors.primary};
+    }
 `;
 
 /**

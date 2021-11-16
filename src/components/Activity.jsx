@@ -42,31 +42,31 @@ const ActivityHeading = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${colors.SecondaryText};
   font-size: clamp(0.625rem, 0.972vw, 1rem);
   font-weight: 500;
 
-  h2 {
-    color: ${colors.secondary};
-    font-size: clamp(0.75rem, 1.042vw, 1.125rem);
-    font-weight: 500;
-    margin-left: 5px;
+    h2 {
+      color: ${colors.H2HeadingText};
+      font-size: clamp(0.75rem, 1.042vw, 1.125rem);
+      font-weight: 500;
+      margin-left: 5px;
 
-      @media screen and (min-width: 375px) {
-        margin-left: 35px;
-        margin-right: 35px;
-      }  
-  }
+        @media screen and (min-width: 375px) {
+          margin-left: 35px;
+          margin-right: 35px;
+          }  
+      }
 `;
 
 const ActivityLegend = styled.div`
   display: flex;
   align-items: center;
   margin-right: 5px;
+  color: ${colors.SecondaryText};
 
     @media screen and (min-width: 375px) {
       margin-right: 35px;
-    }  
+      }  
 `;
 
 const BulletOne = styled.span`
@@ -81,7 +81,7 @@ const BulletOne = styled.span`
 const BulletTwo = styled.span`
   font-size: 40px;
   font-weight: 500;
-  color: ${colors.secondary};
+  color: ${colors.NumberText};
   margin-bottom: 8px;
   margin-left: 15px;
   margin-right: 5px;

@@ -11,7 +11,7 @@ import carbs from '../assets/icons/carbs.svg'
  * CSS for the component using styled.components
  */
 const HealthWrapper = styled.div`
-  color: ${colors.quaternary};
+  color: ${colors.NumberText};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,36 +40,35 @@ const HealthCard = styled.article`
   box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
   
-  img {
-    margin-left: 5px;
-  }
+    img {
+      margin-left: 5px;
+      }
 
-    @media screen and (min-width: 455px) {
-      flex: 1 1 250px;
-      min-width: 325px;
-      margin: unset;
+  @media screen and (min-width: 455px) {
+    flex: 1 1 250px;
+    min-width: 325px;
+    margin: unset;
     }
-    @media screen and (min-width: 1024px) {
-      height: 124px;
-      min-width: unset;
-      margin: unset;
-      flex: unset;
-      }  
+  @media screen and (min-width: 1024px) {
+    height: 124px;
+    min-width: unset;
+    margin: unset;
+    flex: unset;
+    }  
 `;
 
 const HealthValue = styled.div`
-  font-size: 20px;
   font-size: clamp(1rem, 1.389vw, 1.25rem);
   font-style: normal;
   font-weight: 700;
   margin-left: 24px;
 
-  p {
-    color: ${colors.SecondaryText};
-    font-size: 14px;
-    font-weight: 500;
-    margin: unset;
-  }
+    p {
+      color: ${colors.SecondaryText};
+      font-size: 14px;
+      font-weight: 500;
+      margin: unset;
+      }
 `;
 
 /**

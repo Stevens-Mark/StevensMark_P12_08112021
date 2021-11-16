@@ -20,10 +20,10 @@ const SportsGroup = styled.nav`
       grid-template-columns: clamp(3.5rem,8vw,7.5rem);
       }
 
-  img {
-      width: clamp(2.5rem, 4.5vw, 4rem);
-      margin-top: 15px; 
-  }
+    img {
+        width: clamp(2.5rem, 4.5vw, 4rem);
+        margin-top: 15px; 
+    }
 `;
 
 const SportLink = styled.div `

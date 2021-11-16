@@ -48,7 +48,7 @@ const KeyDataWrapper = styled.aside`
     @media screen and (min-width: 1024px) {
       width: 25%;
       margin-bottom: 0px;
-      }
+    }
 `;
 
 const Analysis = styled.div`

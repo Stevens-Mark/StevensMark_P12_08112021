@@ -26,16 +26,18 @@ const Wrapper = styled.div`
   max-width: 258px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
-  p {
-    padding: 10px;
-  }
-    @media screen and (min-width: 1025px) {
-      height: 263px;
-      }  
-    @media screen and (min-width: 1440px) {
-      height: 325px;
-      max-width: 325px;
-      } 
+
+    p {
+      padding: 10px;
+    }
+    
+  @media screen and (min-width: 1025px) {
+    height: 263px;
+    }  
+  @media screen and (min-width: 1440px) {
+    height: 325px;
+    max-width: 325px;
+    } 
 `;
 
 const ScoreWrapper = styled.article`
@@ -58,13 +60,39 @@ const ScoreWrapper = styled.article`
       max-width: 325px;
       } 
 `;
-const ScoreTitle = styled.h2`
-  font-size: clamp(0.625rem, 1vw, 0.938rem);
-  color: ${colors.secondary};
-  position: absolute;
-  top: 16px;
-  left: 20px;
+
+const ScoreHeading = styled.div`
  
+  
+`;
+
+const ScoreTitle = styled.h2`
+  font-size: clamp(0.75rem, 1.042vw, 1.125rem);
+  color: ${colors.H2HeadingText};
+  // margin: unset;
+  margin-top: 25px;
+  position: absolute;
+  left: 10%; 
+`;
+
+const ScorePercentage = styled.p`
+  color: ${colors.NumberText};
+  font-size: clamp(1rem,2vw,1.25rem);
+  font-weight: 700;
+  position: absolute;
+  top: 25%;
+  left: 44%;
+  // margin: unset;
+`;
+
+const ScoreText = styled.p`
+  color: ${colors.SecondaryText};
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  position: absolute;
+  top: 41%;
+  left: 39%;
 `;
 
 /**
@@ -100,29 +128,30 @@ export default function Score() {
     }
     else {
       const score = data.data.todayScore
-      console.log(score)
 
-      const scoreData = [
-        { name: 'Group TodayScore', value: score },
-        { name: 'Group Dummy', value: 1 - score } ]
-
+      const scoreData = [ { value: 12 }, {value: 1 - score } ]
       const COLORS = ['#FF0000', 'transparent']
 
     // Display Radar chart using RECHARTS
     return (
       <ScoreWrapper>
-        <ScoreTitle>Score</ScoreTitle>
+        <ScoreHeading>
+          <ScoreTitle>Score</ScoreTitle>
+          <ScorePercentage>{100 * score}%</ScorePercentage>
+          <ScoreText>de votre <br />objectif </ScoreText>
+        </ScoreHeading>
+
         <ResponsiveContainer width="100%" height="100%"> 
-          <PieChart width={800} height={400}>
+          <PieChart width={700} height={350}>
             <Pie
               data={scoreData}
-              innerRadius={80}
-              outerRadius={90}
+              innerRadius={55}
+              outerRadius={64}
               dataKey='value'
               stroke='transparent'
               startAngle={90} 
-              endAngle={450} >
-                
+              endAngle={360} >
+              
               {scoreData.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} cornerRadius={50} />
               ))}
