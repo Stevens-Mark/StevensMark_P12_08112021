@@ -82,7 +82,7 @@ const Performance = () => {
     if (isLoading) {
       return (
         <Wrapper>
-          <MiniLoadingIcon />
+          <MiniLoadingIcon isWhite={true} />
         </Wrapper>
       )
     }

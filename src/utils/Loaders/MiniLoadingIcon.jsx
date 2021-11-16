@@ -1,5 +1,6 @@
-import colors from '../style/colors'
+// import colors from '../style/colors'
 import styled, { keyframes } from 'styled-components'
+import PropTypes from 'prop-types'
 
 /**
  * Keyframe for Loader component
@@ -19,26 +20,35 @@ const rotate = keyframes`
  */
 const Loader = styled.div`
   padding: 15px;
-  border: 8px solid ${colors.SecondaryText};
+  border: 8px solid ${props => props.primary ? '#fff' : '#FF0000'};
   animation: ${rotate} 1s infinite linear;
   border-bottom-color: transparent;
-  border-radius: 106px;
-  ${(props) =>
-    props.$isFullLink &&
-    `color: white; border-radius: 30px; background-color: ${colors.primary};`}
+  border-radius: 106px;   
 `;
 
 /**
- * Renders a loading icon 
+ * Renders a loading icon (either white or red)
  * @function MiniLoadingIcon
+ * @param {boolean} isWhite
  * @returns {JSX}
  */
-const MiniLoadingIcon = () => {
-
+const MiniLoadingIcon = ({ isWhite }) => {
     return (
-      <Loader />
+      <span>
+        {isWhite ? ( 
+          <Loader primary /> ) 
+        : ( 
+          <Loader /> 
+        )}      
+      </span>
     )
 }
 
 export default MiniLoadingIcon
+
+// Prototypes
+
+MiniLoadingIcon.propTypes = {
+  isWhite: PropTypes.bool,
+}
 

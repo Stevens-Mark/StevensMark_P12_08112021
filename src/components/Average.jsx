@@ -125,7 +125,7 @@ const Average = () => {
     if (isLoading) {
       return (
         <Wrapper>
-          <MiniLoadingIcon />
+          <MiniLoadingIcon isWhite={true} />
         </Wrapper>
       )
     }

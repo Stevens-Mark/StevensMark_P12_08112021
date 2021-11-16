@@ -19,22 +19,18 @@ import {
 /**
  * CSS for component using styled.components
  */
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.secondary};
+const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
   height: 290px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px 0px #00000005;
 `;
 
-const ActivityChartWrapper = styled.article`
-  background: ${colors.backgroundLight};
-  height: 290px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
+const Wrapper = styled(ActivityChartWrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.secondary};
 `;
 
 const ActivityHeading = styled.div`
@@ -152,7 +148,7 @@ const Activity = () => {
   if (isLoading) {
     return (
       <Wrapper>
-        <MiniLoadingIcon />
+        <MiniLoadingIcon/>
       </Wrapper>
     )
   } else {
