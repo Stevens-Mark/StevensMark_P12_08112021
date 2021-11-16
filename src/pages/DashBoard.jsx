@@ -12,7 +12,6 @@ import Average from '../components/Average'
 import Performance from '../components/Performance'
 import Score from '../components/Score'
 
-
 /**
  * CSS for component using styled.components
  */

@@ -29,9 +29,9 @@ const HeadingWrapper = styled.div`
 
 /**
  * Renders a title on the welcome & dashboard pages
- * @param {string} intro
- * @param {string} highlightedText
- * @param {string} text
+ * @param {string} intro: starting text in black
+ * @param {string} highlightedText: color red
+ * @param {string} text: short sentence
  * @returns {JSX}
  */
 const Title = ({ intro, highlightedText, text }) => {

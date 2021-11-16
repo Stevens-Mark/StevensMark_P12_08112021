@@ -74,7 +74,7 @@ const ScoreText = styled.p`
 `;
 
 /**
- * Renders their Score on a PieChartWithPaddingAngle - RECHARTS
+ * Renders the user's Score on a PieChartWithPaddingAngle - RECHARTS
  * @function Score
  * @returns {JSX}
  */
