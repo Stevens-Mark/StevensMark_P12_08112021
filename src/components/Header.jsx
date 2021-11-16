@@ -5,7 +5,7 @@ import colors from '../utils/style/colors'
 // logo imports
 import logo from '../assets/logo/sportsSee_logo.svg'
 // import Hamburger Navigation component
-import { BurgerNav } from './BurgerNav'
+import BurgerNav from './BurgerNav'
 
 /**
  * CSS for the component using styled.components
@@ -58,13 +58,12 @@ const LINK = styled(NavLink)`
 `;
 
 /**
- * Component to render the Header Navigation
+ * Rendeers the Header Navigation
  * Changes to a Hamburger Nav icon if screen width less than 600px (see BurgerNav component)
  * @function Header
  * @returns (JSX)
  */
-export default function Header() {
-
+const Header = () => {
   return (
     <header>
       <NavGroup>
@@ -81,3 +80,4 @@ export default function Header() {
     )
 }
 
+export default Header

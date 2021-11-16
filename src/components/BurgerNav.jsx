@@ -85,13 +85,13 @@ const StyledBurger = styled.button`
 `;
 
 /**
- *  Component renders a 'Hamburger' icon for the navigation menu 
+ *  Renders a 'Hamburger' icon for the navigation menu 
  *  when the screen width is less than 600px
- *  'StyledBurger' animates from a Hamburger icon (closed menu) to an 'X' icon (menu open)
+ *  'StyledBurger' animates from a Hamburger icon (when closed menu) to an 'X' icon (when menu open)
  * @function BurgerNav
  * @returns {JSX}
  */
-export function BurgerNav() {
+const BurgerNav = () => {
   const [open, setOpen] = useState(false);
   return (
     <HamburgerWrapper>
@@ -110,3 +110,5 @@ export function BurgerNav() {
     </HamburgerWrapper>
   )
 }
+
+export default BurgerNav

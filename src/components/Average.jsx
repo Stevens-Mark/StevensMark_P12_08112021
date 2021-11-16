@@ -19,59 +19,44 @@ import {
 /**
  * CSS for the component using styled.components
  */
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${colors.backgroundLight};
-  color: ${colors.secondary};
-  height: 225px;
-  width: 32%;
-  max-width: 258px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
+ const Wrapper = styled.article`
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: ${colors.primary};
+ height: 225px;
+ width: 100%;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px 0px #00000005;
 
-    p {
-      padding: 10px;
-      }
-
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    }  
+  @media screen and (min-width: 600px) {
+    width: 32%;
+    max-width: 258px;
+    } 
+  // @media screen and (min-width: 1025px) {
+  //   height: 263px;
+  //   }    
   @media screen and (min-width: 1440px) {
     height: 325px;
     max-width: 325px;
     } 
 `;
 
-const AverageWrapper = styled.article`
-  height: 225px;
-  width: 100%;
-  border-radius: 5px;
-  background: ${colors.primary};
-  box-shadow: 0px 2px 4px 0px #00000005;
-
-    @media screen and (min-width: 600px) {
-      width: 32%;
-      max-width: 258px;
-      } 
-    // @media screen and (min-width: 1025px) {
-    //   height: 263px;
-    //   }    
-    @media screen and (min-width: 1440px) {
-      height: 325px;
-      max-width: 325px;
-      } 
+const ErrorMsg = styled.p `
+  color: ${colors.tertiary};
+  padding: 10px;
 `;
 
 const AverageHeading = styled.h2`
   position: absolute;
+  top: 0px;
+  left: 15px;
   color: ${colors.tertiary};
   opacity: 0.5;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 500;
   width: 170px;
-  margin: 15px;
 `;
 
 const ToolTipLabel = styled.div`
@@ -86,46 +71,40 @@ const ToolTipLabel = styled.div`
 `;
 
 /**
- * Format day on Xaxis from number to letter
+ * Format day on X axis from number to letter
  * @function TranformDay
  * @param {number} tickItem
- * @returns {string} formattedDay
+ * @returns {string} A Day letter
  */
-  function TranformDay(tickItem) {
-    let formattedDay = ''
+ const TranformDay = (tickItem) => {
     const Day = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D']
-
-    if (tickItem) {
-      formattedDay = Day[tickItem-1]
-    }
-    return formattedDay
+    if (tickItem) return Day[tickItem-1]
   }
 
 /**
- * Displays the tooltip (minutes) information when user hovers on the line chart
+ * Renders the tooltip (minutes) information when user hovers on the line chart
  * @function CustomTooltip
  * @param {boolean} active: inital value false / becomes true when hover on linechart
  * @param {array} payload: contains data to be displayed on hover
  * @returns {JSX}
  */
-  const CustomTooltip = ({ active, payload }) => {
-    if (active && payload && payload.length) {
-      return (
-        <ToolTipLabel>
-          <p>{`${payload[0].value} mins`}</p>
-        </ToolTipLabel>
-      )
-    }
-    return null
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <ToolTipLabel>
+        <p>{`${payload[0].value} mins`}</p>
+      </ToolTipLabel>
+    )
   }
+  return null
+}
   
 /**
- * Fetch() the user's data for their Average Sessions
- * Displays it on a Line Chart
+ * Renders Average Sessions Line Chart
  * @function Average
- * @returns {JSX} Average Sessions Line Chart
+ * @returns {JSX}
  */
-export default function Average() {
+const Average = () => {
   // Get ID from URL param
   const { id } = useParams()
     
@@ -139,7 +118,7 @@ export default function Average() {
     if (error) {
       return (
         <Wrapper>
-          <p>Aucune donnée n'a été trouvée</p>
+          <ErrorMsg>Aucune donnée n'a été trouvée</ErrorMsg>
         </Wrapper>
         )
     }
@@ -152,9 +131,10 @@ export default function Average() {
     }
     else {
       const sessions = data.data.sessions
+
     // Display Line chart using RECHARTS
     return (
-      <AverageWrapper>
+      <Wrapper>
         <AverageHeading>Durée moyenne des sessions</AverageHeading>
 
         <ResponsiveContainer width="100%" height="100%"> 
@@ -204,10 +184,12 @@ export default function Average() {
           </LineChart>
 
         </ResponsiveContainer>
-      </AverageWrapper>   
+      </Wrapper>   
     )
   }
 }
+
+export default Average
 
 //  Prototypes
 

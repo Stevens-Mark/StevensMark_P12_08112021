@@ -15,40 +15,15 @@ import {
 /**
  * CSS for the component using styled.components
  */
-const Wrapper = styled.div`
+const Wrapper = styled.article`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background: ${colors.backgroundLight};
-  color: ${colors.secondary};
-  height: 225px;
-  width: 32%;
-  max-width: 258px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
-
-    p {
-      padding: 10px;
-    }
-    
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    }  
-  @media screen and (min-width: 1440px) {
-    height: 325px;
-    max-width: 325px;
-    } 
-`;
-
-const ScoreWrapper = styled.article`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   height: 225px;
   width: 100%;
   border-radius: 5px;
-  background: ${colors.backgroundLight};
   box-shadow: 0px 2px 4px 0px #00000005;
 
     @media screen and (min-width: 600px) {
@@ -64,12 +39,16 @@ const ScoreWrapper = styled.article`
       } 
 `;
 
+const ErrorMsg = styled.p `
+  color: ${colors.secondary};
+  padding: 10px;
+`;
+
 const ScoreTitle = styled.h2`
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   color: ${colors.H2HeadingText};
-  margin: unset;
   position: absolute;
-  top: 15px;
+  top: 0px;
   left: 15px; 
 `;
 
@@ -82,7 +61,7 @@ const ScorePercentage = styled.p`
   font-size: clamp(1.125rem,2vw, 2rem);
   font-weight: 700;
   text-align: center;
-  margin: 10px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
 `;
 
 const ScoreText = styled.p`
@@ -91,21 +70,20 @@ const ScoreText = styled.p`
   font-weight: 500;
   text-align: center;
   line-height: 20px;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
 `;
 
 /**
- * Fetch() the user's data for their Score
- * Displays it on a PieChartWithPaddingAngle
+ * Renders their Score on a PieChartWithPaddingAngle - RECHARTS
  * @function Score
- * @returns {JSX} Score PieChartWithPaddingAngle
+ * @returns {JSX}
  */
-export default function Score() {
+const Score = () => {
   // Get ID from URL param
   const { id } = useParams()
     
-    const mockScoreData = `../${id}.json`
-      // const score = `http://localhost:3000/user/${id}/`
+    const mockScoreData = `../${id}.json`;
+      // const score = `http://localhost:3000/user/${id}/`;
   
     // Fetch the data using HOOK useFetch
     // @returns @param {object} data, {boolean} isLoading and {boolean} error
@@ -114,7 +92,7 @@ export default function Score() {
     if (error) {
       return (
         <Wrapper>
-          <p>Aucune donnée n'a été trouvée</p>
+          <ErrorMsg>Aucune donnée n'a été trouvée</ErrorMsg>
         </Wrapper>
         )
     }
@@ -128,18 +106,18 @@ export default function Score() {
     else {
       const score = data.data.todayScore
 
-      const scoreData = [ { value: score }, {value: 1 - score } ]
+      const scoreData = [ { value: score}, {value: 1 - score } ]
       const COLORS = ['#FF0000', 'transparent']
 
     // Display Radar chart using RECHARTS
     return (
-      <ScoreWrapper>
+      <Wrapper>
        
-          <ScoreTitle>Score</ScoreTitle>
-          <ScoreSummary>
-            <ScorePercentage>{100 * score}%</ScorePercentage>
-            <ScoreText>de votre <br />objectif </ScoreText>
-          </ScoreSummary>
+        <ScoreTitle>Score</ScoreTitle>
+        <ScoreSummary>
+          <ScorePercentage>{100 * score}%</ScorePercentage>
+          <ScoreText>de votre <br />objectif </ScoreText>
+        </ScoreSummary>
 
         <ResponsiveContainer width="100%" height="100%"> 
           <PieChart width={700} height={350}>
@@ -158,8 +136,10 @@ export default function Score() {
             </Pie>
           </PieChart>
          </ResponsiveContainer> 
-      </ScoreWrapper>   
+      </Wrapper>   
     )
   }
 }
+
+export default Score
 

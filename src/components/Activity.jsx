@@ -95,13 +95,13 @@ const ToolTipLabel = styled.div`
 `;
 
 /**
- * Format date on Xaxis from yyyy-mm-dd to dd/mm
+ * Format date on X axis from yyyy-mm-dd to dd/mm
  * @function TranformDate
  * @param {string} tickItem
- * @returns {string} formattedDate
+ * @returns {string} formatted Date
  */
-function TranformDate(tickItem) {
-  let formattedDate = ''
+const TranformDate = (tickItem) => {
+  let formattedDate = '';
 
   if (tickItem) {
     let parts = tickItem.split('-')
@@ -111,13 +111,14 @@ function TranformDate(tickItem) {
 }
 
 /**
- * Displays the tooltip (kg/kCal) information when user hovers on barchart
+ * Renders the tooltip (kg/kCal) information when user hovers on barchart
  * @function CustomTooltip
  * @param {boolean} active: inital value false / becomes true when hover on barchart
  * @param {array} payload: contains data to be displayed on hover
  * @returns {JSX}
  */
 const CustomTooltip = ({ active, payload }) => {
+
   if (active && payload && payload.length) {
     return (
       <ToolTipLabel>
@@ -130,21 +131,20 @@ const CustomTooltip = ({ active, payload }) => {
 }
 
 /**
- * Fetch() the user's data for their Activities
- * Displays it in a BarChart with Weight & Calories burned
+ * Renders Activities BarChart with Weight & Calories burned
  * @function Activity
- * @returns {JSX} Activity Bar chart
+ * @returns {JSX}
  */
-export default function Activity() {
+const Activity = () => {
   // Get ID from URL param
   const { id } = useParams()
 
   const mockActivityData = `../${id}/activity.json`;
-  // const activity =`http://localhost:3000/user/${id}/activity`
+  // const activity =`http://localhost:3000/user/${id}/activity`;
 
   // Fetch the data using HOOK useFetch
   // @returns @param {object} data, {boolean} isLoading and {boolean} error
-  const { data, isLoading, error } = useFetch(mockActivityData);
+  const { data, isLoading, error } = useFetch(mockActivityData)
 
   if (error) {
     return <Wrapper>Aucune donnée n'a été trouvée</Wrapper>
@@ -156,7 +156,8 @@ export default function Activity() {
       </Wrapper>
     )
   } else {
-    const sessions = data.data.sessions;
+    const sessions = data.data.sessions
+
     // Display Activity chart using RECHARTS
     return (
       <ActivityChartWrapper>
@@ -230,9 +231,11 @@ export default function Activity() {
           </BarChart>
         </ResponsiveContainer>
       </ActivityChartWrapper>
-    );
+    )
   }
 }
+
+export default Activity
 
 // Prototypes
 

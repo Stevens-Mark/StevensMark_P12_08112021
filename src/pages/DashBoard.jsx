@@ -2,6 +2,7 @@
 import { useParams } from 'react-router'
 import styled from 'styled-components'
 import { useFetch } from '../utils/hooks/FetchData'
+// import components
 import Error from './Error'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 import Title from '../components/Title'
@@ -72,7 +73,7 @@ const Analysis = styled.div`
  * @function DashBoard
  * @returns {JSX}
  */
-export default function DashBoard() {
+const DashBoard = () => {
  
   const { id } = useParams()
   
@@ -117,4 +118,6 @@ export default function DashBoard() {
     )
   }
 }
+
+export default DashBoard
 

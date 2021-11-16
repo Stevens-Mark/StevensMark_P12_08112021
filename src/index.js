@@ -15,15 +15,22 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     /* margin: 0; */
+    // max-width: 1440px;
+    // min-height: 100vh;
+    
+    height: 100%;
     font-family: 'Roboto', 'Montserrat', 'Segoe UI', 'Oxygen', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: ${colors.tertiary};
-    // max-width: 1440px;
     margin: auto;
     box-sizing: border-box;
-    // min-height: 100vh;
-    height: 100%;
   }
+  
+  // main {
+  //   min-height: calc(100vh - 24rem); 
+  //   height: 100%;
+  //   min-height: 100vh; 
+  // }  
 
   ul {
     margin: 0;
@@ -46,8 +53,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     position: absolute;
     width: 1px;
-}
-
+  }
 `;
 
 ReactDOM.render(
@@ -62,9 +68,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-  /* main {
-    min-height: calc(100vh - 24rem); 
-   /* height: 100%;  
- }  min-height: 100vh; 
-  */

@@ -55,11 +55,11 @@ const Copyright = styled.p `
 `;
 
 /**
- * Component to render the LeftHand Side navigation Bar
+ * Renders the LeftHand Side navigation Bar
  * @function SideNav
  * @returns {JSX}
  */
-export default function SideNav() {
+const SideNav = () => {
   return (
     <SportsGroup>  
             <SportLink>
@@ -72,3 +72,5 @@ export default function SideNav() {
     </SportsGroup>
     )
 }
+
+export default SideNav

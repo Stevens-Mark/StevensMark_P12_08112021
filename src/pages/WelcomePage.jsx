@@ -56,7 +56,7 @@ const Card = styled.article`
  * @function WelcomePage
  * @returns {JSX}
  */
-export default function WelcomePage() {
+const WelcomePage = () => {
   return (
     <MainWrapper>
       <Title intro={'Bienvenue sur le site de '} 
@@ -79,3 +79,5 @@ export default function WelcomePage() {
     </MainWrapper>
     )
 }
+
+export default WelcomePage

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Used to fetch data 
+ * Service to fetch data 
  * @function useFetch (Hook)
  * @param {string} url
  * @returns {object} data

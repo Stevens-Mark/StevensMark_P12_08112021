@@ -17,79 +17,56 @@ import {
 /**
  * CSS for the component using styled.components
  */
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${colors.backgroundLight};
-  color: ${colors.secondary};
-  height: 225px;
-  width: 32%;
-  max-width: 258px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
+ const Wrapper = styled.article`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: ${colors.quaternary};
+ height: 225px;
+ width: 100%;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px 0px #00000005;
 
-    p {
-      padding: 10px;
-      }
-
-  @media screen and (min-width: 1025px) {
-    height: 263px;
-    }  
+  @media screen and (min-width: 600px) {
+    width: 32%;
+    max-width: 258px;
+    } 
+  // @media screen and (min-width: 1025px) {
+  //   height: 263px;
+  //   }    
   @media screen and (min-width: 1440px) {
     height: 325px;
     max-width: 325px;
     } 
 `;
 
-const PerformanceWrapper = styled.article`
-  height: 225px;
-  width: 100%;
-  border-radius: 5px;
-  background: ${colors.quaternary};
-  box-shadow: 0px 2px 4px 0px #00000005;
-
-    @media screen and (min-width: 600px) {
-      width: 32%;
-      max-width: 258px;
-      } 
-    // @media screen and (min-width: 1025px) {
-    //   height: 263px;
-    //   }    
-    @media screen and (min-width: 1440px) {
-      height: 325px;
-      max-width: 325px;
-      } 
+const ErrorMsg = styled.p `
+  color: ${colors.tertiary};
+  padding: 10px;
 `;
 
 /**
  * Format the labels on the radar axis from number to words
  * @function TranformKind
  * @param {number} tickItem
- * @returns {string} formatKind
+ * @returns {string} Kind: one of the categories.
  */
-  function TranformKind(tickItem) {
-    let formatKind = ''
+  const TranformKind = (tickItem) => {
     const Kind = [ 'Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio']
-
-    if (tickItem) {
-      formatKind = Kind[tickItem-1]
-    }
-    return formatKind
+    if (tickItem) return Kind[tickItem-1]
   }
 
 /**
- * Fetch() the user's data for their Performance
- * Displays it on a Radar chart
+ * Renders Performance Radar chart
  * @function Performance
  * @returns {JSX} Performance Radar chart
  */
-export default function Performance() {
+const Performance = () => {
   // Get ID from URL param
   const { id } = useParams()
     
-    const mockPerformanceData = `../${id}/performance.json`
-      // const performance = `http://localhost:3000/user/${id}/performance`
+    const mockPerformanceData = `../${id}/performance.json`;
+      // const performance = `http://localhost:3000/user/${id}/performance`;
   
     // Fetch the data using HOOK useFetch
     // @returns @param {object} data, {boolean} isLoading and {boolean} error
@@ -98,7 +75,7 @@ export default function Performance() {
     if (error) {
       return (
         <Wrapper>
-          <p>Aucune donnée n'a été trouvée</p>
+          <ErrorMsg>Aucune donnée n'a été trouvée</ErrorMsg>
         </Wrapper>
         )
     }
@@ -111,9 +88,10 @@ export default function Performance() {
     }
     else {
       const performance = data.data
+      
     // Display Radar chart using RECHARTS
     return (
-      <PerformanceWrapper>
+      <Wrapper>
         <ResponsiveContainer width="100%" height="100%"> 
 
             <RadarChart 
@@ -141,10 +119,12 @@ export default function Performance() {
             </RadarChart>
 
          </ResponsiveContainer> 
-      </PerformanceWrapper>   
+      </Wrapper>   
     )
   }
 }
+
+export default Performance
 
 //  Prototypes
 

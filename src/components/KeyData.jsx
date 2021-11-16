@@ -77,7 +77,8 @@ const HealthValue = styled.div`
  * @param {object} healthData: holds users health data
  * @returns {JSX}
  */
-export default function KeyData({ healthData }) {
+const KeyData = ({ healthData }) => {
+
   const categories = ['Calories', 'Protéines', 'Glucides', 'Lipides'];
   const icons = [calories, protiens, fats, carbs];
 
@@ -94,8 +95,10 @@ export default function KeyData({ healthData }) {
         </HealthCard>
       ))}
     </HealthWrapper>
-  );
+  )
 }
+
+export default KeyData
 
 // Prototypes
 
