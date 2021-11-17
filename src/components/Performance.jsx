@@ -64,13 +64,14 @@ const ErrorMsg = styled.p `
 const Performance = () => {
   // Get ID from URL param
   const { id } = useParams()
-    
-    const mockPerformanceData = `../${id}/performance.json`;
-      // const performance = `http://localhost:3000/user/${id}/performance`;
-  
-    // Fetch the data using HOOK useFetch
-    // @returns @param {object} data, {boolean} isLoading and {boolean} error
-    const { data, isLoading, error } = useFetch(mockPerformanceData)
+     
+  // Fetch the data using HOOK useFetch
+  // @returns @param {object} data, {boolean} isLoading and {boolean} error
+
+  // mocked endpoint/data
+  const { data, isLoading, error } = useFetch(`../${id}/performance.json`)
+
+  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/performance`)
 
     if (error) {
       return (

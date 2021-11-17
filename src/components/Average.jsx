@@ -107,13 +107,14 @@ const CustomTooltip = ({ active, payload }) => {
 const Average = () => {
   // Get ID from URL param
   const { id } = useParams()
-    
-    const mockAverageData = `../${id}/average-sessions.json`
-    // const average = `http://localhost:3000/user/${id}/average-sessions`
-  
-    // Fetch the data using HOOK useFetch
-    // @returns @param {object} data, {boolean} isLoading and {boolean} error
-    const { data, isLoading, error } = useFetch(mockAverageData)
+ 
+  // Fetch the data using HOOK useFetch
+  // @returns @param {object} data, {boolean} isLoading and {boolean} error
+
+  // mocked endpoint/data
+  const { data, isLoading, error } = useFetch(`../${id}/average-sessions.json`)
+
+  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/average-sessions`)
 
     if (error) {
       return (

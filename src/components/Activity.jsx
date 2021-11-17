@@ -134,13 +134,14 @@ const CustomTooltip = ({ active, payload }) => {
 const Activity = () => {
   // Get ID from URL param
   const { id } = useParams()
-
-  const mockActivityData = `../${id}/activity.json`;
-  // const activity =`http://localhost:3000/user/${id}/activity`;
-
+  
   // Fetch the data using HOOK useFetch
-  // @returns @param {object} data, {boolean} isLoading and {boolean} error
-  const { data, isLoading, error } = useFetch(mockActivityData)
+  // @returns @param {object} data, {boolean} isLoading and {boolean} error 
+  
+  // mocked endpoint/data
+  const { data, isLoading, error } = useFetch(`../${id}/activity.json`)
+
+  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/activity`)
 
   if (error) {
     return <Wrapper>Aucune donnée n'a été trouvée</Wrapper>

@@ -1,8 +1,9 @@
-import { useParams } from 'react-router'
-import { useFetch } from '../utils/hooks/FetchData'
+// import { useParams } from 'react-router'
+// import { useFetch } from '../utils/hooks/FetchData'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
-import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+// import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 
 // import Rechart items
 import {
@@ -39,10 +40,10 @@ const Wrapper = styled.article`
       } 
 `;
 
-const ErrorMsg = styled.p `
-  color: ${colors.secondary};
-  padding: 10px;
-`;
+// const ErrorMsg = styled.p `
+//   color: ${colors.secondary};
+//   padding: 10px;
+// `;
 
 const ScoreTitle = styled.h2`
   font-size: clamp(1rem, 1.2vw, 1.125rem);
@@ -76,38 +77,13 @@ const ScoreText = styled.p`
 /**
  * Renders the user's Score on a PieChartWithPaddingAngle - RECHARTS
  * @function Score
+ * @param {number} scoreData: holds users daily score
  * @returns {JSX}
  */
-const Score = () => {
-  // Get ID from URL param
-  const { id } = useParams()
-    
-    const mockScoreData = `../${id}.json`;
-      // const score = `http://localhost:3000/user/${id}/`;
-  
-    // Fetch the data using HOOK useFetch
-    // @returns @param {object} data, {boolean} isLoading and {boolean} error
-    const { data, isLoading, error } = useFetch(mockScoreData)
+const Score = ({ scoreData }) => {
 
-    if (error) {
-      return (
-        <Wrapper>
-          <ErrorMsg>Aucune donnée n'a été trouvée</ErrorMsg>
-        </Wrapper>
-        )
-    }
-    if (isLoading) {
-      return (
-        <Wrapper>
-          <MiniLoadingIcon />
-        </Wrapper>
-      )
-    }
-    else {
-      const score = data.data.todayScore
-
-      const scoreData = [ { value: score}, {value: 1 - score } ]
-      const COLORS = ['#FF0000', 'transparent']
+  const scoreValue = [ { value: scoreData}, {value: 1 - scoreData } ]
+  const COLORS = ['#FF0000', 'transparent']
 
     // Display Radar chart using RECHARTS
     return (
@@ -115,14 +91,14 @@ const Score = () => {
        
         <ScoreTitle>Score</ScoreTitle>
         <ScoreSummary>
-          <ScorePercentage>{100 * score}%</ScorePercentage>
+          <ScorePercentage>{100 * scoreData}%</ScorePercentage>
           <ScoreText>de votre <br />objectif </ScoreText>
         </ScoreSummary>
 
         <ResponsiveContainer width="100%" height="100%"> 
           <PieChart width={700} height={350}>
             <Pie
-              data={scoreData}
+              data={scoreValue}
               innerRadius={70}
               outerRadius={85}
               dataKey='value'
@@ -130,7 +106,7 @@ const Score = () => {
               startAngle={90} 
               endAngle={360} >
               
-              {scoreData.map((entry, index) => (
+              {scoreValue.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} cornerRadius={50} />
               ))}
             </Pie>
@@ -139,7 +115,11 @@ const Score = () => {
       </Wrapper>   
     )
   }
-}
 
 export default Score
 
+// Prototypes
+
+Score.propTypes = {
+  ScoreData: PropTypes.number,
+}

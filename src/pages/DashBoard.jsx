@@ -73,14 +73,14 @@ const Analysis = styled.div`
  * @returns {JSX}
  */
 const DashBoard = () => {
- 
+ // Get ID from URL param
   const { id } = useParams()
-  
-  const mockData = `../${id}.json`
-  // const apiData = `http://localhost:3000/user/${id}/`
 
-  const { data, isLoading, error } = useFetch(mockData)
+  // mocked endpoint/data
+  const { data, isLoading, error } = useFetch(`../${id}.json`)
   
+  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/`)
+
   if (error) {
     return <Error />
   }
@@ -93,7 +93,7 @@ const DashBoard = () => {
   }
   else {
     const details = data.data
-
+  // data corrupted either todayScore or score !!!
     return (
       <DashBoardWrapper>
         <Title intro={'Bonjour'} 
@@ -106,7 +106,7 @@ const DashBoard = () => {
                 <Analysis>          
                   <Average />
                   <Performance />
-                  <Score />
+                  <Score scoreData={details.todayScore || details.score}/>
                 </Analysis>
             </Stats>
             <KeyDataWrapper>
