@@ -1,4 +1,7 @@
-# OPENCLASSROOMS PROJECT 12 - Develop an analytics dashboard with React
+![SportSee](/assets/logo/sportsSee_logo.svg)
+
+# OPENCLASSROOMS PROJECT 12 
+## Develop an analytics dashboard with React
 
 At SportSee, a startup dedicated to sports coaching. In full growth, the company will launch a new version of the user's profile page. This page will allow the user to track the number of sessions completed as well as the number of calories burned.
 
@@ -73,7 +76,8 @@ The App normally runs on http://localhost:3001/
 
 
 
-# OPENCLASSROOMS PROJET 12 - Développez un tableau de bord d'analytics avec React
+# OPENCLASSROOMS PROJET 12
+## Développez un tableau de bord d'analytics avec React
 
 Chez SportSee, une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
 
