@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# OPENCLASSROOMS PROJECT 12 - Develop an analytics dashboard with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+At SportSee, a startup dedicated to sports coaching. In full growth, the company will launch a new version of the user's profile page. This page will allow the user to track the number of sessions completed as well as the number of calories burned.
 
-## Available Scripts
+## Skills
 
-In the project directory, you can run:
+- [x] Produce technical documentation for an application
+- [x] Ensure data quality of an application
+- [x] Develop advanced graphical elements using JavaScript libraries
+- [x] Interact with a Web service
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Installation *(English)*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Prerequisites
 
-### `yarn test`
+- [NodeJS](https://nodejs.org/en/)  Version 16.13.0 
+- [Yarn](https://yarnpkg.com/) Version 1.22.11
+- [Visual Studio Code](https://code.visualstudio.com/) or another IDE of your choice
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
 
-### `yarn build`
+- [react] (https://reactjs.org/) Version 17.0.2
+- [react-router-dom] (https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
+- [prop-types] (https://www.npmjs.com/package/prop-types) Version 15.7.2
+- [styled-components] (https://styled-components.com/) Version 5.3.3
+- [recharts] (https://recharts.org/en-US/) Version 2.1.6
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installing and running the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### First - Backend Api
 
-### `yarn eject`
+- Clone the Backend Api onto your computer :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
+or
+  `git clone https://github.com/Stevens-Mark/P12-front-end-dashboard.git`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Inside this repository, install the packages/dependencies :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ `yarn`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Run the Backend Api, which will then listen on port 3000 by default :
 
-## Learn More
+ `yarn start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You will see the message `Magic happens on port 3000` in the terminal window.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Second - Frontend App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Clone this repository onto your computer:
 
-### Analyzing the Bundle Size
+  `git clone https://github.com/Stevens-Mark/stevens_mark_p12_08112021-.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Inside this repository, install the packages/dependencies:
 
-### Making a Progressive Web App
+ `yarn`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Run the Frontend App:
 
-### Advanced Configuration
+ `yarn start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- You will see the message :
 
-### Deployment
+  `? something is already running on port 3000.`
+  `Would you like to run the app on another port instead >> (Y/n)`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Answer: Y
 
-### `yarn build` fails to minify
+The App normally runs on http://localhost:3001/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# OPENCLASSROOMS PROJET 12 - Développez un tableau de bord d'analytics avec React
+
+Chez SportSee, une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
+
+## Skills
+
+- [x] Produire de la documentation technique pour une application
+- [x] Assurer la qualité des données d'une application
+- [x] Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript
+- [x] Interagir avec un service Web
+
+
+# Installation *(Français)*
+
+## Prérequis
+
+- [NodeJS](https://nodejs.org/en/)  Version 16.13.0 
+- [Yarn](https://yarnpkg.com/) Version 1.22.11
+- [Visual Studio Code](https://code.visualstudio.com/) ou un autre IDE de votre choix
+
+## Dépendances
+
+- [react] (https://reactjs.org/) Version 17.0.2
+- [react-router-dom] (https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
+- [prop-types] (https://www.npmjs.com/package/prop-types) Version 15.7.2
+- [styled-components] (https://styled-components.com/) Version 5.3.3
+- [recharts] (https://recharts.org/en-US/) Version 2.1.6
+
+
+## Installation et exécution du projet
+
+### Premièrement - Backend Api
+
+- Clonez l'Api Backend sur votre ordinateur :
+
+  `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
+ou
+  `git clone https://github.com/Stevens-Mark/P12-front-end-dashboard.git`
+
+- Dans ce dépôt, installez les paquets/dépendances :
+
+ `yarn`
+
+- Exécutez l'Api Backend, qui écoutera sur le port 3000 par défaut. :
+
+ `yarn start`
+
+Vous verrez le message `Magic happens on port 3000` dans la fenêtre du terminal.
+
+
+### Second - Frontend App
+
+- Clonez ce référentiel sur votre ordinateur :
+
+  `git clone https://github.com/Stevens-Mark/stevens_mark_p12_08112021-.git`
+
+- Dans ce dépôt, installez les paquets/dépendances :
+
+ `yarn`
+
+- Exécutez l'application frontale :
+
+ `yarn start`
+
+- Vous verrez le message :
+
+  `? something is already running on port 3000.`
+  `Would you like to run the app on another port instead >> (Y/n)`
+
+- répondre: Y
+
+L'application fonctionne normalement sur http://localhost:3001/
+
+
