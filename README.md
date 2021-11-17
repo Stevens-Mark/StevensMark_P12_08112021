@@ -1,4 +1,4 @@
-![SportSee](/assets/logo/sportsSee_logo.svg)
+![SportSee](/src/assets/logo/sportsSee_logo.svg)
 
 # OPENCLASSROOMS PROJECT 12 
 ## Develop an analytics dashboard with React
