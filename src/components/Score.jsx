@@ -55,6 +55,11 @@ const ScoreTitle = styled.h2`
 
 const ScoreSummary = styled.div`
   position: absolute;
+  background: ${colors.tertiary};
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 `;
 
 const ScorePercentage = styled.p`
@@ -62,7 +67,10 @@ const ScorePercentage = styled.p`
   font-size: clamp(1.125rem,2vw, 2rem);
   font-weight: 700;
   text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 35px 0px 0px 0px;
+    @media screen and (min-width: 1025px) {
+      margin: 25px 0px 0px 0px;
+        }  
 `;
 
 const ScoreText = styled.p`
@@ -99,8 +107,8 @@ const Score = ({ scoreData }) => {
           <PieChart width={700} height={350}>
             <Pie
               data={scoreValue}
-              innerRadius={70}
-              outerRadius={85}
+              innerRadius={75}
+              outerRadius={86}
               dataKey='value'
               stroke='transparent'
               startAngle={90} 
