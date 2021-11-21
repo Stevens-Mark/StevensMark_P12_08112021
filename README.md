@@ -4,15 +4,6 @@
 
 ## Develop an analytics dashboard with React
 
-At SportSee, a startup dedicated to sports coaching. In full growth, the company will launch a new version of the user's profile page. This page will allow the user to track the number of sessions completed as well as the number of calories burned.
-
-## Skills
-
-- [x] Produce technical documentation for an application
-- [x] Ensure data quality of an application
-- [x] Develop advanced graphical elements using JavaScript libraries
-- [x] Interact with a Web service
-
 
 # Installation *(English)*
 
@@ -24,11 +15,11 @@ At SportSee, a startup dedicated to sports coaching. In full growth, the company
 
 ## Dependencies
 
-- [react] (https://reactjs.org/) Version 17.0.2
-- [react-router-dom] (https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
-- [prop-types] (https://www.npmjs.com/package/prop-types) Version 15.7.2
-- [styled-components] (https://styled-components.com/) Version 5.3.3
-- [recharts] (https://recharts.org/en-US/) Version 2.1.6
+- [React](https://reactjs.org/) Version 17.0.2
+- [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
+- [Prop-types](https://www.npmjs.com/package/prop-types) Version 15.7.2
+- [Styled-components](https://styled-components.com/) Version 5.3.3
+- [Recharts](https://recharts.org/en-US/) Version 2.1.6
 
 
 ## Installing and running the project
@@ -81,15 +72,6 @@ The App normally runs on http://localhost:3001/
 
 ## Développez un tableau de bord d'analytics avec React
 
-Chez SportSee, une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
-
-## Skills
-
-- [x] Produire de la documentation technique pour une application
-- [x] Assurer la qualité des données d'une application
-- [x] Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript
-- [x] Interagir avec un service Web
-
 
 # Installation *(français)*
 
@@ -102,11 +84,11 @@ Chez SportSee, une startup dédiée au coaching sportif. En pleine croissance, l
 
 ## Dépendances
 
-- [react] (https://reactjs.org/) Version 17.0.2
-- [react-router-dom] (https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
-- [prop-types] (https://www.npmjs.com/package/prop-types) Version 15.7.2
-- [styled-components] (https://styled-components.com/) Version 5.3.3
-- [recharts] (https://recharts.org/en-US/) Version 2.1.6
+- [React](https://reactjs.org/) Version 17.0.2
+- [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) Version 5.2.0
+- [Prop-types](https://www.npmjs.com/package/prop-types) Version 15.7.2
+- [Styled-components](https://styled-components.com/) Version 5.3.3
+- [Recharts](https://recharts.org/en-US/) Version 2.1.6
 
 
 ## Installation et exécution du projet
