@@ -1,5 +1,5 @@
 
-import { useParams } from 'react-router'
+import { Switch, Route, useParams, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components'
 import { useFetch } from '../utils/hooks/FetchData'
 // import components
@@ -84,13 +84,16 @@ const Analysis = styled.div`
  * @returns {JSX}
  */
 const DashBoard = () => {
- // Get ID from URL param
+  // Get ID from URL param
   const { id } = useParams()
 
   // mocked endpoint/data
   const { data, isLoading, error } = useFetch(`../${id}.json`)
   
   // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/`)
+
+  // Get URL path for the nested routes
+  const { path } = useRouteMatch()
 
   if (error) {
     return <Error />
@@ -106,35 +109,44 @@ const DashBoard = () => {
     const details = data.data
   // data corrupted either todayScore or score !!!
     return (
-      <DashBoardWrapper> 
 
+      <DashBoardWrapper> 
         <SideNav />
 
-          <InfoWrapper>
+        <Switch>
+            {/*NESTED ROUTES: if yoga, swimming, cycling or gym is chosen, render the error page as these pages currently don't exist */}
+          <Route path={`${path}/:topicId`} component={Error} />
 
-            <Title intro={'Bonjour'} 
-                  highlightedText={details.userInfos.firstName} 
-                  text={'Félicitation ! Vous avez explosé vos objectifs hier 👏'} />
-      
-            <UserStats> 
+          {/* otherwise render users dashboard as normal */}
+          <Route path={`${path}`}>
+            <InfoWrapper>
 
-                <Stats>
-                  <Activity />         
-                    <Analysis>          
-                      <Average />
-                      <Performance />
-                      <Score scoreData={details.todayScore || details.score}/>
-                    </Analysis>
-                </Stats>
+              <Title intro={'Bonjour'} 
+                    highlightedText={details.userInfos.firstName} 
+                    text={'Félicitation ! Vous avez explosé vos objectifs hier 👏'} />
+        
+              <UserStats> 
 
-                <KeyDataWrapper>
-                  <KeyData healthData={details.keyData} />
-                </KeyDataWrapper>
+                  <Stats>
+                    <Activity />         
+                      <Analysis>          
+                        <Average />
+                        <Performance />
+                        <Score scoreData={details.todayScore || details.score}/>
+                      </Analysis>
+                  </Stats>
 
-            </UserStats>  
+                  <KeyDataWrapper>
+                    <KeyData healthData={details.keyData} />
+                  </KeyDataWrapper>
 
-          </InfoWrapper>
+              </UserStats>  
+
+            </InfoWrapper>
+          </Route>
+        </Switch>
       </DashBoardWrapper> 
+
     )
   }
 }

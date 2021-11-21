@@ -4,6 +4,8 @@ import { useFetch } from '../utils/hooks/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+// import helper function to format the day label correctly
+import { TranformDay } from '../utils/HelperFunctions/Formatters'
 
 // import Rechart items
 import { 
@@ -69,17 +71,6 @@ const ToolTipLabel = styled.div`
   height: 20px;
   width: 25px;
 `;
-
-/**
- * Format day on X axis from number to letter
- * @function TranformDay
- * @param {number} tickItem
- * @returns {string} A Day letter
- */
- const TranformDay = (tickItem) => {
-    const Day = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D']
-    if (tickItem) return Day[tickItem-1]
-  }
 
 /**
  * Renders the tooltip (minutes) information when user hovers on the line chart

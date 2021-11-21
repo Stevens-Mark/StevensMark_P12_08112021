@@ -6,7 +6,7 @@ import colors from '../utils/style/colors'
  * CSS for the component using styled.components
  */
 const ErrorWrapper = styled.main`
-  min-height: 100vh;
+  min-height: 106vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@ const ErrorWrapper = styled.main`
   h1 {
     font-size: clamp(6rem, 20vw, 21.875rem);
     font-weight: 700;
-    margin-top: 4rem;
+    margin-top: 4.75rem;
     margin-bottom: 3rem;
   }
 

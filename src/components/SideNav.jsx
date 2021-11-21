@@ -1,4 +1,4 @@
-import { Link, useRouteMatch  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 // logo imports
@@ -60,15 +60,13 @@ const Copyright = styled.p `
  * @returns {JSX}
  */
 const SideNav = () => {
-  let { url } = useRouteMatch()
-  console.log(url)
   return (
     <SportsGroup>  
             <SportLink>
-              <Link to={`${url}/yoga`}><img src={Yoga} alt='Yoga'/></Link>
-              <Link to={`${url}/swimming`}><img src={Swim} alt='Swim'/></Link>
-              <Link to={`${url}/cycling`}><img src={Bike} alt='Bike'/></Link>
-              <Link to={`${url}/gym`}><img src={Gym} alt='Gym'/></Link>
+              <Link to='yoga'><img src={Yoga} alt='Yoga'/></Link>
+              <Link to='swimming'><img src={Swim} alt='Swim'/></Link>
+              <Link to='cycling'><img src={Bike} alt='Bike'/></Link>
+              <Link to='gym'><img src={Gym} alt='Gym'/></Link>
             </SportLink>       
         <Copyright>Copyright, SportSee 2020</Copyright>
     </SportsGroup>

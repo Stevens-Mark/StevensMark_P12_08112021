@@ -4,6 +4,8 @@ import { useFetch } from '../utils/hooks/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+// import helper function to format the date correctly
+import { TranformDate } from '../utils/HelperFunctions/Formatters'
 
 // import Rechart items
 import {
@@ -89,38 +91,6 @@ const ToolTipLabel = styled.div`
   font-weight: 500;
   padding: 5px;
 `;
-
-// /**
-//  * Format date on X axis from yyyy-mm-dd to dd/mm
-//  * @function TranformDate
-//  * @param {string} tickItem
-//  * @returns {string} formatted Date
-//  */
-// const TranformDate = (tickItem) => {
-//   let formattedDate = '';
-
-//   if (tickItem) {
-//     let parts = tickItem.split('-')
-//     formattedDate = `${parts[2]}/${parts[1]}`
-//   }
-//   return formattedDate
-// }
-
-/**
- * Format date on X axis from yyyy-mm-dd to dd
- * @function TranformDate
- * @param {string} tickItem
- * @returns {string} formatted Date
- */
-const TranformDate = (tickItem) => {
-  let formattedDate = '';
-
-  if (tickItem) {
-    let parts = tickItem.split('-')
-    formattedDate = `${parts[2].replace(/^0+/, '')}`
-  }
-  return formattedDate
-}
 
 /**
  * Renders the tooltip (kg/kCal) information when user hovers on barchart
