@@ -5,6 +5,7 @@ import { useFetch } from '../utils/hooks/FetchData'
 // import components
 import Error from './Error'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+import SideNav from '../components/SideNav'
 import Title from '../components/Title'
 import Activity from '../components/Activity'
 import KeyData from '../components/KeyData'
@@ -22,7 +23,17 @@ import Score from '../components/Score'
   height: 90vh;
 `;
 
-const DashBoardWrapper = styled.main`
+const DashBoardWrapper = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: clamp(3.5rem, 8vw, 7.5rem) 1fr;
+      }  
+`;
+
+const InfoWrapper = styled.main`
   padding: clamp(0.625rem, 1.5vw, 4.5rem);
   min-height: 100vh;
 `;
@@ -95,25 +106,35 @@ const DashBoard = () => {
     const details = data.data
   // data corrupted either todayScore or score !!!
     return (
-      <DashBoardWrapper>
-        <Title intro={'Bonjour'} 
-              highlightedText={details.userInfos.firstName} 
-              text={'Félicitation ! Vous avez explosé vos objectifs hier 👏'} />
-   
-         <UserStats> 
-            <Stats>
-              <Activity />         
-                <Analysis>          
-                  <Average />
-                  <Performance />
-                  <Score scoreData={details.todayScore || details.score}/>
-                </Analysis>
-            </Stats>
-            <KeyDataWrapper>
-              <KeyData healthData={details.keyData} />
-            </KeyDataWrapper>
-          </UserStats>  
-      </DashBoardWrapper>
+      <DashBoardWrapper> 
+
+        <SideNav />
+
+          <InfoWrapper>
+
+            <Title intro={'Bonjour'} 
+                  highlightedText={details.userInfos.firstName} 
+                  text={'Félicitation ! Vous avez explosé vos objectifs hier 👏'} />
+      
+            <UserStats> 
+
+                <Stats>
+                  <Activity />         
+                    <Analysis>          
+                      <Average />
+                      <Performance />
+                      <Score scoreData={details.todayScore || details.score}/>
+                    </Analysis>
+                </Stats>
+
+                <KeyDataWrapper>
+                  <KeyData healthData={details.keyData} />
+                </KeyDataWrapper>
+
+            </UserStats>  
+
+          </InfoWrapper>
+      </DashBoardWrapper> 
     )
   }
 }

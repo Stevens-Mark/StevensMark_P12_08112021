@@ -15,7 +15,7 @@ const ErrorWrapper = styled.main`
   h1 {
     font-size: clamp(6rem, 20vw, 21.875rem);
     font-weight: 700;
-    margin-top: 4.75rem;
+    margin-top: 4rem;
     margin-bottom: 3rem;
   }
 

@@ -101,7 +101,7 @@ const TranformDate = (tickItem) => {
 
   if (tickItem) {
     let parts = tickItem.split('-')
-    formattedDate = `${parts[1]}/${parts[2]}`
+    formattedDate = `${parts[2]}/${parts[1]}`
   }
   return formattedDate
 }
@@ -154,7 +154,7 @@ const Activity = () => {
     )
   } else {
     const sessions = data.data.sessions
-
+    console.log()
     // Display Activity chart using RECHARTS
     return (
       <ActivityChartWrapper>
