@@ -4,6 +4,8 @@ import { useFetch } from '../utils/hooks/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
+// import helper function to format the 'kind' of activity correctly
+import { TranformKind } from '../utils/HelperFunctions/Formatters'
 
 // import Rechart items
 import { 
@@ -44,17 +46,6 @@ const ErrorMsg = styled.p `
   color: ${colors.tertiary};
   padding: 10px;
 `;
-
-/**
- * Format the labels on the radar axis from number to words
- * @function TranformKind
- * @param {number} tickItem
- * @returns {string} Kind: one of the categories.
- */
-  const TranformKind = (tickItem) => {
-    const Kind = [ 'Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio']
-    if (tickItem) return Kind[tickItem-1]
-  }
 
 /**
  * Renders Performance Radar chart
