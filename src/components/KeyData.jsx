@@ -41,7 +41,13 @@ const HealthCard = styled.article`
   background: ${colors.backgroundLight};
   
     img {
-      margin-left: 5px;
+      margin-left: 15px;
+      height: 50px;
+      height: 50px;
+        @media screen and (min-width: 1024px) {
+          height: 60px;
+          height: 60px;
+          } 
       }
 
   @media screen and (min-width: 455px) {
@@ -50,7 +56,7 @@ const HealthCard = styled.article`
     margin: unset;
     }
   @media screen and (min-width: 1024px) {
-    height: 124px;
+    height: 100px;
     min-width: unset;
     margin: unset;
     flex: unset;
