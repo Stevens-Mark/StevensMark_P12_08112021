@@ -66,7 +66,7 @@ const Analysis = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   gap: 15px;
 
     @media screen and (min-width: 600px) {
