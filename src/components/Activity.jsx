@@ -140,7 +140,7 @@ const Activity = () => {
     )
   } else {
     const sessions = data.data.sessions
-    console.log()
+
     // Display Activity chart using RECHARTS
     return (
       <ActivityChartWrapper>
@@ -176,9 +176,7 @@ const Activity = () => {
               axisLine={false}
               tickLine={false}
               domain={['dataMin -3', 'dataMax + 3']}
-              style={{
-                fontSize: '14px',
-              }} />
+              style={{ fontSize: '14px', }} />
 
             <YAxis
               yAxisId='calories'

@@ -156,14 +156,14 @@ const Average = () => {
               dataKey="sessionLength"
               axisLine={false}
               tickLine={false}
-              tick={false}  
+              // tick={false}  
               domain={['dataMin -2', 'dataMax + 20']} />
 
             <Tooltip 
                 content={<CustomTooltip />}
                 cursor={{ 
                 stroke: `${colors.secondary}`,
-                strokeOpacity: 0.1, 
+                strokeOpacity: 0.11, 
                 strokeWidth: '45',}} />
             
             <Line type="monotone" 
