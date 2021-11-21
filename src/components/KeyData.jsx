@@ -40,15 +40,15 @@ const HealthCard = styled.article`
   box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
   
-    img {
-      margin-left: 15px;
-      height: 50px;
-      height: 50px;
-        @media screen and (min-width: 1024px) {
-          height: 60px;
-          height: 60px;
-          } 
-      }
+  img {
+    margin-left: 15px;
+    height: 50px;
+    height: 50px;
+      @media screen and (min-width: 1024px) {
+        height: 60px;
+        height: 60px;
+        } 
+    }
 
   @media screen and (min-width: 455px) {
     flex: 1 1 250px;
@@ -61,6 +61,9 @@ const HealthCard = styled.article`
     margin: unset;
     flex: unset;
     }  
+    @media screen and (min-width: 1440px) {
+      height: 124px;
+      }  
 `;
 
 const HealthValue = styled.div`
