@@ -114,11 +114,7 @@ const DashBoard = () => {
         <SideNav />
 
         <Switch>
-            {/*NESTED ROUTES: if yoga, swimming, cycling or gym is chosen, render the error page as these pages currently don't exist */}
-          <Route path={`${path}/:topicId`} component={Error} />
-
-          {/* otherwise render users dashboard as normal */}
-          <Route path={`${path}`}>
+          <Route exact path={`${path}`}>
             <InfoWrapper>
 
               <Title intro={'Bonjour'} 
@@ -144,6 +140,9 @@ const DashBoard = () => {
 
             </InfoWrapper>
           </Route>
+
+          {/*NESTED ROUTES: if yoga, swimming, cycling or gym is chosen, render the error page as these pages currently don't exist */}
+          <Route path={`${path}/:topicId`} component={Error} />
         </Switch>
       </DashBoardWrapper> 
 
