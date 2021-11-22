@@ -1,11 +1,11 @@
 import { useParams } from 'react-router'
 import PropTypes from 'prop-types'
-import { useFetch } from '../utils/hooks/FetchData'
+import { useFetch } from '../utils/Service/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 // import helper function to format the day correctly
-import { TranformDay } from '../utils/HelperFunctions/Formatters'
+import { TranformDay } from '../utils/HelperFunctions/Formatters.js'
 
 // import Rechart items
 import { 
@@ -45,7 +45,7 @@ import {
     } 
 `;
 
-const ErrorMsg = styled.p `
+const ErrorMsg = styled.p`
   color: ${colors.tertiary};
   padding: 10px;
 `;
@@ -130,14 +130,13 @@ const Average = () => {
         <AverageHeading>Durée moyenne des sessions</AverageHeading>
 
         <ResponsiveContainer width="100%" height="100%"> 
-          <LineChart
-            data={sessions}
-            margin={{
-              top: 0,
-              right: 8,
-              left: -53,
-              bottom: 0,
-            }} >
+            <LineChart
+              data={sessions}
+              margin={{
+                top: 0,
+                right: 8,
+                left: -53,
+                bottom: 0, }} >
 
             <CartesianGrid
               strokeDasharray="0" 
@@ -156,15 +155,15 @@ const Average = () => {
               dataKey="sessionLength"
               axisLine={false}
               tickLine={false}
-              tick={false}  
+              // tick={false}  
               domain={['dataMin -2', 'dataMax + 20']} />
 
             <Tooltip 
-                content={<CustomTooltip />}
-                cursor={{ 
-                stroke: `${colors.secondary}`,
-                strokeOpacity: 0.1, 
-                strokeWidth: '45',}} />
+              content={<CustomTooltip />}
+              cursor={{ 
+              stroke: `${colors.secondary}`,
+              strokeOpacity: 0.1, 
+              strokeWidth: '45',}} />
             
             <Line type="monotone" 
               dataKey="sessionLength" 

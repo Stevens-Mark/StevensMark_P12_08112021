@@ -1,7 +1,7 @@
 
 import { useParams } from 'react-router'
 import styled from 'styled-components'
-import { useFetch } from '../utils/hooks/FetchData'
+import { useFetch } from '../utils/Service/FetchData'
 // import components
 import Error from './Error'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
@@ -104,7 +104,7 @@ const DashBoard = () => {
   }
   else {
     const details = data.data
-  // data corrupted either todayScore or score !!!
+  // NOTE: data corrupted: either todayScore or score is used !!!
     return (
       <DashBoardWrapper> 
 

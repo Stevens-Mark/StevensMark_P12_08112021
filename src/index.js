@@ -13,24 +13,14 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    /* margin: 0; */
-    // max-width: 1440px;
-    // min-height: 100vh;
-    
+  body {  
     height: 100%;
     font-family: 'Roboto', 'Montserrat', 'Segoe UI', 'Oxygen', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: ${colors.tertiary};
     margin: auto;
     box-sizing: border-box;
-  }
-  
-  // main {
-  //   min-height: calc(100vh - 24rem); 
-  //   height: 100%;
-  //   min-height: 100vh; 
-  // }  
+  } 
 
   ul {
     margin: 0;

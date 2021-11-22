@@ -1,9 +1,6 @@
-// import { useParams } from 'react-router'
-// import { useFetch } from '../utils/hooks/FetchData'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
-// import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 
 // import Rechart items
 import {
@@ -39,11 +36,6 @@ const Wrapper = styled.article`
       max-width: 325px;
       } 
 `;
-
-// const ErrorMsg = styled.p `
-//   color: ${colors.secondary};
-//   padding: 10px;
-// `;
 
 const ScoreTitle = styled.h2`
   font-size: clamp(1rem, 1.2vw, 1.125rem);
@@ -110,9 +102,9 @@ const Score = ({ scoreData }) => {
               innerRadius={75}
               outerRadius={86}
               dataKey='value'
-              stroke='transparent'
+              // stroke='transparent'
               startAngle={90} 
-              endAngle={360} >
+              endAngle={450} >
               
               {scoreValue.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} cornerRadius={50} />
