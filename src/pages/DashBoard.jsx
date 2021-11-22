@@ -1,7 +1,7 @@
 
 import { Switch, Route, useParams, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components'
-import { useFetch } from '../utils/hooks/FetchData'
+import { useFetch } from '../utils/Service/FetchData';
 // import components
 import Error from './Error'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'

@@ -27,7 +27,7 @@ const ErrorWrapper = styled.main`
   }
 `;
 
-const ReturnLink = styled(Link) `
+const ReturnLink = styled(Link)`
   color: ${colors.primary};
   font-size: clamp(0.875rem, 1.5vw, 1.375rem);
   font-weight: 500;

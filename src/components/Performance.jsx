@@ -1,11 +1,11 @@
 import { useParams } from 'react-router'
 import PropTypes from 'prop-types'
-import { useFetch } from '../utils/hooks/FetchData'
+import { useFetch } from '../utils/Service/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 // import helper function to format 'kind' of activity
-import { TranformKind } from '../utils/HelperFunctions/Formatters'
+import { TranformKind } from '../utils/HelperFunctions/Formatters.js'
 
 // import Rechart items
 import { 
@@ -42,7 +42,7 @@ import {
     } 
 `;
 
-const ErrorMsg = styled.p `
+const ErrorMsg = styled.p`
   color: ${colors.tertiary};
   padding: 10px;
 `;

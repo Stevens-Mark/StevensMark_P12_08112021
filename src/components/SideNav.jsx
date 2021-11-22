@@ -26,7 +26,7 @@ const SportsGroup = styled.nav`
     }
 `;
 
-const SportLink = styled.div `
+const SportLink = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -40,7 +40,7 @@ const SportLink = styled.div `
       }  
 `;
 
-const Copyright = styled.p `
+const Copyright = styled.p`
   display: flex;
   justify-content: center;
   font-size: 12px;
