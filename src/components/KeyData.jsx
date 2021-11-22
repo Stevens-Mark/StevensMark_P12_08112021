@@ -86,18 +86,19 @@ const HealthValue = styled.div`
  * @param {object} healthData: holds users health data
  * @returns {JSX}
  */
-const KeyData = ({ healthData }) => {
+ const KeyData = ({ healthData }) => {
 
-  const categories = ['Calories', 'Protéines', 'Glucides', 'Lipides'];
-  const icons = [calories, protiens, fats, carbs];
+  const categories = ['Calories', 'Protéines', 'Glucides', 'Lipides']
+  const icons = [calories, protiens, fats, carbs]
 
+  // console.log(Object.values(healthData))
   return (
     <HealthWrapper>
       {categories.map((cat, index) => (
         <HealthCard key={cat}>
           <img src={icons[index]} alt='' />
           <HealthValue>
-            {healthData[Object.keys(healthData)[index]] + ' '}
+            {Object.values(healthData)[index] + ' '}
             {index === 0 ? 'kCal' : 'g'}
             <p>{cat}</p>
           </HealthValue>
