@@ -87,11 +87,10 @@ const DashBoard = () => {
  // Get ID from URL param
   const { id } = useParams()
 
-  // mocked endpoint/data
-  const { data, isLoading, error } = useFetch(`../${id}.json`)
+  // Fetch the data using HOOK useFetch
+  // @returns @param {object} data, {boolean} isLoading and {boolean} error
+  const { data, isLoading, error } = useFetch( id, 'UsersGeneralInfo' )
   
-  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/`)
-
   if (error) {
     return <Error />
   }

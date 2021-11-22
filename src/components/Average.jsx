@@ -101,11 +101,7 @@ const Average = () => {
  
   // Fetch the data using HOOK useFetch
   // @returns @param {object} data, {boolean} isLoading and {boolean} error
-
-  // mocked endpoint/data
-  const { data, isLoading, error } = useFetch(`../${id}/average-sessions.json`)
-
-  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/average-sessions`)
+     const { data, isLoading, error } = useFetch( id, 'average' )
 
     if (error) {
       return (

@@ -123,11 +123,7 @@ const Activity = () => {
   
   // Fetch the data using HOOK useFetch
   // @returns @param {object} data, {boolean} isLoading and {boolean} error 
-  
-  // mocked endpoint/data
-  const { data, isLoading, error } = useFetch(`../${id}/activity.json`)
-
-  // const { data, isLoading, error } = useFetch(`http://localhost:3000/user/${id}/activity`)
+  const { data, isLoading, error } = useFetch( id, 'activity')
 
   if (error) {
     return <Wrapper>Aucune donnée n'a été trouvée</Wrapper>
@@ -213,6 +209,7 @@ const Activity = () => {
               radius={[50, 50, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
+        
       </ActivityChartWrapper>
     )
   }

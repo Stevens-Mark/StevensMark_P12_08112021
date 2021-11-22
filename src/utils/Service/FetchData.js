@@ -1,18 +1,27 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { ManageMockedEndpoints } from './ManageEndpoints'
+// import { ManageEndpoints } from './ManageEndpoints'
 
 /**
  * Service to fetch data 
  * @function useFetch (Hook)
- * @param {string} url
+ * @param {string} id of the user
+ * @param {string} typeInfo: the type of information/data requested
  * @returns {object} data
  * @returns {boolean} isLoading
  * @returns {boolean} error
  */
-export function useFetch(url) {
+export function useFetch(id, typeInfo) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+
+  // mocked data urls
+  const url =  ManageMockedEndpoints(id, typeInfo)
+
+  // real api url/endpoints
+  // const url =  ManageEndpoints(id, typeInfo)
 
   useEffect(() => {
     if (!url) return
@@ -37,5 +46,6 @@ export function useFetch(url) {
 // Prototypes
 
 useFetch.propTypes = {
-  url: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  typeInfo: PropTypes.string.isRequired,
 }
