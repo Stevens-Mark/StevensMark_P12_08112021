@@ -56,7 +56,7 @@ const Performance = () => {
   // Get ID from URL param
   const { id } = useParams()
      
-  // Fetch the data using HOOK useFetch
+  // Fetch the data using (custom hook) useFetch
   // @returns @param {object} data, {boolean} isLoading and {boolean} error
   const { data, isLoading, error } = useFetch( id, 'performance')
 

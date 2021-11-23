@@ -5,23 +5,23 @@ import { ManageMockedEndpoints } from './ManageEndpoints'
 
 /**
  * Service to fetch data 
- * @function useFetch (Hook)
+ * @function useFetch (custom Hook)
  * @param {string} id of the user
- * @param {string} typeInfo: the type of information/data requested
+ * @param {string} category: (userGeneralInfo, activity, average or performance)
  * @returns {object} data
  * @returns {boolean} isLoading
  * @returns {boolean} error
  */
-export function useFetch(id, typeInfo) {
+export function useFetch(id, category) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
   // mocked data urls
-  const url =  ManageMockedEndpoints(id, typeInfo)
+  const url =  ManageMockedEndpoints(id, category)
 
   // real api url/endpoints
-  // const url =  ManageEndpoints(id, typeInfo)
+  // const url =  ManageEndpoints(id, category)
 
   useEffect(() => {
     if (!url) return
@@ -47,5 +47,5 @@ export function useFetch(id, typeInfo) {
 
 useFetch.propTypes = {
   id: PropTypes.string.isRequired,
-  typeInfo: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 }

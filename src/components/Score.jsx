@@ -107,7 +107,8 @@ const Score = ({ scoreData }) => {
               endAngle={450} >
               
               {scoreValue.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} cornerRadius={50} />
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} 
+                cornerRadius={50} />
               ))}
             </Pie>
           </PieChart>
