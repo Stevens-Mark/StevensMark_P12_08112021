@@ -26,7 +26,7 @@
  */
 const TranformDate = (tickItem) => {
   let formattedDate = '';
-
+  
   if (tickItem) {
     let parts = tickItem.split('-')
     formattedDate = `${parts[2].replace(/^0+/, '')}`
@@ -42,6 +42,7 @@ const TranformDate = (tickItem) => {
  * @returns {string} A Day letter
  */
  const TranformDay = (tickItem) => {
+  
   const Day = [ 'L', 'M', 'M', 'J', 'V', 'S', 'D']
   if (tickItem) return Day[tickItem-1]
 }
@@ -54,6 +55,7 @@ const TranformDate = (tickItem) => {
  * @returns {string} Kind: one of the categories.
  */
  const TranformKind = (tickItem) => {
+
   const Kind = [ 'Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
   if (tickItem) return Kind[tickItem-1]
 }
@@ -66,7 +68,7 @@ const TranformDate = (tickItem) => {
  * @returns {object} activityDisplayOrder: array of reordered Kind/value pairs
  */
 const RevertKindOrder = (performance) => {
-
+  console.log(typeof performance)
   const kindOrderInChart = [ 6, 5, 4, 3, 2, 1 ]
   const kindDisplayOrder = []
 

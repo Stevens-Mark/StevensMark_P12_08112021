@@ -180,10 +180,6 @@ export default Average
 
 //  Prototypes
 
-TranformDay.propTypes = {
-  tickItem: PropTypes.number.isRequired,
-}
-
 CustomTooltip.propTypes = {
   active: PropTypes.bool,
   payload: PropTypes.array,

@@ -119,10 +119,8 @@ const Performance = () => {
 
 export default Performance
 
-//  Prototypes
 
-TranformKind.propTypes = {
-  tickItem: PropTypes.number.isRequired,
+RevertKindOrder.propTypes = {
+  performance: PropTypes.object,
 }
-
 

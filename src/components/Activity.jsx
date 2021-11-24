@@ -222,11 +222,8 @@ export default Activity
 
 // Prototypes
 
-TranformDate.propTypes = {
-  tickItem: PropTypes.string.isRequired ,
-}
-
 CustomTooltip.propTypes = {
   active: PropTypes.bool,
   payload: PropTypes.array,
 }
+
