@@ -3,12 +3,11 @@ import styled from 'styled-components'
 import colors from '../utils/style/colors'
 
 // import Rechart items
-import {
-  ResponsiveContainer,
-    PieChart,
-    Pie, 
-    Cell 
-} from "recharts";
+import { 
+    ResponsiveContainer,
+    RadialBarChart, 
+    RadialBar 
+} from 'recharts'
 
 /**
  * CSS for the component using styled.components
@@ -75,17 +74,20 @@ const ScoreText = styled.p`
 `;
 
 /**
- * Renders the user's Score on a PieChartWithPaddingAngle - RECHARTS
+ * Renders the user's Score on a RadialBarChart  - RECHARTS
  * @function Score
  * @param {number} scoreData: holds users daily score
  * @returns {JSX}
  */
 const Score = ({ scoreData }) => {
 
-  const scoreValue = [ { value: scoreData}, {value: 1 - scoreData } ]
-  const COLORS = ['#FF0000', 'transparent']
+  // A 'dummy' daily score of 100% (ie, value: 1) is needed as a comparison
+  // in order to display todayScore correctly 
+  const scoreValue = [ 
+        { value: 1, fill: "transparent" }, 
+        { value: scoreData, fill: "#FF0000" } ]
 
-    // Display Radar chart using RECHARTS
+    // Display RadialBarChart using RECHARTS
     return (
       <Wrapper>
        
@@ -96,23 +98,19 @@ const Score = ({ scoreData }) => {
         </ScoreSummary>
 
         <ResponsiveContainer width="100%" height="100%"> 
-          <PieChart width={700} height={350}>
-            <Pie
-              data={scoreValue}
-              innerRadius={75}
-              outerRadius={86}
-              dataKey='value'
-              // stroke='transparent'
-              startAngle={90} 
-              endAngle={450} >
-              
-              {scoreValue.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} 
-                cornerRadius={50} />
-              ))}
-            </Pie>
-          </PieChart>
+          <RadialBarChart 
+            width={700} 
+            height={350} 
+            startAngle={90} 
+            endAngle={450} 
+            innerRadius={50} 
+            outerRadius={110} 
+            barSize={10} 
+            data={scoreValue}>
+            <RadialBar cornerRadius={50} dataKey="value" />
+          </RadialBarChart>
          </ResponsiveContainer> 
+         
       </Wrapper>   
     )
   }

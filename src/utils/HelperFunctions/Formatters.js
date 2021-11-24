@@ -54,8 +54,34 @@ const TranformDate = (tickItem) => {
  * @returns {string} Kind: one of the categories.
  */
  const TranformKind = (tickItem) => {
-  const Kind = [ 'Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio']
+  const Kind = [ 'Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
   if (tickItem) return Kind[tickItem-1]
 }
 
-export { TranformDate, TranformDay, TranformKind }
+/**
+ * Reverses the order the data is displayed in the radar chart from
+ * cardio(1) first - intensiity(6) last TO intensiity first - cardio last
+ * @function RevertKindOrder
+ * @param {object} performance: array of Kind/value pairs
+ * @returns {object} activityDisplayOrder: array of reordered Kind/value pairs
+ */
+const RevertKindOrder = (performance) => {
+
+  const kindOrderInChart = [ 6, 5, 4, 3, 2, 1 ]
+  const kindDisplayOrder = []
+
+  for (let kindNumber of kindOrderInChart) {
+    for (let activityKind of performance) {
+      if (kindNumber === activityKind.kind) {
+        kindDisplayOrder.push({    
+          value: activityKind.value,
+          kind: kindNumber,
+        })
+      }
+    }
+  }
+  return kindDisplayOrder
+}
+
+export { TranformDate, TranformDay, RevertKindOrder, TranformKind }
+

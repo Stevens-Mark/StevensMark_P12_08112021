@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 // import helper function to format the 'kind' of activity correctly
-import { TranformKind } from '../utils/HelperFunctions/Formatters.js'
+
+import { TranformKind, RevertKindOrder } from '../utils/HelperFunctions/Formatters.js'
 
 // import Rechart items
 import { 
@@ -75,8 +76,11 @@ const Performance = () => {
       )
     }
     else {
-      const performance = data.data
+      const performance = data.data.data
       
+      // reverse the order of the data in performance, so it displays correctly in the radar chart
+      const reversePerformanceOrder = RevertKindOrder(performance)
+
     // Display Radar chart using RECHARTS
     return (
       <Wrapper>
@@ -85,11 +89,12 @@ const Performance = () => {
             <RadarChart 
               cx="50%" cy="50%" 
               outerRadius="60%" 
-              data={performance.data}>
+              data={reversePerformanceOrder}>
 
             <PolarGrid radialLines={false}/>
 
             <PolarAngleAxis 
+            
             dataKey="kind" 
             tickFormatter={TranformKind} 
             stroke= {`${colors.tertiary}`}

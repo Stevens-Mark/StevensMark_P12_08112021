@@ -90,6 +90,7 @@ const ToolTipLabel = styled.div`
   font-size: 7px;
   font-weight: 500;
   padding: 5px;
+  margin: 5px;
 `;
 
 /**
@@ -136,8 +137,8 @@ const Activity = () => {
     )
   } else {
     const sessions = data.data.sessions
-    console.log()
     // Display Activity chart using RECHARTS
+    
     return (
       <ActivityChartWrapper>
         <ActivityHeading>
@@ -150,14 +151,15 @@ const Activity = () => {
 
         <ResponsiveContainer width='100%' height={250}>
           <BarChart
-            data={sessions}
             margin={{
               top: 20,
               right: 0,
               left: 0,
               bottom: 30,
-            }}
-            barGap={5} >
+              }}
+              barGap={5}
+              data={sessions} >
+
             <XAxis
               dataKey='day'
               tickFormatter={TranformDate}
@@ -171,10 +173,11 @@ const Activity = () => {
               orientation='right'
               axisLine={false}
               tickLine={false}
-              domain={['dataMin -3', 'dataMax + 3']}
-              style={{
-                fontSize: '14px',
-              }} />
+              tickCount='3' 
+              type="number" 
+              domain={['dataMin -3', 'auto']} 
+              // domain={['dataMin -3', 'dataMax + 3']}
+              style={{ fontSize: '14px', }} />
 
             <YAxis
               yAxisId='calories'
@@ -184,7 +187,7 @@ const Activity = () => {
               tickLine={false}
               domain={['dataMin -10', 'dataMax + 10']}  />
 
-            <Tooltip
+            <Tooltip dy={4}
               content={<CustomTooltip />}
               cursor={{ fill: `${colors.barChartToolTip}` }} />
 
