@@ -1,12 +1,11 @@
 import { useParams } from 'react-router'
-import PropTypes from 'prop-types'
 import { useFetch } from '../utils/Service/FetchData'
 import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 // import helper function to format the 'kind' of activity correctly
 
-import { TranformKind, RevertKindOrder } from '../utils/HelperFunctions/Formatters.js'
+import { TranformKind } from '../utils/HelperFunctions/Formatters.js'
 
 // import Rechart items
 import { 
@@ -77,9 +76,11 @@ const Performance = () => {
     }
     else {
       const performance = data.data.data
-      
-      // reverse the order of the data in performance, so it displays correctly in the radar chart
-      const reversePerformanceOrder = RevertKindOrder(performance)
+
+      // reverse the order of the data so it displays correctly in the radar chart
+      // currently the order is 'Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité'
+      // but we want, Intensité, Vitesse, Force, Endurance, Energie, Cardio
+      const reverseActivityOrder = [...performance].sort((a, b) => b.kind - a.kind)
 
     // Display Radar chart using RECHARTS
     return (
@@ -89,7 +90,7 @@ const Performance = () => {
             <RadarChart 
               cx="50%" cy="50%" 
               outerRadius="60%" 
-              data={reversePerformanceOrder}>
+              data={reverseActivityOrder}>
 
             <PolarGrid radialLines={false}/>
 
@@ -118,9 +119,4 @@ const Performance = () => {
 }
 
 export default Performance
-
-
-RevertKindOrder.propTypes = {
-  performance: PropTypes.object,
-}
 
