@@ -11,25 +11,25 @@ import BurgerNav from './BurgerNav'
  * CSS for the component using styled.components
  */
 const Image = styled.img`
-  margin-left: 16px;
-  margin-top: 28px;
+  margin-left: 1rem;
+  margin-top: 1.75rem;
   width: clamp(7rem, 12vw, 10rem);
 
     @media screen and (min-width: 600px) {
-      margin-left: 0px;
-      margin-top: 8px;
+      margin-left: 0rem;
+      margin-top: 0.5rem;
       }
 `;
 
 const NavGroup = styled.nav`
   background: ${colors.secondary};
-  height: 91px;
+  height: 5.688rem;
   
     @media screen and (min-width: 600px) {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0px 25px;
+      padding: 0rem1.563rem;
       }
 `;
 
@@ -39,7 +39,7 @@ const LinkGroup = styled.div`
     @media screen and (min-width: 600px) {
       display: flex;
       justify-content: space-between;
-      padding: 10px;
+      padding: 0.625rem;
       width: 80%;
       }
 `;
@@ -48,7 +48,7 @@ const LINK = styled(NavLink)`
   color:  ${colors.tertiary};
   font-size: clamp(1rem, 1.667vw, 1.5rem);
   font-weight: 500;
-  padding: 5px;
+  padding: 0.313rem;
   text-decoration: none;
     &.${(props) => props.activeClassName} {
       color: ${colors.primary};

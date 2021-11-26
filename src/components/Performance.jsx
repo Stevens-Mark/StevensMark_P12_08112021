@@ -22,29 +22,29 @@ import {
  const Wrapper = styled.article`
  align-items: center;
  background: ${colors.quaternary};
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
+ border-radius: 0.313rem;
+ box-shadow: 0rem 0.125rem 0.25rem 0rem #00000005;
  display: flex;
- height: 225px;
+ height: 14.063rem;
  justify-content: center;
  width: 100%;
 
-  @media screen and (min-width: 600px) {
-    max-width: 258px;
-    width: 32%;
-    } 
+ @media screen and (min-width: 600px) {
+  max-width: 16.125rem;
+  width: 32%;
+  } 
   // @media screen and (min-width: 1025px) {
-  //   height: 263px;
+  //   height: 16.438rem;
   //   }    
   @media screen and (min-width: 1440px) {
-    height: 325px;
-    max-width: 325px;
+    height: 20.313rem;
+    max-width: 20.313rem;
     } 
 `;
 
 const ErrorMsg = styled.p`
   color: ${colors.tertiary};
-  padding: 10px;
+  padding: 0.625rem;
 `;
 
 /**

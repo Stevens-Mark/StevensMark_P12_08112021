@@ -18,11 +18,11 @@ const HamburgerWrapper = styled.div`
 const StyledMenu = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 27px;
+  grid-template-rows: 1.688rem;
   justify-items: center;
   background: ${colors.secondary};
   width: 100%;
-  height: 65px;
+  height: 4.063rem;
   opacity: ${({ open }) => open ? '1' : '0'};
   transition: opacity 0.6s ease-in-out;
   position: relative;
@@ -33,7 +33,7 @@ const LINK = styled(Link)`
   color:  ${colors.tertiary};
   font-size: clamp(1rem, 1.667vw, 1.5rem);
   font-weight: 500;
-  padding: 5px;
+  padding: 0.313rem;
   text-decoration: none;
   transition: color 0.3s linear;
     &:hover {
@@ -51,8 +51,8 @@ const StyledBurger = styled.button`
   justify-content: space-around;
   padding: 0;
   position: absolute;
-  right: 16px;
-  top: 36px;
+  right: 1rem;
+  top: 2.25rem;
   width: 1.5rem;
   z-index: 10;
 
@@ -62,7 +62,7 @@ const StyledBurger = styled.button`
 
   div {
     background: ${colors.primary};
-    border-radius: 10px;
+    border-radius: 0.625rem;
     height: 0.2rem;
     position: relative;
     transform-origin: 1px;

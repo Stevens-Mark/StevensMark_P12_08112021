@@ -54,10 +54,10 @@ const Stats = styled.div`
 `;
 
 const KeyDataWrapper = styled.aside`
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 
     @media screen and (min-width: 1024px) {
-      margin-bottom: 0px;
+      margin-bottom: 0rem;
       width: 25%;
     }
 `;
@@ -66,16 +66,16 @@ const Analysis = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin: 20px 0px;
+  gap: 0.938rem;
+  margin: 1.25rem 0rem;
 
     @media screen and (min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;
-      margin: 20px 0px 0px;
+      margin: 1.25rem 0rem 0rem;
     }  
     @media screen and (min-width: 1440px) {
-      margin-top: 70px;
+      margin-top: 4.375rem;
     }  
 `;
 

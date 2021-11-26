@@ -21,7 +21,7 @@ const SportsGroup = styled.nav`
       }
 
     img {
-        margin-top: 15px; 
+        margin-top: 0.938rem; 
         width: clamp(2.5rem, 4.5vw, 4rem);
     }
 `;
@@ -30,7 +30,7 @@ const SportLink = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 
     @media screen and (min-width: 1024px) {
       align-items: center;
@@ -42,13 +42,13 @@ const SportLink = styled.div`
 
 const Copyright = styled.p`
   display: flex;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   justify-content: center;
 
     @media screen and (min-width: 1024px) {
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       transform: rotate(180deg);
       writing-mode: vertical-lr;
       }

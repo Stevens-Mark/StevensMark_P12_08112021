@@ -23,9 +23,9 @@ import {
  */
 const ActivityChartWrapper = styled.article`
   background: ${colors.backgroundLight};
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
-  height: 290px;
+  border-radius: 0.313rem;
+  box-shadow: 0rem 0.125rem 0.25rem 0rem #00000005;
+  height: 18.125rem;
 `;
 
 const Wrapper = styled(ActivityChartWrapper)`
@@ -46,11 +46,11 @@ const ActivityHeading = styled.div`
       color: ${colors.H2HeadingText};
       font-size: clamp(1rem, 1.2vw, 1.125rem);
       font-weight: 500;
-      margin-left: 5px;
+      margin-left: 0.313rem;
 
         @media screen and (min-width: 375px) {
-          margin-left: 35px;
-          margin-right: 35px;
+          margin-left: 2.188rem;
+          margin-right: 2.188rem;
           }  
       }
 `;
@@ -59,38 +59,38 @@ const ActivityLegend = styled.div`
   align-items: center;
   color: ${colors.SecondaryText};
   display: flex;
-  margin-right: 5px;
+  margin-right:0.313rem;
 
     @media screen and (min-width: 375px) {
-      margin-right: 35px;
+      margin-right: 2.188rem;
       }  
 `;
 
 const BulletOne = styled.span`
   color: ${colors.primary};
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 8px;
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.938rem;
+  margin-right: 0.313rem;
 `;
 
 const BulletTwo = styled.span`
   color: ${colors.NumberText};
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 8px;
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.938rem;
+  margin-right: 0.313rem;
 `;
 
 const ToolTipLabel = styled.div`
   background: ${colors.primary};
   color: ${colors.tertiary};
-  font-size: 7px;
+  font-size: 0.438rem;
   font-weight: 500;
-  margin: 5px;
-  padding: 5px;
+  margin: 0.313rem;
+  padding: 0.313rem;
 `;
 
 /**

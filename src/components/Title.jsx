@@ -8,7 +8,7 @@ import colors from '../utils/style/colors'
  */
 const HeadingWrapper = styled.div`
   color: ${colors.secondary};
-  margin-bottom: 35px;
+  margin-bottom: 2.188rem;
 
     h1 {
       font-size: clamp(1.5rem, 3vw, 3rem);

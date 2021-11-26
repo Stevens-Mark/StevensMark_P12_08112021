@@ -19,7 +19,7 @@ const HealthWrapper = styled.div`
     @media screen and (min-width: 455px) {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 0.625rem;
       justify-content: center;
     }
     @media screen and (min-width: 1024px) {
@@ -33,36 +33,36 @@ const HealthWrapper = styled.div`
 const HealthCard = styled.article`
   align-items: center;
   background: ${colors.backgroundLight};
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #00000005;
+  border-radius: 0.313rem;
+  box-shadow: 0rem 0.125rem 0.25rem 0rem #00000005;
   display: flex;
-  height: 70px;
-  margin: 10px;
+  height: 4.375rem;
+  margin: 0.625rem;
   width: 100%;
   
   img {
-    height: 50px;
-    margin-left: 15px;
-    width: 50px;
+    height: 3.125rem;
+    margin-left: 0.938rem;
+    width: 3.125rem;
       @media screen and (min-width: 1024px) {
-        height: 60px;
-        Width: 60px;
+        height: 3.75rem;
+        Width: 3.75rem;
         } 
     }
 
   @media screen and (min-width: 455px) {
-    flex: 1 1 250px;
+    flex: 1 1 15.625rem;
     margin: unset;
-    min-width: 325px;
+    min-width: 20.313rem;
     }
   @media screen and (min-width: 1024px) {
     flex: unset;
-    height: 100px;
+    height: 6.25rem;
     margin: unset;
     min-width: unset;
     }  
     @media screen and (min-width: 1440px) {
-      height: 124px;
+      height: 7.75rem;
       }  
 `;
 
@@ -70,11 +70,11 @@ const HealthValue = styled.div`
   font-size: clamp(1rem, 1.389vw, 1.25rem);
   font-style: normal;
   font-weight: 700;
-  margin-left: 24px;
+  margin-left: 1.5rem;
 
     p {
       color: ${colors.SecondaryText};
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 500;
       margin: unset;
       }

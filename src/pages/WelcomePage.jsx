@@ -22,7 +22,7 @@ const LINKS = styled(Link)`
   color:  ${colors.secondary};
   font-size: clamp(1rem, 1.667vw, 1.5rem);
   font-weight: 500;
-  padding: 5px;
+  padding: 0.313rem;
   text-decoration: none;
     &:hover {
       color: ${colors.primary};
@@ -31,7 +31,7 @@ const LINKS = styled(Link)`
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 
     @media screen and (min-width: 600px) {
       flex-direction: row;
@@ -44,7 +44,7 @@ const Card = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 
     h2 {
       margin: unset;

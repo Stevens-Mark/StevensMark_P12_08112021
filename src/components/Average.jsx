@@ -24,52 +24,52 @@ import {
  const Wrapper = styled.article`
  align-items: center;
  background: ${colors.primary};
- border-radius: 5px;
- box-shadow: 0px 2px 4px 0px #00000005;
+ border-radius: 0.313rem;
+ box-shadow: 0rem 0.125rem 0.25rem 0rem #00000005;
  display: flex;
- height: 225px;
+ height: 14.063rem;
  justify-content: center;
  position: relative;
  width: 100%;
 
   @media screen and (min-width: 600px) {
-    max-width: 258px;
+    max-width: 16.125rem;
     width: 32%;
     } 
   // @media screen and (min-width: 1025px) {
-  //   height: 263px;
+  //   height: 16.438rem;
   //   }    
   @media screen and (min-width: 1440px) {
-    height: 325px;
-    max-width: 325px;
+    height: 20.313rem;
+    max-width: 20.313rem;
     } 
 `;
 
 const ErrorMsg = styled.p`
   color: ${colors.tertiary};
-  padding: 10px;
+  padding: 0.625rem;
 `;
 
 const AverageHeading = styled.h2`
   color: ${colors.tertiary};
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 500;
-  left: 15px;
+  left: 0.938rem;
   opacity: 0.5;
   position: absolute;
-  top: 0px;
-  width: 170px;
+  top: 0rem;
+  width: 10.625rem;
 `;
 
 const ToolTipLabel = styled.div`
   background: ${colors.tertiary};
   color: ${colors.secondary};
-  font-size: 7px;
+  font-size: 0.438rem;
   font-weight: 500;
-  height: 20px;
-  line-height: 4px;
-  padding: 2px;
-  width: 25px;
+  height: 1.25rem;
+  line-height: 0.25rem;
+  padding: 0.125rem;
+  width: 1.563rem;
 `;
 
 /**
