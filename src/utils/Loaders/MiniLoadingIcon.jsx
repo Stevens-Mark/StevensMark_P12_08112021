@@ -20,9 +20,9 @@ const rotate = keyframes`
  */
 const Loader = styled.div`
   animation: ${rotate} 1s infinite linear;
+  border: 0.5rem solid ${props => props.primary ? '#fff' : '#FF0000'};
   border-bottom-color: transparent;
   border-radius: 6.625rem;   
-  border: 0.5rem solid ${props => props.primary ? '#fff' : '#FF0000'};
   padding: 0.938rem;
 `;
 
