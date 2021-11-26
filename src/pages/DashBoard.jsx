@@ -17,10 +17,10 @@ import Score from '../components/Score'
  * CSS for component using styled.components
  */
  const LoaderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: 90vh;
+  justify-content: center;
 `;
 
 const DashBoardWrapper = styled.div`
@@ -34,8 +34,8 @@ const DashBoardWrapper = styled.div`
 `;
 
 const InfoWrapper = styled.main`
-  padding: clamp(0.625rem, 1.5vw, 4.5rem);
   min-height: 100vh;
+  padding: clamp(0.625rem, 1.5vw, 4.5rem);
 `;
 
 const UserStats = styled.div`
@@ -57,21 +57,22 @@ const KeyDataWrapper = styled.aside`
   margin-bottom: 20px;
 
     @media screen and (min-width: 1024px) {
-      width: 25%;
       margin-bottom: 0px;
+      width: 25%;
     }
 `;
 
 const Analysis = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 20px 0px;
   gap: 15px;
+  margin: 20px 0px;
 
     @media screen and (min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;
+      margin: 20px 0px 0px;
     }  
     @media screen and (min-width: 1440px) {
       margin-top: 70px;

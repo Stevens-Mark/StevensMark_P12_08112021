@@ -6,24 +6,24 @@ import colors from '../utils/style/colors'
  * CSS for the component using styled.components
  */
 const ErrorWrapper = styled.main`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   color: ${colors.primary};
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   
   h1 {
     font-size: clamp(6rem, 20vw, 21.875rem);
     font-weight: 700;
-    margin-top: 4rem;
     margin-bottom: 3rem;
+    margin-top: 4rem;
   }
 
   p {
     font-size: clamp(1.125rem, 2.5vw, 3rem);
-    text-align: center;
     font-weight: 500;
     margin-bottom: 8.313rem;
+    text-align: center;
   }
 `;
 

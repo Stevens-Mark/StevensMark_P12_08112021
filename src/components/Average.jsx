@@ -22,19 +22,19 @@ import {
  * CSS for the component using styled.components
  */
  const Wrapper = styled.article`
- position: relative;
- display: flex;
  align-items: center;
- justify-content: center;
  background: ${colors.primary};
- height: 225px;
- width: 100%;
  border-radius: 5px;
  box-shadow: 0px 2px 4px 0px #00000005;
+ display: flex;
+ height: 225px;
+ justify-content: center;
+ position: relative;
+ width: 100%;
 
   @media screen and (min-width: 600px) {
-    width: 32%;
     max-width: 258px;
+    width: 32%;
     } 
   // @media screen and (min-width: 1025px) {
   //   height: 263px;
@@ -51,24 +51,24 @@ const ErrorMsg = styled.p`
 `;
 
 const AverageHeading = styled.h2`
-  position: absolute;
-  top: 0px;
-  left: 15px;
   color: ${colors.tertiary};
-  opacity: 0.5;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 500;
+  left: 15px;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
   width: 170px;
 `;
 
 const ToolTipLabel = styled.div`
-  color: ${colors.secondary};
   background: ${colors.tertiary};
+  color: ${colors.secondary};
   font-size: 7px;
   font-weight: 500;
+  height: 20px;
   line-height: 4px;
   padding: 2px;
-  height: 20px;
   width: 25px;
 `;
 

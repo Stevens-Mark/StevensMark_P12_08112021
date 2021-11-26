@@ -20,18 +20,18 @@ import {
  * CSS for the component using styled.components
  */
  const Wrapper = styled.article`
- display: flex;
  align-items: center;
- justify-content: center;
  background: ${colors.quaternary};
- height: 225px;
- width: 100%;
  border-radius: 5px;
  box-shadow: 0px 2px 4px 0px #00000005;
+ display: flex;
+ height: 225px;
+ justify-content: center;
+ width: 100%;
 
   @media screen and (min-width: 600px) {
-    width: 32%;
     max-width: 258px;
+    width: 32%;
     } 
   // @media screen and (min-width: 1025px) {
   //   height: 263px;

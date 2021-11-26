@@ -10,8 +10,8 @@ import logo from '../assets/logo/runningMan.png'
  * CSS for the component using styled.components
  */
  const MainWrapper = styled.main`
-  padding: clamp(0.625rem, 1.5vw, 4.5rem);
   min-height: 100vh; 
+  padding: clamp(0.625rem, 1.5vw, 4.5rem);
 
    img {
     width: clamp(6rem, 17vw, 20rem);
@@ -19,19 +19,19 @@ import logo from '../assets/logo/runningMan.png'
 `;
 
 const LINKS = styled(Link)`
-  text-decoration: none;
-  font-weight: 500;
   color:  ${colors.secondary};
-  padding: 5px;
   font-size: clamp(1rem, 1.667vw, 1.5rem);
+  font-weight: 500;
+  padding: 5px;
+  text-decoration: none;
     &:hover {
       color: ${colors.primary};
 `;
 
 const CardWrapper = styled.div`
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 
     @media screen and (min-width: 600px) {
       flex-direction: row;
@@ -40,11 +40,11 @@ const CardWrapper = styled.div`
 `;
 
 const Card = styled.article`
-  margin-bottom: 50px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 50px;
 
     h2 {
       margin: unset;

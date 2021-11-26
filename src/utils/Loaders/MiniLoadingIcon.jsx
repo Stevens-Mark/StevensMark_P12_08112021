@@ -19,11 +19,11 @@ const rotate = keyframes`
  * CSS for the Loader component
  */
 const Loader = styled.div`
-  padding: 15px;
-  border: 8px solid ${props => props.primary ? '#fff' : '#FF0000'};
   animation: ${rotate} 1s infinite linear;
   border-bottom-color: transparent;
   border-radius: 106px;   
+  border: 8px solid ${props => props.primary ? '#fff' : '#FF0000'};
+  padding: 15px;
 `;
 
 /**

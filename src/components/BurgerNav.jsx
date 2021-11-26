@@ -30,30 +30,30 @@ const StyledMenu = styled.nav`
 `;
 
 const LINK = styled(Link)`
-  text-decoration: none;
-  font-weight: 500;
   color:  ${colors.tertiary};
-  padding: 5px;
-  transition: color 0.3s linear;
   font-size: clamp(1rem, 1.667vw, 1.5rem);
+  font-weight: 500;
+  padding: 5px;
+  text-decoration: none;
+  transition: color 0.3s linear;
     &:hover {
         color: ${colors.primary};
       }
 `;
 
 const StyledBurger = styled.button`
-  position: absolute;
-  top: 36px;
-  right: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 1.5rem;
+  justify-content: space-around;
   padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 36px;
+  width: 1.5rem;
   z-index: 10;
 
   // &:focus {
@@ -61,13 +61,13 @@ const StyledBurger = styled.button`
       }
 
   div {
-    width: 1.5rem;
-    height: 0.2rem;
     background: ${colors.primary};
     border-radius: 10px;
-    transition: all 0.3s linear;
+    height: 0.2rem;
     position: relative;
     transform-origin: 1px;
+    transition: all 0.3s linear;
+    width: 1.5rem;
 
       :first-child {
         transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};

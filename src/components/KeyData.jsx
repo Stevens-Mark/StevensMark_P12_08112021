@@ -11,55 +11,55 @@ import carbs from '../assets/icons/carbs.svg'
  * CSS for the component using styled.components
  */
 const HealthWrapper = styled.div`
+  align-items: center;
   color: ${colors.NumberText};
   display: flex;
   flex-direction: column;
-  align-items: center;
 
     @media screen and (min-width: 455px) {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 10px;
+      justify-content: center;
     }
     @media screen and (min-width: 1024px) {
       flex-direction: column;
-      margin-left: 10%;
-      justify-content: space-between;
       height: 100%;
+      justify-content: space-between;
+      margin-left: 10%;
     }
 `;
 
 const HealthCard = styled.article`
-  display: flex;
   align-items: center;
-  height: 70px;
-  width: 100%;
-  border-radius: 5px;
-  margin: 10px;
-  box-shadow: 0px 2px 4px 0px #00000005;
   background: ${colors.backgroundLight};
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px #00000005;
+  display: flex;
+  height: 70px;
+  margin: 10px;
+  width: 100%;
   
   img {
+    height: 50px;
     margin-left: 15px;
-    height: 50px;
-    height: 50px;
+    width: 50px;
       @media screen and (min-width: 1024px) {
         height: 60px;
-        height: 60px;
+        Width: 60px;
         } 
     }
 
   @media screen and (min-width: 455px) {
     flex: 1 1 250px;
-    min-width: 325px;
     margin: unset;
+    min-width: 325px;
     }
   @media screen and (min-width: 1024px) {
-    height: 100px;
-    min-width: unset;
-    margin: unset;
     flex: unset;
+    height: 100px;
+    margin: unset;
+    min-width: unset;
     }  
     @media screen and (min-width: 1440px) {
       height: 124px;
