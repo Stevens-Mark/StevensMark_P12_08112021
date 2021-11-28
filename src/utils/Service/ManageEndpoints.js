@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 /**
- * USED TO COLLECT REAL DATA
+ * USED TO COLLECT DATA FROM THE API
  * @function ManageEndpoints
  * @param {string} category: the type of information/data requested
  * @param {string} id of user
@@ -27,7 +27,7 @@ import PropTypes from 'prop-types'
 }
 
 /**
- * USED TO COLLECT 'MOCKED' DATA
+ * USED TO COLLECT 'MOCKED' DATA (held in the public folder)
  * @function ManageMockedEndpoints
  * @param {string} category: the type of information/data requested
  * @param {string} id of user

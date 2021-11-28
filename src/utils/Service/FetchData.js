@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { ManageMockedEndpoints } from './ManageEndpoints'
-// import { ManageEndpoints } from './ManageEndpoints'
+// import { ManageMockedEndpoints } from './ManageEndpoints'
+import { ManageEndpoints } from './ManageEndpoints'
 
 /**
  * Service to fetch data 
@@ -18,10 +18,10 @@ export function useFetch(id, category) {
   const [error, setError] = useState(false)
 
   // mocked data urls
-  const url =  ManageMockedEndpoints(id, category)
+  // const url =  ManageMockedEndpoints(id, category)
 
   // real api url/endpoints
-  // const url =  ManageEndpoints(id, category)
+  const url =  ManageEndpoints(id, category)
 
   useEffect(() => {
     if (!url) return
