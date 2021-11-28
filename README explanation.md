@@ -55,19 +55,14 @@ Work on the new user profile page of the site. Use the Figma mock-ups and the Ka
 
 ### First - Backend Api
 
-- Clone the Backend Api onto your computer :
+- Clone the Backend Api onto your computer :  
+`git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
+or :  
+`git clone https://github.com/Stevens-Mark/P12-front-end-dashboard.git`
 
-  `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
-or
-  `git clone https://github.com/Stevens-Mark/P12-front-end-dashboard.git`
+- Inside this repository, install the packages/dependencies : `yarn`
 
-- Inside this repository, install the packages/dependencies :
-
- `yarn`
-
-- Run the Backend Api, which will then listen on port 3000 by default :
-
- `yarn start`
+- Run the Backend Api, which will then listen on port 3000 by default : `yarn start`
 
 You will see the message `Magic happens on port 3000` in the terminal window.
 
@@ -78,13 +73,9 @@ You will see the message `Magic happens on port 3000` in the terminal window.
 
   `git clone https://github.com/Stevens-Mark/stevens_mark_p12_08112021-.git`
 
-- Inside this repository, install the packages/dependencies:
+- Inside this repository, install the packages/dependencies: `yarn`
 
- `yarn`
-
-- Run the Frontend App:
-
- `yarn start`
+- Run the Frontend App: `yarn start`
 
 - You will see the message :
 
@@ -95,7 +86,7 @@ You will see the message `Magic happens on port 3000` in the terminal window.
 
 The App normally runs on http://localhost:3001/
 
-
+**Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
 # OPENCLASSROOMS PROJET 12
 
@@ -159,16 +150,12 @@ Travailler sur la nouvelle page de profil utilisateur du site. Utiliser les maqu
 - Clonez l'Api Backend sur votre ordinateur :
 
   `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
-ou
+ou :
   `git clone https://github.com/Stevens-Mark/P12-front-end-dashboard.git`
 
-- Dans ce dépôt, installez les paquets/dépendances :
+- Dans ce dépôt, installez les paquets/dépendances : `yarn`
 
- `yarn`
-
-- Exécutez l'Api Backend, qui écoutera sur le port 3000 par défaut. :
-
- `yarn start`
+- Exécutez l'Api Backend, qui écoutera sur le port 3000 par défaut. : `yarn start`
 
 Vous verrez le message `Magic happens on port 3000` dans la fenêtre du terminal.
 
@@ -179,13 +166,9 @@ Vous verrez le message `Magic happens on port 3000` dans la fenêtre du terminal
 
   `git clone https://github.com/Stevens-Mark/stevens_mark_p12_08112021-.git`
 
-- Dans ce dépôt, installez les paquets/dépendances :
+- Dans ce dépôt, installez les paquets/dépendances : `yarn`
 
- `yarn`
-
-- Exécutez l'application frontale :
-
- `yarn start`
+- Exécutez l'application frontale : `yarn start`
 
 - Vous verrez le message :
 
@@ -197,3 +180,4 @@ Vous verrez le message `Magic happens on port 3000` dans la fenêtre du terminal
 L'application fonctionne normalement sur http://localhost:3001/
 
 
+**Attention, actuellement seulement deux utilisateurs ont été simulés. Ils ont respectivement les userId 12 et 18.**
