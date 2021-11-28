@@ -58,7 +58,7 @@ You will see the message `Magic happens on port 3000` in the terminal window.
 
 The App normally runs on http://localhost:3001/
 
-**Note: currently for this project there is only data fro the users 12 & 18**
+**Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
 
 
@@ -120,4 +120,4 @@ Vous verrez le message `Magic happens on port 3000` dans la fenêtre du terminal
 L'application fonctionne normalement sur http://localhost:3001/
 
 
-**Remarque : pour ce projet, il n'y a actuellement que des données pour les utilisateurs de 12 et 18 ans.**
+**Attention, actuellement seulement deux utilisateurs ont été simulés. Ils ont respectivement les userId 12 et 18.**
