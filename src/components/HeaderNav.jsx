@@ -29,7 +29,7 @@ const NavGroup = styled.nav`
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0rem1.563rem;
+      padding: 0rem 1rem;
       }
 `;
 

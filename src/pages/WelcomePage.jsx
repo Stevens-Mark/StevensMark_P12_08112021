@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import Title from '../components/Title'
 //import icons
-import logo from '../assets/logo/runningMan.png'
+import logo from '../assets/logo/runningMan.svg'
 
 
 /**
