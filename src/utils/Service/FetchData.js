@@ -39,6 +39,7 @@ export function useFetch(id, category) {
       }
     }
     fetchData()
+    
   }, [url])
   return { isLoading, data, error }
 }

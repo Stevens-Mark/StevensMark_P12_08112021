@@ -94,22 +94,20 @@ const Performance = () => {
 
             <PolarGrid radialLines={false}/>
 
-            <PolarAngleAxis 
-            
-            dataKey="kind" 
-            tickFormatter={TranformKind} 
-            stroke= {`${colors.tertiary}`}
-            dy={4}
-            tickLine={false}
-              style={{ 
-              fontSize: '12px', 
-              fontWeight: '500',}} />
+            <PolarAngleAxis     
+              dataKey="kind" 
+              tickFormatter={TranformKind} 
+              stroke= {`${colors.tertiary}`}
+              dy={4}
+              tickLine={false}
+              style={{ fontSize: '12px', fontWeight: '500',}} />
 
             <Radar 
               name="Mike" 
               dataKey="value" 
               fill={`${colors.primary}`} 
               fillOpacity={0.7} />
+              
             </RadarChart>
 
          </ResponsiveContainer> 

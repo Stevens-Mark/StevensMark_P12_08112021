@@ -107,9 +107,7 @@ const DashBoard = () => {
   // NOTE: data corrupted: either todayScore or score is used !!!
     return (
       <DashBoardWrapper> 
-
         <SideNav />
-
           <InfoWrapper>
 
             <Title intro={'Bonjour'} 
