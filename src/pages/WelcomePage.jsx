@@ -10,6 +10,7 @@ import logo from '../assets/logo/runningMan.svg'
  * CSS for the component using styled.components
  */
  const MainWrapper = styled.main`
+  margin-top: 2.188rem;
   min-height: 100vh; 
   padding: clamp(0.625rem, 1.5vw, 4.5rem);
 

@@ -8,7 +8,7 @@ import { useState } from 'react'
  */
 const HamburgerWrapper = styled.div`
   display: none;
-  z-index: 6;
+  // z-index: 6;
 
     @media (max-width: 600px){
       display:fixed;
@@ -26,7 +26,7 @@ const StyledMenu = styled.nav`
   opacity: ${({ open }) => open ? '1' : '0'};
   transition: opacity 0.6s ease-in-out;
   position: relative;
-  z-index: 10;
+  // z-index: 10;
 `;
 
 const LINK = styled(Link)`
@@ -54,7 +54,7 @@ const StyledBurger = styled.button`
   right: 1rem;
   top: 2.25rem;
   width: 1.5rem;
-  z-index: 10;
+  // z-index: 10;
 
   // &:focus {
   //   outline: none;
@@ -64,7 +64,7 @@ const StyledBurger = styled.button`
     background: ${colors.primary};
     border-radius: 0.625rem;
     height: 0.2rem;
-    position: relative;
+    // position: relative;
     transform-origin: 1px;
     transition: all 0.3s linear;
     width: 1.5rem;

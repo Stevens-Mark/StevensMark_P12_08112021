@@ -36,6 +36,7 @@ const DashBoardWrapper = styled.div`
 const InfoWrapper = styled.main`
   min-height: 100vh;
   padding: clamp(0.625rem, 1.5vw, 4.5rem);
+  margin-top: 2.188rem;
 `;
 
 const UserStats = styled.div`
