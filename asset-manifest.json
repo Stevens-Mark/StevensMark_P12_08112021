@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/StevensMark_P12_08112021/static/js/main.6805b58a.chunk.js",
+    "main.js.map": "/StevensMark_P12_08112021/static/js/main.6805b58a.chunk.js.map",
+    "runtime-main.js": "/StevensMark_P12_08112021/static/js/runtime-main.8f6150df.js",
+    "runtime-main.js.map": "/StevensMark_P12_08112021/static/js/runtime-main.8f6150df.js.map",
+    "static/js/2.13762e4b.chunk.js": "/StevensMark_P12_08112021/static/js/2.13762e4b.chunk.js",
+    "static/js/2.13762e4b.chunk.js.map": "/StevensMark_P12_08112021/static/js/2.13762e4b.chunk.js.map",
+    "static/js/3.1fd4d20a.chunk.js": "/StevensMark_P12_08112021/static/js/3.1fd4d20a.chunk.js",
+    "static/js/3.1fd4d20a.chunk.js.map": "/StevensMark_P12_08112021/static/js/3.1fd4d20a.chunk.js.map",
+    "index.html": "/StevensMark_P12_08112021/index.html",
+    "static/js/2.13762e4b.chunk.js.LICENSE.txt": "/StevensMark_P12_08112021/static/js/2.13762e4b.chunk.js.LICENSE.txt",
+    "static/media/bike.22f466fe.svg": "/StevensMark_P12_08112021/static/media/bike.22f466fe.svg",
+    "static/media/calories.3067c742.svg": "/StevensMark_P12_08112021/static/media/calories.3067c742.svg",
+    "static/media/carbs.36f59707.svg": "/StevensMark_P12_08112021/static/media/carbs.36f59707.svg",
+    "static/media/dumbell.c9f62cf1.svg": "/StevensMark_P12_08112021/static/media/dumbell.c9f62cf1.svg",
+    "static/media/fats.5f240256.svg": "/StevensMark_P12_08112021/static/media/fats.5f240256.svg",
+    "static/media/protiens.31851914.svg": "/StevensMark_P12_08112021/static/media/protiens.31851914.svg",
+    "static/media/runningMan.99d2d7e5.svg": "/StevensMark_P12_08112021/static/media/runningMan.99d2d7e5.svg",
+    "static/media/sportsSee_logo.74d87110.svg": "/StevensMark_P12_08112021/static/media/sportsSee_logo.74d87110.svg",
+    "static/media/swim.c135dfed.svg": "/StevensMark_P12_08112021/static/media/swim.c135dfed.svg",
+    "static/media/zen.e6da2f73.svg": "/StevensMark_P12_08112021/static/media/zen.e6da2f73.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f6150df.js",
+    "static/js/2.13762e4b.chunk.js",
+    "static/js/main.6805b58a.chunk.js"
+  ]
+}
