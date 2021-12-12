@@ -36,16 +36,16 @@ import PropTypes from 'prop-types'
 const ManageMockedEndpoints = (id, category) => {
   switch (category) {
     case 'usersGeneralInfo':
-      return `user/${id}.json`
+      return `${id}.json`
 
     case 'activity':
-      return `user${id}/activity.json`
+      return `${id}/activity.json`
 
     case 'average':
-      return `user/${id}/average-sessions.json`
+      return `${id}/average-sessions.json`
 
     case 'performance':
-      return `user/${id}/performance.json`
+      return `${id}/performance.json`
 
     default :
       return null
