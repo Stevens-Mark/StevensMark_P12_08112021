@@ -2,6 +2,10 @@
 
 # OPENCLASSROOMS PROJECT 12 
 
+# SportSee
+
+Open website at Git pages: https://stevens-mark.github.io/StevensMark_P12_08112021/
+
 ## Develop an analytics dashboard with React
 
 At SportSee, a startup dedicated to sports coaching. In full growth, the company will launch a new version of the user's profile page. This page will allow the user to track the number of sessions completed as well as the number of calories burned.
@@ -89,6 +93,10 @@ The App normally runs on http://localhost:3001/
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
 # OPENCLASSROOMS PROJET 12
+
+# SportSee
+
+Ouvrir le site web aux pages Git: https://stevens-mark.github.io/StevensMark_P12_08112021/
 
 ## Développez un tableau de bord d'analytics avec React
 
