@@ -13,7 +13,7 @@ import  Error from './pages/Error'
  */
 export default function App() {
   return (   
-    <Router>
+    <Router basename='/StevensMark_P12_081120211/'>
       <Header />  
         <Switch>
           <Route exact path="/" component={WelcomePage}/>
