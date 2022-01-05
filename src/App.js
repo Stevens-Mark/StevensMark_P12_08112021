@@ -18,7 +18,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={WelcomePage}/>
           <Route path="/user/:id" component={DashBoard}/>
-          <Route component={Error} />
+          <Route component={Error}/>
         </Switch> 
     </Router>  
   )
