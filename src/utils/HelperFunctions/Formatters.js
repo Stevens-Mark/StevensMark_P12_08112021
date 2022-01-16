@@ -1,22 +1,5 @@
 // Functions used to format the labels on the different graphs
 
-// /**
-//  * Format date on X axis from yyyy-mm-dd to dd/mm
-//  * on the Daily activities Line graph
-//  * @function TranformDate
-//  * @param {string} tickItem
-//  * @returns {string} formatted Date
-//  */
-//  const TranformDate = (tickItem) => {
-//   let formattedDate = '';
-
-//   if (tickItem) {
-//     let parts = tickItem.split('-')
-//     formattedDate = `${parts[2]}/${parts[1]}`
-//   }
-//   return formattedDate
-// }
-
 /**
  * Format date on X axis from yyyy-mm-dd to dd
  * on the Daily activities Line graph

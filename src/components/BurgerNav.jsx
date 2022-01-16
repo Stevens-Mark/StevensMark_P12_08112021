@@ -8,8 +8,6 @@ import { useState } from 'react'
  */
 const HamburgerWrapper = styled.div`
   display: none;
-  // z-index: 6;
-
     @media (max-width: 600px){
       display:fixed;
     }
@@ -26,7 +24,7 @@ const StyledMenu = styled.nav`
   opacity: ${({ open }) => open ? '1' : '0'};
   transition: opacity 0.6s ease-in-out;
   position: relative;
-  // z-index: 10;
+
 `;
 
 const LINK = styled(Link)`
@@ -54,11 +52,6 @@ const StyledBurger = styled.button`
   right: 1rem;
   top: 2.25rem;
   width: 1.5rem;
-  // z-index: 10;
-
-  // &:focus {
-  //   outline: none;
-      }
 
   div {
     background: ${colors.primary};

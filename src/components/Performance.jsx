@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import colors from '../utils/style/colors'
 import MiniLoadingIcon from '../utils/Loaders/MiniLoadingIcon'
 // import helper function to format the 'kind' of activity correctly
-
 import { TranformKind } from '../utils/HelperFunctions/Formatters.js'
 
 // import Rechart items
@@ -33,9 +32,7 @@ import {
   max-width: 16.125rem;
   width: 32%;
   } 
-  // @media screen and (min-width: 1025px) {
-  //   height: 16.438rem;
-  //   }    
+  
   @media screen and (min-width: 1440px) {
     height: 20.313rem;
     max-width: 20.313rem;

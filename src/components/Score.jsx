@@ -27,9 +27,7 @@ const Wrapper = styled.article`
      max-width: 16.125rem;
      width: 32%;
      } 
-   // @media screen and (min-width: 1025px) {
-   //   height: 16.438rem;
-   //   }    
+   
    @media screen and (min-width: 1440px) {
      height: 20.313rem;
      max-width: 20.313rem;
