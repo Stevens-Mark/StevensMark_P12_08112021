@@ -6,7 +6,7 @@
 
 # SportSee
 
-Open website at [Sportsee-netifly](https://sportsee2021.netlify.app/)
+Open website at [Sportsee](https://sportsee2021.netlify.app/)
 
 ## Develop an analytics dashboard with React
 
@@ -98,7 +98,7 @@ The App normally runs on http://localhost:3001/
 
 # SportSee
 
-Ouvrir le site web à [Sportsee-netifly](https://sportsee2021.netlify.app/)
+Ouvrir le site web à [Sportsee](https://sportsee2021.netlify.app/)
 
 ## Développez un tableau de bord d'analytics avec React
 
