@@ -1,10 +1,12 @@
 ![SportSee](/src/assets/logo/sportsSee_logo.svg)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5960d81c-ee20-4b01-b854-d1227e809ba0/deploy-status)](https://app.netlify.com/sites/sportsee2021/deploys)
+
 # OPENCLASSROOMS PROJECT 12 
 
 # SportSee
 
-Open website at Git pages: https://stevens-mark.github.io/StevensMark_P12_08112021/
+Open website at [Sportsee-netifly](https://sportsee2021.netlify.app/)
 
 ## Develop an analytics dashboard with React
 
@@ -96,7 +98,7 @@ The App normally runs on http://localhost:3001/
 
 # SportSee
 
-Ouvrir le site web aux pages Git: https://stevens-mark.github.io/StevensMark_P12_08112021/
+Ouvrir le site web à [Sportsee-netifly](https://sportsee2021.netlify.app/)
 
 ## Développez un tableau de bord d'analytics avec React
 
