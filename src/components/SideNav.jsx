@@ -63,10 +63,10 @@ const SideNav = () => {
   return (
     <SportsGroup>  
             <SportLink>
-              <Link to='/yoga'><img src={Yoga} alt='Yoga'/></Link>
-              <Link to='/swimming'><img src={Swim} alt='Swim'/></Link>
-              <Link to='/cycling'><img src={Bike} alt='Bike'/></Link>
-              <Link to='/gym'><img src={Gym} alt='Gym'/></Link>
+              <Link /*to='/yoga'*/><img src={Yoga} alt='Yoga'/></Link>
+              <Link /*to='/swimming'*/><img src={Swim} alt='Swim'/></Link>
+              <Link /*to='/cycling'*/><img src={Bike} alt='Bike'/></Link>
+              <Link /*to='/gym'*/><img src={Gym} alt='Gym'/></Link>
             </SportLink>       
         <Copyright>Copyright, SportSee 2020</Copyright>
     </SportsGroup>
