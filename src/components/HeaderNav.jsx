@@ -67,7 +67,7 @@ const Header = () => {
   return (
     <header>
       <NavGroup>
-          <LINK to="/"><Image className="logo" src={logo} alt="logo"></Image></LINK>
+          <LINK to="/"><Image src={logo} alt="logo"></Image></LINK>
           <LinkGroup>
             <LINK activeClassName="active" exact to="/">Accueil</LINK>
             <LINK activeClassName="active" to="/profile">Profil</LINK>
