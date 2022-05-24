@@ -94,7 +94,7 @@ const BurgerNav = () => {
             <div />
         </StyledBurger>
 
-        <StyledMenu open={open}>
+        <StyledMenu open={open} role="navigation" aria-label="page navigation">
             <LINK to="/">Accueil</LINK>
             <LINK to="/profile">Profil</LINK>
             <LINK to="/settings">Réglage</LINK>

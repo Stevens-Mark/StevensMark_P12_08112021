@@ -61,12 +61,12 @@ const Copyright = styled.p`
  */
 const SideNav = () => {
   return (
-    <SportsGroup>  
+    <SportsGroup role="navigation" aria-label="type of sport">  
             <SportLink>
-              <Link /*to='/yoga'*/><img src={Yoga} alt='Yoga'/></Link>
-              <Link /*to='/swimming'*/><img src={Swim} alt='Swim'/></Link>
-              <Link /*to='/cycling'*/><img src={Bike} alt='Bike'/></Link>
-              <Link /*to='/gym'*/><img src={Gym} alt='Gym'/></Link>
+              <Link to='#'><img src={Yoga} alt='Yoga'/></Link>
+              <Link to='#'><img src={Swim} alt='Swim'/></Link>
+              <Link to='#'><img src={Bike} alt='Bike'/></Link>
+              <Link to='#'><img src={Gym} alt='Gym'/></Link>
             </SportLink>       
         <Copyright>Copyright, SportSee 2020</Copyright>
     </SportsGroup>

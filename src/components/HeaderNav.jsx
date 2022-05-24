@@ -66,7 +66,7 @@ const LINK = styled(NavLink)`
 const Header = () => {
   return (
     <header>
-      <NavGroup>
+      <NavGroup role="navigation" aria-label="page navigation">
           <LINK to="/"><Image src={logo} alt="logo"></Image></LINK>
           <LinkGroup>
             <LINK activeClassName="active" exact to="/">Accueil</LINK>
